@@ -5,16 +5,16 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace Assets.Code.Infrastructure.Services.Editor
+namespace Assets.Code.Infrastructure.Editor
 {
-    public class SceneSwitcherService : EditorWindow
+    public class SceneSwitcherEditor : EditorWindow
     {
         private Vector2 scrollPos;
 
         [MenuItem("Tools/Scene Switcher")]
         private static void ShowWindow()
         {
-            var window = GetWindow<SceneSwitcherService>();
+            var window = GetWindow<SceneSwitcherEditor>();
             window.titleContent = new GUIContent("Scene Switcher");
             window.Show();
         }
@@ -36,14 +36,14 @@ namespace Assets.Code.Infrastructure.Services.Editor
 
                     if (pressed && Event.current.button == 0)
                     {
-                        var activeScene = EditorSceneManager.GetActiveScene();
+                        var activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
                         EditorSceneManager.SaveScene(activeScene, activeScene.path);
                         EditorSceneManager.OpenScene(scene.path);
                     }
 
                     if (pressed && Event.current.button == 1)
                     {
-                        var activeScene = EditorSceneManager.GetActiveScene();
+                        var activeScene = UnityEngine.SceneManagement.SceneManager.GetActiveScene();
                         EditorSceneManager.SaveScene(activeScene, activeScene.path);
 
                         EditorSceneManager.OpenScene(scene.path, OpenSceneMode.Additive);
