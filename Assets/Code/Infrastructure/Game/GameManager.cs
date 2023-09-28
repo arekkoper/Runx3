@@ -18,7 +18,7 @@ namespace Assets.Code.Infrastructure
 
         private void Start()
         {
-            ChangeState(new MainMenu());
+            ChangeState(new Level001());
         }
 
         private void Update()
