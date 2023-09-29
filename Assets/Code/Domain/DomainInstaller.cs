@@ -7,6 +7,7 @@ namespace Assets.Code.Domain
     {
         public override void InstallBindings()
         {
+            
         }
     }
 }

@@ -11,6 +11,7 @@ public class InfrastructureInstaller : MonoInstaller
         //Services
         SignalBusInstaller.Install(Container);
         Container.Bind<IMediator>().To<Mediator>().AsSingle();
+        Container.Bind<IPlayerService>().To<PlayerService>().AsSingle();
 
         //Loaders
         Container.Bind<ILevelLoader>().To<LevelLoader>().AsSingle();
