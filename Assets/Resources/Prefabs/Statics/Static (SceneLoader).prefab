@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 1431924075768103732}
   - component: {fileID: 3161078255103670984}
   m_Layer: 0
-  m_Name: Pre_Static_SceneLoader
+  m_Name: Static (SceneLoader)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

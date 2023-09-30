@@ -2,7 +2,7 @@
 
 namespace Assets.Code.Application.Signals
 {
-    public class LevelFinishedSignal
+    public class OnPlayerWinSignal
     {
         
     }

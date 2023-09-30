@@ -25,12 +25,12 @@ namespace Assets.Code.Presentation.Presenters
 
         private void OnEnable()
         {
-            _signalBus.Subscribe<GameStateChangedSignal>(Perform);
+            _signalBus.Subscribe<OnGameStateChangedSignal>(Perform);
         }
 
         private void OnDisable()
         {
-            _signalBus.Unsubscribe<GameStateChangedSignal>(Perform);
+            _signalBus.Unsubscribe<OnGameStateChangedSignal>(Perform);
         }
 
         private void Perform()

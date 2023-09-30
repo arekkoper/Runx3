@@ -14,6 +14,9 @@ namespace Assets.Code.Application.Modules.Game.GameStates
             ScenesToLoad.Add(Manager.LEVELS[LevelID]);
             ScenesToUnload.Add(Manager.UI_MAIN_MENU);
 
+            if(LevelID-- <= 0)
+                ScenesToUnload.Add(Manager.LEVELS[LevelID--]);
+
             EnterState();
         }
 
@@ -23,7 +26,6 @@ namespace Assets.Code.Application.Modules.Game.GameStates
 
         protected override void EnterState()
         {
-            Manager.Mediator.Send(new CreatePlayerCommand());
             Manager.Mediator.Send(new LoadLevelCommand());
         }
     }

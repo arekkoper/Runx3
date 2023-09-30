@@ -11,7 +11,7 @@ namespace Assets.Code.Presentation.Presenters
 
         private void OnTriggerEnter(Collider other)
         {
-            _signalBus.Fire(new LevelFinishedSignal());
+            _signalBus.Fire(new OnPlayerWinSignal());
         }
     }
 }

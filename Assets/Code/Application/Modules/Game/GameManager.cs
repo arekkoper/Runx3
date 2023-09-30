@@ -1,5 +1,6 @@
 ﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
 using Assets.Code.Application.Modules.Game.GameStates;
+using Assets.Code.Application.Modules.Hero.Commands.CreatePlayer;
 using Assets.Code.Application.Signals;
 using Assets.Code.Domain.Commons.Abstractions;
 using System.Collections.Generic;
@@ -12,10 +13,10 @@ namespace Assets.Code.Application.Modules.Game
         private readonly SignalBus _signalBus;
         private readonly IMediator _mediator;
 
+        public int CurentLevelID { get; set; }
         public GameState CurrentState { get; set; }
         public string UI_MAIN_MENU { get => "UI_MainMenu"; }
         public string UI_GAME { get => "UI_Game"; }
-        public string LEVEL_001 { get => "Level_001"; }
         public Dictionary<int, string> LEVELS { get; } = new()
         {
             {1, "Level_001" },
@@ -34,6 +35,9 @@ namespace Assets.Code.Application.Modules.Game
 
         public void Initialize()
         {
+            _mediator.Send(new CreatePlayerCommand());
+            CurentLevelID = 0;
+
             ChangeState(new MainMenu());
         }
 
@@ -47,7 +51,7 @@ namespace Assets.Code.Application.Modules.Game
             state.Manager = this;
             CurrentState = state;
             CurrentState.ReloadScenes();
-            _signalBus.Fire(new GameStateChangedSignal());
+            _signalBus.Fire(new OnGameStateChangedSignal());
         }
 
 

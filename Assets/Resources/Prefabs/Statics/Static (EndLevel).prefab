@@ -130,7 +130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5840727933570962350}
   m_Layer: 0
-  m_Name: Pre_Static_End
+  m_Name: Static (EndLevel)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
