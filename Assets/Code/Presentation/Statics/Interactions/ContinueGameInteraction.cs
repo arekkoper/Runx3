@@ -1,5 +1,4 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
+﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
 using Assets.Code.Application.Modules.Game;
 using Assets.Code.Application.Modules.Game.Commands.ChangeLevel;
 using Assets.Code.Presentation.Commons;
@@ -15,13 +14,13 @@ namespace Assets.Code.Presentation.Statics.Interactions
 
         private void Start()
         {
-            if (_gameManager.CurentLevelID == 0)
+            if (_gameManager.CurrentLevelID == 0)
                 GetComponent<Button>().interactable = false;
         }
 
         public void Interact()
         {
-            _mediator.Send(new ChangeLevelCommand() { LevelID = _gameManager.CurentLevelID });
+            _mediator.Send(new ChangeLevelCommand() { LevelID = _gameManager.CurrentLevelID });
         }
     }
 }

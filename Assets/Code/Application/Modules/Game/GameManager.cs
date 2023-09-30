@@ -5,6 +5,7 @@ using Assets.Code.Application.Signals;
 using Assets.Code.Domain.Commons.Abstractions;
 using System;
 using System.Collections.Generic;
+using UnityEngine;
 using Zenject;
 
 namespace Assets.Code.Application.Modules.Game
@@ -14,7 +15,7 @@ namespace Assets.Code.Application.Modules.Game
         private readonly SignalBus _signalBus;
         private readonly IMediator _mediator;
 
-        public int CurentLevelID { get; set; }
+        public int CurrentLevelID { get; set; }
         public int PreviousLevelID { get; set; }
         public GameState CurrentState { get; set; }
         public string UI_MAIN_MENU { get => "UI_MainMenu"; }
@@ -25,7 +26,7 @@ namespace Assets.Code.Application.Modules.Game
             {2, "Level_002" },
             {3, "Level_003" }
         };
-        public bool MaxLevelReached { get => CurentLevelID == LEVELS.Count; }
+        public bool MaxLevelReached { get => CurrentLevelID == LEVELS.Count; }
 
         public SignalBus SignalBus => _signalBus;
         public IMediator Mediator => _mediator;
@@ -40,6 +41,7 @@ namespace Assets.Code.Application.Modules.Game
         {
             _mediator.Send(new CreatePlayerCommand());
             _signalBus.Subscribe<OnScenesLoadedSignal>(EnterState);
+            Load();
 
             ChangeState(new MainMenu());
         }
@@ -67,6 +69,16 @@ namespace Assets.Code.Application.Modules.Game
             CurrentState.EnterState();
         }
 
+        public void Save()
+        {
+            PlayerPrefs.SetInt("LevelID", CurrentLevelID);
+            PlayerPrefs.Save();
+        }
+
+        public void Load()
+        {
+            CurrentLevelID = PlayerPrefs.GetInt("LevelID");
+        }
 
     }
 }

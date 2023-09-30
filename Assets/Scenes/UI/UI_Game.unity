@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &116990879
+--- !u!1001 &265367034
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -145,7 +145,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 116990882}
+      objectReference: {fileID: 265367037}
     - target: {fileID: 605327992571181460, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -284,27 +284,27 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7420962734473165783, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 116990882}
+      addedObject: {fileID: 265367037}
   m_SourcePrefab: {fileID: 100100000, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa, type: 3}
---- !u!224 &116990880 stripped
+--- !u!224 &265367035 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4915727706416690607, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
     type: 3}
-  m_PrefabInstance: {fileID: 116990879}
+  m_PrefabInstance: {fileID: 265367034}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &116990881 stripped
+--- !u!1 &265367036 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7420962734473165783, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
     type: 3}
-  m_PrefabInstance: {fileID: 116990879}
+  m_PrefabInstance: {fileID: 265367034}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &116990882
+--- !u!114 &265367037
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 116990881}
+  m_GameObject: {fileID: 265367036}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec503e35a0c3c3041a972df754f3d563, type: 3}
@@ -344,7 +344,7 @@ RectTransform:
   m_Children:
   - {fileID: 2053675972}
   - {fileID: 1213936084}
-  - {fileID: 116990880}
+  - {fileID: 265367035}
   m_Father: {fileID: 1463141801}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
