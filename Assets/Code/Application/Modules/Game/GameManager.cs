@@ -2,6 +2,7 @@
 using Assets.Code.Application.Modules.Game.GameStates;
 using Assets.Code.Application.Signals;
 using Assets.Code.Domain.Commons.Abstractions;
+using System.Collections.Generic;
 using Zenject;
 
 namespace Assets.Code.Application.Modules.Game
@@ -15,6 +16,12 @@ namespace Assets.Code.Application.Modules.Game
         public string UI_MAIN_MENU { get => "UI_MainMenu"; }
         public string UI_GAME { get => "UI_Game"; }
         public string LEVEL_001 { get => "Level_001"; }
+        public Dictionary<int, string> LEVELS { get; } = new()
+        {
+            {1, "Level_001" },
+            {2, "Level_002" },
+            {3, "Level_003" }
+        };
 
         public SignalBus SignalBus => _signalBus;
         public IMediator Mediator => _mediator;
@@ -27,7 +34,7 @@ namespace Assets.Code.Application.Modules.Game
 
         public void Initialize()
         {
-            ChangeState(new Level001());
+            ChangeState(new MainMenu());
         }
 
         public void Tick()

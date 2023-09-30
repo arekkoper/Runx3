@@ -1,5 +1,4 @@
-﻿using UnityEditor.Search;
-
+﻿
 namespace Assets.Code.Application.Commons.Interfaces.Mediator
 {
     public interface IMediator
