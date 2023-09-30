@@ -20,6 +20,8 @@ namespace Assets.Code.Presentation.Presenters
         [Header("Parameters")]
         [SerializeField] private float _counter;
 
+        private bool _firstLoad;
+
         [Inject] private readonly SignalBus _signalBus;
         [Inject] private readonly GameManager _gameManager;
 
@@ -42,12 +44,19 @@ namespace Assets.Code.Presentation.Presenters
         {
             _canvasGroup.blocksRaycasts = true;
 
-            _counter = 0f;
-            while (_counter < _duration)
+            if(_firstLoad)
             {
-                _counter += Time.deltaTime;
-                _canvasGroup.alpha = _counter / _duration;
-                yield return new WaitForEndOfFrame();
+                _counter = 0f;
+                while (_counter < _duration)
+                {
+                    _counter += Time.deltaTime;
+                    _canvasGroup.alpha = _counter / _duration;
+                    yield return new WaitForEndOfFrame();
+                }
+            }
+            else
+            {
+                _counter = _duration;
             }
 
             _gameManager.CurrentState.ScenesToUnload.ForEach(scene =>
@@ -85,6 +94,7 @@ namespace Assets.Code.Presentation.Presenters
             }
 
             _canvasGroup.blocksRaycasts = false;
+            _firstLoad = true;
         }
 
     }
