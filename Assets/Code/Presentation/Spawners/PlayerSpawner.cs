@@ -1,6 +1,6 @@
-﻿
-using Assets.Code.Presentation.Presenters;
+﻿using Assets.Code.Presentation.Presenters;
 using UnityEngine;
+using Zenject;
 
 namespace Assets.Code.Presentation.Spawners
 {
@@ -19,12 +19,18 @@ namespace Assets.Code.Presentation.Spawners
 
         public void Spawn()
         {
-            if(_presenter != null)
-            {
-                Object.Destroy(_presenter.gameObject);
-            }
+            Unspawn();
 
             _presenter = _factory.Create(_playerService.GetPlayer());
         }
+
+        public void Unspawn()
+        {
+            if (_presenter != null)
+            {
+                Object.Destroy(_presenter.gameObject);
+            }
+        }
+
     }
 }

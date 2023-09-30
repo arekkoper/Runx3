@@ -16,5 +16,10 @@ namespace Assets.Code.Infrastructure.Loaders
         {
             _playerSpawner.Spawn();
         }
+
+        public void Unload()
+        {
+            _playerSpawner.Unspawn();
+        }
     }
 }

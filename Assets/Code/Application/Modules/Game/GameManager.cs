@@ -25,6 +25,7 @@ namespace Assets.Code.Application.Modules.Game
             {2, "Level_002" },
             {3, "Level_003" }
         };
+        public bool MaxLevelReached { get => CurentLevelID == LEVELS.Count; }
 
         public SignalBus SignalBus => _signalBus;
         public IMediator Mediator => _mediator;

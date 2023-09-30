@@ -3,5 +3,6 @@
     public interface ILevelLoader
     {
         void Load();
+        void Unload();
     }
 }
