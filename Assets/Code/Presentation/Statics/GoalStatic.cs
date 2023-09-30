@@ -1,24 +1,17 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game.Commands.LoadLevel;
+﻿using Assets.Code.Application.Signals;
+using Assets.Code.Presentation.Commons;
 using UnityEngine;
 using Zenject;
 
 namespace Assets.Code.Presentation.Presenters
 {
-    public class GoalStatic : MonoBehaviour
+    public class GoalStatic : MonoStatic
     {
         [Inject] private readonly SignalBus _signalBus;
 
-        private void Awake()
-        {
-            DiContainer container = ProjectContext.Instance.Container;
-
-            container.Inject(this);
-        }
-
         private void OnTriggerEnter(Collider other)
         {
-            _signalBus.Fire(other);
+            _signalBus.Fire(new LevelFinishedSignal());
         }
     }
 }

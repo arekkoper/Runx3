@@ -9,7 +9,6 @@ public class PresentationInstaller : MonoInstaller
 {
     [Header("Presenters")]
     [SerializeField] private PlayerPresenter _playerPresenter;
-    [SerializeField] private ScenePresenter _scenePresenter;
 
     [Header("Hubs")]
     [SerializeField] private Transform _entitiesHub;
@@ -19,7 +18,6 @@ public class PresentationInstaller : MonoInstaller
     {
         //Presenters
         Container.BindFactory<Player, PlayerPresenter, PlayerPresenter.Factory>().FromComponentInNewPrefab(_playerPresenter).UnderTransform(_entitiesHub);
-        Container.BindFactory<GameManager, ScenePresenter, ScenePresenter.Factory>().FromComponentInNewPrefab(_scenePresenter).UnderTransform(_uiHub);
 
         //Spawners
         Container.BindInterfacesAndSelfTo<PlayerSpawner>().AsSingle();

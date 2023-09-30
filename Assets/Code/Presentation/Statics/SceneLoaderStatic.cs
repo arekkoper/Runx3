@@ -1,4 +1,6 @@
 ﻿using Assets.Code.Application.Modules.Game;
+using Assets.Code.Application.Signals;
+using Assets.Code.Presentation.Commons;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +9,7 @@ using Zenject;
 
 namespace Assets.Code.Presentation.Presenters
 {
-    public class ScenePresenter : MonoBehaviour
+    public class SceneLoaderStatic : MonoStatic
     {
         [Header("References")]
         [SerializeField] private CanvasGroup _canvasGroup;
@@ -18,16 +20,20 @@ namespace Assets.Code.Presentation.Presenters
         [Header("Parameters")]
         [SerializeField] private float _counter;
 
+        [Inject] private readonly SignalBus _signalBus;
         [Inject] private readonly GameManager _gameManager;
 
-        public class Factory : PlaceholderFactory<GameManager, ScenePresenter> { }
-
-        private void Awake()
+        private void OnEnable()
         {
-            _gameManager.OnStateChange += GameManager_OnStateChange;
+            _signalBus.Subscribe<GameStateChangedSignal>(Perform);
         }
 
-        private void GameManager_OnStateChange()
+        private void OnDisable()
+        {
+            _signalBus.Unsubscribe<GameStateChangedSignal>(Perform);
+        }
+
+        private void Perform()
         {
             StartCoroutine(Transition());
         }

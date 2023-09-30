@@ -1,8 +1,7 @@
 ﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
 using Assets.Code.Application.Modules.Game.GameStates;
+using Assets.Code.Application.Signals;
 using Assets.Code.Domain.Commons.Abstractions;
-using Assets.Code.Presentation.Presenters;
-using System;
 using Zenject;
 
 namespace Assets.Code.Application.Modules.Game
@@ -11,9 +10,6 @@ namespace Assets.Code.Application.Modules.Game
     {
         private readonly SignalBus _signalBus;
         private readonly IMediator _mediator;
-        private readonly ScenePresenter.Factory _factory;
-
-        public event Action OnStateChange;
 
         public GameState CurrentState { get; set; }
         public string UI_MAIN_MENU { get => "UI_MainMenu"; }
@@ -23,16 +19,14 @@ namespace Assets.Code.Application.Modules.Game
         public SignalBus SignalBus => _signalBus;
         public IMediator Mediator => _mediator;
 
-        public GameManager(SignalBus signalBus, IMediator mediator, ScenePresenter.Factory factory)
+        public GameManager(SignalBus signalBus, IMediator mediator)
         {
             _signalBus = signalBus;
             _mediator = mediator;
-            _factory = factory;
         }
 
         public void Initialize()
         {
-            _factory.Create(this);
             ChangeState(new Level001());
         }
 
@@ -46,7 +40,7 @@ namespace Assets.Code.Application.Modules.Game
             state.Manager = this;
             CurrentState = state;
             CurrentState.ReloadScenes();
-            OnStateChange?.Invoke();
+            _signalBus.Fire(new GameStateChangedSignal());
         }
 
 
