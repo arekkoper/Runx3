@@ -9,7 +9,7 @@ namespace Assets.Code.Domain.Commons.Abstractions
         public List<string> ScenesToLoad { get; set; } = new();
         public List<string> ScenesToUnload { get; set; } = new();
 
-        protected abstract void EnterState();
+        public abstract void EnterState();
         public abstract void ReloadScenes();
         public abstract void UpdateState();
     }

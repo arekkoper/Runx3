@@ -3,17 +3,19 @@ using Assets.Code.Application.Modules.Game.GameStates;
 using Assets.Code.Application.Modules.Hero.Commands.CreatePlayer;
 using Assets.Code.Application.Signals;
 using Assets.Code.Domain.Commons.Abstractions;
+using System;
 using System.Collections.Generic;
 using Zenject;
 
 namespace Assets.Code.Application.Modules.Game
 {
-    public class GameManager : IInitializable, ITickable
+    public class GameManager : IInitializable, ITickable, IDisposable
     {
         private readonly SignalBus _signalBus;
         private readonly IMediator _mediator;
 
         public int CurentLevelID { get; set; }
+        public int PreviousLevelID { get; set; }
         public GameState CurrentState { get; set; }
         public string UI_MAIN_MENU { get => "UI_MainMenu"; }
         public string UI_GAME { get => "UI_Game"; }
@@ -36,9 +38,14 @@ namespace Assets.Code.Application.Modules.Game
         public void Initialize()
         {
             _mediator.Send(new CreatePlayerCommand());
-            CurentLevelID = 0;
+            _signalBus.Subscribe<OnScenesLoadedSignal>(EnterState);
 
             ChangeState(new MainMenu());
+        }
+
+        public void Dispose()
+        {
+            _signalBus.Unsubscribe<OnScenesLoadedSignal>(EnterState);
         }
 
         public void Tick()
@@ -52,6 +59,11 @@ namespace Assets.Code.Application.Modules.Game
             CurrentState = state;
             CurrentState.ReloadScenes();
             _signalBus.Fire(new OnGameStateChangedSignal());
+        }
+
+        public void EnterState()
+        {
+            CurrentState.EnterState();
         }
 
 

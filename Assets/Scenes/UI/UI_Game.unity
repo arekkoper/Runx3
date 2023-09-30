@@ -372,7 +372,7 @@ PrefabInstance:
     - target: {fileID: 605327992571181460, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 605327992571181460, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
@@ -388,12 +388,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1213936086}
+      objectReference: {fileID: 715055605}
     - target: {fileID: 605327992571181460, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1213936086}
     - target: {fileID: 605327992571181460, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -407,7 +407,7 @@ PrefabInstance:
     - target: {fileID: 605327992571181460, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Interact
+      value: Hide
       objectReference: {fileID: 0}
     - target: {fileID: 605327992571181460, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
@@ -417,13 +417,12 @@ PrefabInstance:
     - target: {fileID: 605327992571181460, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: Assets.Code.Presentation.Statics.Interactions.NextLevelInteraction,
-        Code
+      value: Assets.Code.Presentation.Statics.UI.WinSection, Code
       objectReference: {fileID: 0}
     - target: {fileID: 605327992571181460, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: Assets.Code.Presentation.Statics.Interactions.RestartGameInteraction,
+      value: Assets.Code.Presentation.Statics.Interactions.NextLevelInteraction,
         Code
       objectReference: {fileID: 0}
     - target: {fileID: 605327992571181460, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,

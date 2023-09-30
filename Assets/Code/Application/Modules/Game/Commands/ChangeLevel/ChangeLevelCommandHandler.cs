@@ -14,9 +14,9 @@ namespace Assets.Code.Application.Modules.Game.Commands.ChangeLevel
 
         public void Handle(ChangeLevelCommand command)
         {
+            _gameManager.PreviousLevelID = _gameManager.CurentLevelID;
             _gameManager.CurentLevelID = command.LevelID;
             _gameManager.ChangeState(new Level() { LevelID = command.LevelID });
-
 
         }
     }

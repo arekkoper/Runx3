@@ -56,7 +56,13 @@ namespace Assets.Code.Presentation.Presenters
             });
 
             var asyncOperations = new List<AsyncOperation>();
-            _gameManager.CurrentState.ScenesToLoad.ForEach(scene => asyncOperations.Add(SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive)));
+            _gameManager.CurrentState.ScenesToLoad.ForEach(scene =>
+            {
+                if(!SceneManager.GetSceneByName(scene).isLoaded)
+                {
+                    asyncOperations.Add(SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive));
+                }
+            });
 
             var asyncLoaded = new List<AsyncOperation>();
             while (asyncLoaded.Count != asyncOperations.Count)
@@ -68,6 +74,8 @@ namespace Assets.Code.Presentation.Presenters
 
                 yield return null;
             }
+
+            _signalBus.Fire(new OnScenesLoadedSignal());
 
             while (_counter > 0f)
             {
