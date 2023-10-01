@@ -27,6 +27,7 @@ namespace Assets.Code.Application.Modules.Hero.Commands.PlayerWin
             _gameManager.CurrentLevelID++;
 
             _gameManager.Save();
+            _playerService.Save();
        }
     }
 }

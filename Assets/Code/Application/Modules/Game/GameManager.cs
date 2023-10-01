@@ -43,7 +43,8 @@ namespace Assets.Code.Application.Modules.Game
             else
                 CurrentLevelID = 1;
 
-            _mediator.Send(new CreatePlayerCommand());
+            var player = _mediator.Send(new CreatePlayerCommand());
+
             _signalBus.Subscribe<OnScenesLoadedSignal>(EnterState);
 
             ChangeState(new MainMenu());

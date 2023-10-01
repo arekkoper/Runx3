@@ -1,5 +1,6 @@
 ﻿
 using Assets.Code.Domain.Entities;
+using UnityEngine;
 
 namespace Assets.Code.Infrastructure.Services
 {
@@ -18,6 +19,8 @@ namespace Assets.Code.Infrastructure.Services
                 TimeToMaxSpeed = 0.26f,
                 TimeToLoseMaxSpeed = 0.2f
             };
+
+            Load();
 
             return _player;
         }
@@ -40,6 +43,17 @@ namespace Assets.Code.Infrastructure.Services
         public void ResetScore()
         {
             _player.Score = 0;
+        }
+
+        public void Save()
+        {
+            PlayerPrefs.SetInt("Score", _player.Score);
+            PlayerPrefs.Save();
+        }
+
+        public void Load()
+        {
+            _player.Score = PlayerPrefs.GetInt("Score");
         }
     }
 }
