@@ -1,6 +1,5 @@
 ﻿using Assets.Code.Presentation.Presenters;
 using UnityEngine;
-using Zenject;
 
 namespace Assets.Code.Presentation.Spawners
 {
@@ -30,6 +29,11 @@ namespace Assets.Code.Presentation.Spawners
             {
                 Object.Destroy(_presenter.gameObject);
             }
+        }
+
+        public Vector3 GetPlayerPosition()
+        {
+            return _presenter == null ? Vector3.zero : _presenter.transform.position;
         }
 
     }
