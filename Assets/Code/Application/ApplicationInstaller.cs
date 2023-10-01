@@ -1,7 +1,6 @@
 using Assets.Code.Application.Modules.Game;
 using Assets.Code.Application.Observers;
 using Assets.Code.Application.Signals;
-using UnityEngine;
 using Zenject;
 
 namespace Assets.Code.Application

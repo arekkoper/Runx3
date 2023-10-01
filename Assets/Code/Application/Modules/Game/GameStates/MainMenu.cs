@@ -10,8 +10,13 @@ namespace Assets.Code.Application.Modules.Game.GameStates
             ScenesToLoad.Add(Manager.UI_MAIN_MENU);
             ScenesToUnload.Add(Manager.UI_GAME);
 
-            if(Manager.CurrentLevelID > 0)
-                ScenesToUnload.Add(Manager.LEVELS[Manager.CurrentLevelID]);
+            foreach (var item in Manager.LEVELS)
+            {
+                ScenesToUnload.Add(Manager.LEVELS[item.Key]);
+            }
+
+            //if (Manager.CurrentLevelID > 0)
+            //    ScenesToUnload.Add(Manager.LEVELS[Manager.CurrentLevelID]);
         }
 
         public override void UpdateState()

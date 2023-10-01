@@ -1,4 +1,5 @@
-﻿using Assets.Code.Application.Modules.Game;
+﻿using Assets.Code.Application.Commons.Interfaces.UI;
+using Assets.Code.Application.Modules.Game;
 using Assets.Code.Application.Signals;
 using Assets.Code.Presentation.Commons;
 using TMPro;
@@ -7,7 +8,7 @@ using Zenject;
 
 namespace Assets.Code.Presentation.Statics.UI
 {
-    public class WinSection : MonoStatic
+    public class WinSection : MonoStatic, IWinSection
     {
         [Header("References")]
         [SerializeField] private CanvasGroup _canvasGroup;
@@ -27,7 +28,7 @@ namespace Assets.Code.Presentation.Statics.UI
             _signalBus.Unsubscribe<OnPlayerWinSignal>(Show);
         }
 
-        private void Show()
+        public void Show()
         {
             if(_gameManager.MaxLevelReached)
             {

@@ -16,7 +16,6 @@ namespace Assets.Code.Application.Modules.Game
         private readonly IMediator _mediator;
 
         public int CurrentLevelID { get; set; }
-        public int PreviousLevelID { get; set; }
         public GameState CurrentState { get; set; }
         public string UI_MAIN_MENU { get => "UI_MainMenu"; }
         public string UI_GAME { get => "UI_Game"; }
@@ -39,9 +38,13 @@ namespace Assets.Code.Application.Modules.Game
 
         public void Initialize()
         {
+            if (PlayerPrefs.GetInt("LevelID") > 1)
+                Load();
+            else
+                CurrentLevelID = 1;
+
             _mediator.Send(new CreatePlayerCommand());
             _signalBus.Subscribe<OnScenesLoadedSignal>(EnterState);
-            Load();
 
             ChangeState(new MainMenu());
         }

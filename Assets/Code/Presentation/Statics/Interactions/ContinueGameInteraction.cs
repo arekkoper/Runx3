@@ -14,7 +14,7 @@ namespace Assets.Code.Presentation.Statics.Interactions
 
         private void Start()
         {
-            if (_gameManager.CurrentLevelID == 0)
+            if (_gameManager.CurrentLevelID <= 1)
                 GetComponent<Button>().interactable = false;
         }
 
