@@ -36,5 +36,10 @@ namespace Assets.Code.Infrastructure.Services
         {
             _player.Score += 10;
         }
+
+        public void ResetScore()
+        {
+            _player.Score = 0;
+        }
     }
 }

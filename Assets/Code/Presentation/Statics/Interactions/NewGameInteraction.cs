@@ -1,6 +1,7 @@
 ﻿
 using Assets.Code.Application.Commons.Interfaces.Mediator;
 using Assets.Code.Application.Modules.Game.Commands.ChangeLevel;
+using Assets.Code.Application.Modules.Game.Commands.StartNewGame;
 using Assets.Code.Presentation.Commons;
 using Zenject;
 
@@ -12,7 +13,7 @@ namespace Assets.Code.Presentation.Statics.Interactions
 
         public void Interact()
         {
-            _mediator.Send(new ChangeLevelCommand() { LevelID = 1 });
+            _mediator.Send(new StartNewGameCommand());
         }
     }
 }
