@@ -8,12 +8,10 @@ namespace Assets.Code.Application.Modules.Game.Commands.ReturnToMenu
     public class ReturnToMenuCommandHandler : ICommandHandler<ReturnToMenuCommand>
     {
         private readonly GameManager _gameManager;
-        private readonly ILevelLoader _levelLoader;
 
-        public ReturnToMenuCommandHandler(GameManager gameManager, ILevelLoader levelLoader)
+        public ReturnToMenuCommandHandler(GameManager gameManager)
         {
             _gameManager = gameManager;
-            _levelLoader = levelLoader;
         }
 
         public void Handle(ReturnToMenuCommand command)

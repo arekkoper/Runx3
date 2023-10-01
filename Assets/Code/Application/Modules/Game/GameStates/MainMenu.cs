@@ -15,8 +15,6 @@ namespace Assets.Code.Application.Modules.Game.GameStates
                 ScenesToUnload.Add(Manager.LEVELS[item.Key]);
             }
 
-            //if (Manager.CurrentLevelID > 0)
-            //    ScenesToUnload.Add(Manager.LEVELS[Manager.CurrentLevelID]);
         }
 
         public override void UpdateState()
