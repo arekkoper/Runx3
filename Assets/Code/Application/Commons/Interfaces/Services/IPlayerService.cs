@@ -4,4 +4,6 @@ public interface IPlayerService
 {
     Player Create();
     Player GetPlayer();
+    int GetScore();
+    void IncreaseScore();
 }

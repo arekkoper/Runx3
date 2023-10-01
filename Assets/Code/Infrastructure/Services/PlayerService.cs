@@ -26,5 +26,15 @@ namespace Assets.Code.Infrastructure.Services
         {
             return _player;
         }
+
+        public int GetScore()
+        {
+            return _player.Score;
+        }
+
+        public void IncreaseScore()
+        {
+            _player.Score += 10;
+        }
     }
 }
