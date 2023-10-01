@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerPresenter: {fileID: 7212802172318825142, guid: b8c2d9e8731e2fb40ad6242619cff7ce,
     type: 3}
-  _scenePresenter: {fileID: 3161078255103670984, guid: 164c6bc32f25d894d8f57fe64e77863b,
+  _catcherPresenter: {fileID: 8520420633275913502, guid: 065457b756f897a408d234dc9dd359f8,
     type: 3}
   _entitiesHub: {fileID: 199599693854135951}
   _uiHub: {fileID: 6387933245619010850}

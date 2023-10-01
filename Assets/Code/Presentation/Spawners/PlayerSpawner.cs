@@ -31,9 +31,14 @@ namespace Assets.Code.Presentation.Spawners
             }
         }
 
+        public bool HasPresenter()
+        {
+            return _presenter != null;
+        }
+
         public Vector3 GetPlayerPosition()
         {
-            return _presenter == null ? Vector3.zero : _presenter.transform.position;
+            return _presenter.transform.position;
         }
 
     }

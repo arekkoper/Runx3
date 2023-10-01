@@ -22,6 +22,8 @@ namespace Assets.Code.Presentation.Presenters
 
         [Inject] private readonly PlayerSpawner _playerSpawner;
 
+        public class Factory : PlaceholderFactory<CatcherPresenter> { }
+
         private enum State
         {
             Idle,
@@ -68,7 +70,7 @@ namespace Assets.Code.Presentation.Presenters
 
         private void Retarget()
         {
-            _currentTarget = _playerSpawner.GetPlayerPosition();
+            _currentTarget = _playerSpawner.HasPresenter() ? _playerSpawner.GetPlayerPosition() : new Vector3(transform.position.x + 2f, 0f, transform.position.z + 2f);
             _initialRotation = _model.rotation;
             _targetRotation = Quaternion.LookRotation((_currentTarget - transform.position).normalized);
             _state = State.Rotating;
