@@ -19,6 +19,8 @@ namespace Assets.Code.Presentation.Presenters
         private Transform _currentPoint;
         private Transform[] _points;
 
+        public Transform[] Points { get => _points; }
+
         private void Start()
         {
             SetupPatrolPoints();

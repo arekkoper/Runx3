@@ -1,5 +1,3 @@
-using Assets.Code.Application.Commons.Interfaces.UI;
-using Assets.Code.Application.Modules.Game;
 using Assets.Code.Domain.Entities;
 using Assets.Code.Presentation.Presenters;
 using Assets.Code.Presentation.Spawners;
