@@ -79,11 +79,15 @@ namespace Assets.Code.Presentation.Presenters
                     point.gameObject.hideFlags = HideFlags.HideInHierarchy;
                 }
             }
+            else
+            {
+                _points = new Transform[0];
+            }
 
             SetCurrentPoint(0);
         }
 
-        private List<Transform> GetUnsortedPatrolPoints()
+        public List<Transform> GetUnsortedPatrolPoints()
         {
             var points = new List<Transform>();
 
