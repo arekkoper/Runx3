@@ -13,16 +13,7 @@ namespace Assets.Code.Infrastructure.Editor
         {
             if (Target == null) return;
 
-            Handles.color = Color.white;
-
-            Vector3[] vectors = new Vector3[Target.Points.Length];
-
-            for (int i = 0; i < Target.Points.Length; i++)
-            {
-                vectors[i] = Target.Points[i].position;
-            }
-
-            Handles.DrawLines(vectors);
+            Debug.Log("Ohayoo!");
 
         }
     }

@@ -15,6 +15,8 @@ namespace Assets.Code.Presentation.Presenters
 
         private float _lastFireTime = 0f;
 
+        public float Range { get => _range; }
+
         private void Update()
         {
             if(Time.time >= _lastFireTime + _fireRate)
