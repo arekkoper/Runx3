@@ -5,6 +5,7 @@ using Assets.Code.Application.Modules.Hero.Behaviours;
 using Assets.Code.Application.Modules.Hero.Commands.KillPlayer;
 using Assets.Code.Application.Signals;
 using Assets.Code.Domain.Entities;
+using System;
 using UnityEngine;
 using Zenject;
 
@@ -36,9 +37,24 @@ namespace Assets.Code.Presentation.Presenters
             };
         }
 
+        private void OnEnable()
+        {
+            _signalBus.Subscribe<OnPlayerWinSignal>(React);
+        }
+
+        private void OnDisable()
+        {
+            _signalBus.Unsubscribe<OnPlayerWinSignal>(React);
+        }
+
         private void Update()
         {
             _movementBehaviour.Behave();
+        }
+
+        private void React()
+        {
+            _movementBehaviour.StopHandleInputs = true;
         }
 
         public void Die()

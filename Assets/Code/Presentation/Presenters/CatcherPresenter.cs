@@ -1,5 +1,6 @@
 ﻿
 using Assets.Code.Application.Commons.Interfaces.Mediator;
+using Assets.Code.Application.Signals;
 using Assets.Code.Presentation.Commons;
 using Assets.Code.Presentation.Spawners;
 using System;
@@ -21,6 +22,7 @@ namespace Assets.Code.Presentation.Presenters
         [SerializeField] private float _postRotationWaitTime;
 
         [Inject] private readonly PlayerSpawner _playerSpawner;
+        [Inject] private readonly SignalBus _signalBus;
 
         public class Factory : PlaceholderFactory<CatcherPresenter> { }
 
@@ -45,6 +47,21 @@ namespace Assets.Code.Presentation.Presenters
         private void Update()
         {
             Movement();
+        }
+
+        private void OnEnable()
+        {
+            _signalBus.Subscribe<OnPlayerWinSignal>(React);
+        }
+
+        private void OnDisable()
+        {
+            _signalBus.Unsubscribe<OnPlayerWinSignal>(React);
+        }
+
+        private void React()
+        {
+            gameObject.SetActive(false);
         }
 
         private void Movement()
