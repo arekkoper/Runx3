@@ -184,7 +184,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 60.000004
+  field of view: 75
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -529,6 +529,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Static (SceneLoader)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7723448941753627102, guid: 164c6bc32f25d894d8f57fe64e77863b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

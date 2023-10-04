@@ -1,6 +1,5 @@
-﻿
+﻿#if UNITY_EDITOR
 using Assets.Code.Presentation.Presenters;
-using log4net.Util;
 using UnityEditor;
 using UnityEngine;
 
@@ -25,3 +24,4 @@ namespace Assets.Code.Infrastructure.Editor
         }
     }
 }
+#endif
