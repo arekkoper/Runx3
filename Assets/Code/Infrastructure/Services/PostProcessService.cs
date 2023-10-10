@@ -2,6 +2,7 @@
 using Assets.Code.Application.Commons.Interfaces.Services;
 using Assets.Code.Application.Signals;
 using Assets.Code.Presentation.Commons;
+using System;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -20,12 +21,17 @@ namespace Assets.Code.Infrastructure.Providers
 
         private void OnEnable()
         {
-            _signalBus.Subscribe<OnLevelLoadedSignal>(() => ChangeVignetteIntensity(0f));
+            _signalBus.Subscribe<OnLevelLoadedSignal>(ResetVignette);
         }
 
         private void OnDisable()
         {
-            _signalBus.Unsubscribe<OnLevelLoadedSignal>(() => ChangeVignetteIntensity(0f));
+            _signalBus.Unsubscribe<OnLevelLoadedSignal>(ResetVignette);
+        }
+
+        private void ResetVignette()
+        {
+            ChangeVignetteIntensity(0f);
         }
 
         public void ChangeVignetteIntensity(float intensity)

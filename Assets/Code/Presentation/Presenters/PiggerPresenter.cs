@@ -14,7 +14,7 @@ namespace Assets.Code.Presentation.Presenters
         [Header("Parameters")]
         [SerializeField] private float _speed;
 
-        private const float RotationSlerpAmount = 0.05f;
+        private const float RotationSlerpAmount = 0.08f;
         private int _currentPointIndex;
         private Transform _currentPoint;
         private Transform[] _points;
