@@ -16,6 +16,7 @@ namespace Assets.Code.Application
             Container.DeclareSignal<OnGameStateChangedSignal>().OptionalSubscriber();
             Container.DeclareSignal<OnPlayerKilledSignal>().OptionalSubscriber();
             Container.DeclareSignal<OnScenesLoadedSignal>().OptionalSubscriber();
+            Container.DeclareSignal<OnLevelLoadedSignal>().OptionalSubscriber();
 
             //Observers
             Container.BindInterfacesAndSelfTo<OnPlayerKilledObserver>().AsSingle();

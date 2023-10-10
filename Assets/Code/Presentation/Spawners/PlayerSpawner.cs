@@ -41,5 +41,10 @@ namespace Assets.Code.Presentation.Spawners
             return _presenter.transform.position;
         }
 
+        public PlayerPresenter GetPresenter()
+        {
+            return _presenter;
+        }
+
     }
 }

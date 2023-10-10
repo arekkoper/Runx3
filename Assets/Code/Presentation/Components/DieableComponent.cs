@@ -1,7 +1,7 @@
 ﻿using Assets.Code.Application.Commons.Interfaces.Presenters;
 using UnityEngine;
 
-namespace Assets.Code.Presentation.Componenets
+namespace Assets.Code.Presentation.Components
 {
     public class DieableComponent : MonoBehaviour
     {

@@ -29,10 +29,20 @@ namespace Assets.Code.Presentation.Spawners
             _presenter.transform.position = _spawnPoint.transform.position;
         }
 
-        internal void Unspawn()
+        public void Unspawn()
         {
             if(_presenter != null)
                 Object.Destroy(_presenter.gameObject);
+        }
+
+        public CatcherPresenter GetPresenter()
+        {
+            return _presenter;
+        }
+
+        public bool HasPresenter()
+        {
+            return _presenter != null;
         }
     }
 }

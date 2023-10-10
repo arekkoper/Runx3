@@ -1,4 +1,5 @@
 using Assets.Code.Domain.Entities;
+using Assets.Code.Presentation.Effects;
 using Assets.Code.Presentation.Presenters;
 using Assets.Code.Presentation.Spawners;
 using UnityEngine;
@@ -23,6 +24,8 @@ public class PresentationInstaller : MonoInstaller
         //Spawners
         Container.BindInterfacesAndSelfTo<PlayerSpawner>().AsSingle();
         Container.BindInterfacesAndSelfTo<CatcherSpawner>().AsSingle();
+
+
 
     }
 }

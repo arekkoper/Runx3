@@ -1,6 +1,8 @@
 using Assets.Code.Application.Commons.Interfaces.Loaders;
 using Assets.Code.Application.Commons.Interfaces.Mediator;
+using Assets.Code.Application.Commons.Interfaces.Services;
 using Assets.Code.Infrastructure.Loaders;
+using Assets.Code.Infrastructure.Providers;
 using Assets.Code.Infrastructure.Services;
 using Zenject;
 
@@ -15,5 +17,6 @@ public class InfrastructureInstaller : MonoInstaller
 
         //Loaders
         Container.Bind<ILevelLoader>().To<LevelLoader>().AsSingle();
+
     }
 }

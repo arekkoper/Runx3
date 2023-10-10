@@ -1,5 +1,8 @@
 ﻿using Assets.Code.Application.Commons.Interfaces.Loaders;
+using Assets.Code.Application.Commons.Interfaces.Mediator;
+using Assets.Code.Application.Signals;
 using Assets.Code.Presentation.Spawners;
+using Zenject;
 
 namespace Assets.Code.Infrastructure.Loaders
 {
@@ -7,17 +10,21 @@ namespace Assets.Code.Infrastructure.Loaders
     {
         private readonly PlayerSpawner _playerSpawner;
         private readonly CatcherSpawner _catcherSpawner;
+        private readonly SignalBus _signalBus;
 
-        public LevelLoader(PlayerSpawner playerSpawner, CatcherSpawner catcherSpawner)
+        public LevelLoader(PlayerSpawner playerSpawner, CatcherSpawner catcherSpawner, SignalBus signalBus)
         {
             _playerSpawner = playerSpawner;
             _catcherSpawner = catcherSpawner;
+            _signalBus = signalBus;
         }
 
         public void Load() 
         {
             _playerSpawner.Spawn();
             _catcherSpawner.Spawn();
+
+            _signalBus.Fire(new OnLevelLoadedSignal());
         }
 
         public void Unload()
