@@ -989,6 +989,9 @@ MonoBehaviour:
   _lockedObject: {fileID: 689535681}
   _theBestScore: {fileID: 2137941419}
   _deaths: {fileID: 1236217551}
+  _nextLevel: {fileID: 955841679}
+  _previousLevel: {fileID: 814684476}
+  _run: {fileID: 2045951136}
 --- !u!1 &325869148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3183,7 +3186,7 @@ PrefabInstance:
     - target: {fileID: 7420962734473165783, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: m_Name
-      value: Button (StartGame)
+      value: Button (Run)
       objectReference: {fileID: 0}
     - target: {fileID: 7505139459629376117, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
@@ -3216,6 +3219,18 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 2045951134}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2045951136 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 605327992571181460, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 2045951134}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2132185392
 GameObject:
   m_ObjectHideFlags: 0
