@@ -16,7 +16,7 @@ namespace Assets.Code.Application.Modules.Game.Commands.ReturnToMenu
 
         public void Handle(ReturnToMenuCommand command)
         {
-            _gameManager.ChangeState(new MainMenu());
+            _gameManager.ChangeState(new MainMenuState());
         }
     }
 }

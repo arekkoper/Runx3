@@ -35,9 +35,9 @@ namespace Assets.Code.Infrastructure.Services
             return _player.Score;
         }
 
-        public void IncreaseScore()
+        public void IncreaseScore(int score)
         {
-            _player.Score += 10;
+            _player.Score += score;
         }
 
         public void ResetScore()

@@ -1,5 +1,4 @@
 ﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game.GameStates;
 
 namespace Assets.Code.Application.Modules.Game.Commands.ChangeLevel
 {
@@ -14,8 +13,7 @@ namespace Assets.Code.Application.Modules.Game.Commands.ChangeLevel
 
         public void Handle(ChangeLevelCommand command)
         {
-            _gameManager.ChangeState(new Level() { LevelID = command.LevelID });
-
+            _gameManager.ChangeState(new GameStates.LevelState() { LevelID = command.LevelID });
         }
     }
 }

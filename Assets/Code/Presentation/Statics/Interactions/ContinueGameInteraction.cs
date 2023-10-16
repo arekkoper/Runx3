@@ -15,7 +15,14 @@ namespace Assets.Code.Presentation.Statics.Interactions
         private void Start()
         {
             if (_gameManager.CurrentLevelID <= 1)
+            {
                 GetComponent<Button>().interactable = false;
+            }
+            
+            if (_gameManager.MaxLevelReached)
+            {
+                GetComponent<Button>().gameObject.SetActive(false);
+            }
         }
 
         public void Interact()

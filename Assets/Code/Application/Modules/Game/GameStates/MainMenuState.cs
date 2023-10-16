@@ -3,7 +3,7 @@ using Assets.Code.Domain.Commons.Abstractions;
 
 namespace Assets.Code.Application.Modules.Game.GameStates
 {
-    public class MainMenu : GameState
+    public class MainMenuState : GameState
     {
         public override void ReloadScenes()
         {
@@ -25,5 +25,6 @@ namespace Assets.Code.Application.Modules.Game.GameStates
         {
             Manager.Mediator.Send(new UnloadLevelCommand());
         }
+
     }
 }

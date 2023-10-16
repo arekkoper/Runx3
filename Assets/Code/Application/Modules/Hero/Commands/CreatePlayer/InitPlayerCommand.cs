@@ -3,7 +3,7 @@ using Assets.Code.Domain.Entities;
 
 namespace Assets.Code.Application.Modules.Hero.Commands.CreatePlayer
 {
-    public class CreatePlayerCommand : ICommand<Player>
+    public class InitPlayerCommand : ICommand<Player>
     {
 
     }

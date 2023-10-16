@@ -5,7 +5,7 @@ public interface IPlayerService
     Player Create();
     Player GetPlayer();
     int GetScore();
-    void IncreaseScore();
+    void IncreaseScore(int score);
     void ResetScore();
     void Save();
 }

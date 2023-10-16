@@ -1,6 +1,7 @@
 ﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
 using Assets.Code.Application.Modules.Game.GameStates;
 using Assets.Code.Application.Modules.Hero.Commands.CreatePlayer;
+using Assets.Code.Application.Modules.Level.Commands.InitLevels;
 using Assets.Code.Application.Signals;
 using Assets.Code.Domain.Commons.Abstractions;
 using System;
@@ -25,7 +26,9 @@ namespace Assets.Code.Application.Modules.Game
             {2, "Level_002" },
             {3, "Level_003" }
         };
-        public bool MaxLevelReached { get => CurrentLevelID == LEVELS.Count; }
+        public bool MaxLevelReached { get => CurrentLevelID >= LEVELS.Count; }
+        public float StartLevelTime { get; set; }
+        public float EndLevelTime { get; set; }
 
         public SignalBus SignalBus => _signalBus;
         public IMediator Mediator => _mediator;
@@ -43,11 +46,13 @@ namespace Assets.Code.Application.Modules.Game
             else
                 CurrentLevelID = 1;
 
-            var player = _mediator.Send(new CreatePlayerCommand());
+            //Initiator commands
+            _mediator.Send(new InitPlayerCommand());
+            _mediator.Send(new InitLevelsCommand() { LevelCap = 3 });
 
             _signalBus.Subscribe<OnScenesLoadedSignal>(EnterState);
 
-            ChangeState(new MainMenu());
+            ChangeState(new MainMenuState());
         }
 
         public void Dispose()
