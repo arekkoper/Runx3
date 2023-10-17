@@ -1,6 +1,5 @@
 using Zenject;
 using NUnit.Framework;
-using System;
 using Assets.Code.Application.Commons.Interfaces.Mediator;
 using Assets.Code.Infrastructure.Services;
 using Assets.Code.Application.Commons.Interfaces.Services;
@@ -9,7 +8,7 @@ using Assets.Code.Application.Commons.Interfaces.Repositories;
 using Assets.Code.Infrastructure.Repositories;
 
 [TestFixture]
-public class PlayerWinTest : ZenjectUnitTestFixture
+public class MakeLevelAvailableTest : ZenjectUnitTestFixture
 {
     [SetUp]
     public void CommonInstall()
@@ -22,10 +21,9 @@ public class PlayerWinTest : ZenjectUnitTestFixture
 
     [Inject] private readonly IMediator _mediator;
     [Inject] private readonly ILevelService _levelService;
-    [Inject] private readonly ILevelRepository _levelRepository;
 
     [Test]
-    public void MakeLevelAvailable()
+    public void ChangeLevelAvailableFromFalseToTrue()
     {
         var level = _levelService.Create();
 
