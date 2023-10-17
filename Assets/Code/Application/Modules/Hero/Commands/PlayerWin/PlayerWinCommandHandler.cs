@@ -1,6 +1,8 @@
 ﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
+using Assets.Code.Application.Commons.Interfaces.Services;
 using Assets.Code.Application.Modules.Game;
 using Assets.Code.Application.Modules.Game.Commands.CalculateScore;
+using Assets.Code.Application.Modules.Level.Commands.MakeAvailable;
 using Assets.Code.Application.Signals;
 using UnityEngine;
 using Zenject;
@@ -33,6 +35,7 @@ namespace Assets.Code.Application.Modules.Hero.Commands.PlayerWin
             _signalBus.Fire(new OnPlayerWinSignal()); //this is for UI
 
             _gameManager.CurrentLevelID++;
+            _mediator.Send(new MakeLevelAvailableCommand() { Id = _gameManager.CurrentLevelID });
 
             _gameManager.Save();
             _playerService.Save();
