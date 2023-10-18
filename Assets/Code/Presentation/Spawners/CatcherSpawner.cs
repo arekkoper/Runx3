@@ -25,6 +25,8 @@ namespace Assets.Code.Presentation.Spawners
         {
             Unspawn();
 
+            if (_spawnPoint == null) return;
+
             _presenter = _factory.Create();
             _presenter.transform.position = _spawnPoint.transform.position;
         }

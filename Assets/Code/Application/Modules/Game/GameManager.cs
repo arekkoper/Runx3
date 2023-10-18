@@ -22,6 +22,7 @@ namespace Assets.Code.Application.Modules.Game
         public string UI_GAME { get => "UI_Game"; }
         public Dictionary<int, string> LEVELS { get; } = new()
         {
+            {0, "Level_Test" },
             {1, "Level_001" },
             {2, "Level_002" },
             {3, "Level_003" }
