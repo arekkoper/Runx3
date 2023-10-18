@@ -8,7 +8,6 @@ namespace Assets.Code.Presentation.Presenters
         [Header("References")]
         [SerializeField] private Transform _spikeHolder;
         [SerializeField] private GameObject _hitBoxObject;
-        [SerializeField] private GameObject _colliderObject;
 
         [Header("Parameters")]
         [SerializeField] private float _interval;
@@ -43,7 +42,6 @@ namespace Assets.Code.Presentation.Presenters
 
         private void StartLowering()
         {
-            _hitBoxObject.SetActive(false);
             _lastSwitchTime = Time.time;
             _state = State.Lowering;
         }
@@ -65,7 +63,7 @@ namespace Assets.Code.Presentation.Presenters
                 if(scale.y == LoweredSpikeHeight)
                 {
                     Invoke("StartRising", _interval);
-                    _colliderObject.SetActive(false);
+                    _hitBoxObject.SetActive(false);
                     _state = State.Lowered;
                 }
             }
@@ -79,7 +77,6 @@ namespace Assets.Code.Presentation.Presenters
                 if (scale.y == SpikeWeight)
                 {
                     Invoke("StartLowering", _raiseWaitTime);
-                    _colliderObject.SetActive(true);
                     _state = State.Raised;
                 }
 
