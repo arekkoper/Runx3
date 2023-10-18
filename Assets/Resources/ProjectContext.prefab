@@ -44,6 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d639143e820d8c54399b520886e10563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CatcherSettings:
+    Speed: 22
+    MinRetargetInterval: 0.2
+    MaxRetargetInterval: 0.5
+    RotationTime: 0.1
+    PostRotationWaitTime: 0.3
 --- !u!1 &2881026751000409607
 GameObject:
   m_ObjectHideFlags: 0
