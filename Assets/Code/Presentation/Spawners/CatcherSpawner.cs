@@ -1,6 +1,5 @@
 ﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
 using Assets.Code.Application.Commons.Interfaces.Spawners;
-using Assets.Code.Application.Modules.Catcher.Commands.CreateCatcher;
 using Assets.Code.Domain.Entities;
 using Assets.Code.Presentation.Presenters;
 using Assets.Code.Presentation.Spawners.Points;
@@ -35,9 +34,7 @@ namespace Assets.Code.Presentation.Spawners
 
             if (_spawnPoint == null) return;
 
-            var catcher = _mediator.Send(new CreateCatcherCommand());
-
-            _presenter = _factory.Create(catcher);
+            _presenter = _factory.Create();
 
             _presenter.transform.position = _spawnPoint.transform.position;
 
