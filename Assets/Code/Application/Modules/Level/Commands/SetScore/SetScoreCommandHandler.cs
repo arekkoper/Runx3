@@ -18,7 +18,7 @@ namespace Assets.Code.Application.Modules.Level.Commands.SetScore
         {
             var level = _levelService.GetLevelById(command.LevelID);
 
-            if(command.Score > level.TheBestScore)
+            if(command.Score < level.TheBestScore || level.TheBestScore == 0)
             {
                 level.TheBestScore = command.Score;
 

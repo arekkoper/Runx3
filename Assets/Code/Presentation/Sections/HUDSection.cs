@@ -12,7 +12,7 @@ using Zenject;
 
 namespace Assets.Code.Presentation.Statics.UI
 {
-    public class ScoreSection : MonoStatic
+    public class HUDSection : MonoStatic
     {
         [Header("References")]
         [SerializeField] private TMP_Text _currentScore;

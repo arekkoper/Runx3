@@ -32,7 +32,7 @@ namespace Assets.Code.Application.Modules.Game.GameStates
             Manager.Mediator.Send(new LoadLevelCommand());
             Manager.StartLevelTime = Time.time;
 
-            Debug.Log($"Enter stte Level {LevelID}");
+            Debug.Log($"Enter state Level {LevelID}");
         }
 
     }
