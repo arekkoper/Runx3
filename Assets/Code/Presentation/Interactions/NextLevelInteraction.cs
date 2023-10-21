@@ -14,9 +14,6 @@ namespace Assets.Code.Presentation.Statics.Interactions
 
         public void Interact()
         {
-            //var newLevelID = _gameManager.CurrentLevelID;
-            //newLevelID++;
-            //_mediator.Send(new ChangeLevelCommand() { LevelID = newLevelID });
             _mediator.Send(new ChangeLevelCommand() { LevelID = _gameManager.CurrentLevelID });
         }
     }

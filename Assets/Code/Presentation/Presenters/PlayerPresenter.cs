@@ -1,11 +1,7 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Commons.Interfaces.Presenters;
+﻿using Assets.Code.Application.Commons.Interfaces.Presenters;
 using Assets.Code.Application.Modules.Hero.Behaviours;
-using Assets.Code.Application.Modules.Hero.Commands.KillPlayer;
 using Assets.Code.Application.Signals;
 using Assets.Code.Domain.Entities;
-using System;
 using UnityEngine;
 using Zenject;
 

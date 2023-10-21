@@ -8,6 +8,7 @@ namespace Assets.Code.Domain.Entities
         public int TheBestScore { get; set; }
         public int Deaths { get; set; }
         public bool IsAvailable { get; set; }
+        public bool IsRunning { get; set; }
         public Sprite Thumbnail { get; set; }
     }
 }

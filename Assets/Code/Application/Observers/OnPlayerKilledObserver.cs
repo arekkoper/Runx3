@@ -1,6 +1,6 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Hero.Commands.KillPlayer;
+﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
+using Assets.Code.Application.Modules.Hero.Commands.DestroyPlayerPresenter;
+using Assets.Code.Application.Modules.Level.Commands.IncreaseDeathScore;
 using Assets.Code.Application.Signals;
 using System;
 using Zenject;
@@ -29,7 +29,8 @@ namespace Assets.Code.Application.Observers
 
         private void Perform(OnPlayerKilledSignal param)
         {
-            _mediator.Send(new KillPlayerCommand() { PlayerPresenter = param.PlayerPresenter });
+            _mediator.Send(new DestroyPlayerPresenterCommand() { PlayerPresenter = param.PlayerPresenter });
+            _mediator.Send(new IncreaseDeathScoreCommand());
         }
     }
 }

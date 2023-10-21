@@ -23,6 +23,7 @@ namespace Assets.Code.Infrastructure.Services
                 TheBestScore = 0,
                 Deaths = 0,
                 IsAvailable = false,
+                IsRunning = false
             };
 
             _repository.Add(level);
