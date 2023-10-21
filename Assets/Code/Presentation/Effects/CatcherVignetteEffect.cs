@@ -1,5 +1,6 @@
 ﻿
 using Assets.Code.Application.Commons.Interfaces.Services;
+using Assets.Code.Application.Commons.Interfaces.Spawners;
 using Assets.Code.Presentation.Spawners;
 using System;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace Assets.Code.Presentation.Effects
     public class CatcherVignetteEffect : IInitializable, ITickable
     {
         private readonly PlayerSpawner _playerSpawner;
-        private readonly CatcherSpawner _catcherSpawner;
+        private readonly ICatcherSpawner _catcherSpawner;
         private readonly IPostProcessService _postProcessService;
 
         private float _distance;
@@ -20,7 +21,7 @@ namespace Assets.Code.Presentation.Effects
         private double _angle;
         private float _offset;
 
-        public CatcherVignetteEffect(PlayerSpawner playerSpawner, CatcherSpawner catcherSpawner, IPostProcessService postProcessService)
+        public CatcherVignetteEffect(PlayerSpawner playerSpawner, ICatcherSpawner catcherSpawner, IPostProcessService postProcessService)
         {
             _playerSpawner = playerSpawner;
             _catcherSpawner = catcherSpawner;
@@ -37,7 +38,7 @@ namespace Assets.Code.Presentation.Effects
         public void Tick()
         {
             if (_playerSpawner == null || _catcherSpawner == null) return;
-            if (!_playerSpawner.HasPresenter() || !_catcherSpawner.HasPresenter()) return;
+            if (!_playerSpawner.HasPresenter() || !_catcherSpawner.HasPresenter(1)) return;
 
             CalculateDistance();
 
@@ -48,7 +49,9 @@ namespace Assets.Code.Presentation.Effects
 
         private void CalculateDistance()
         {
-            _distance = Vector3.Distance(_playerSpawner.GetPresenter().transform.position, _catcherSpawner.GetPresenter().transform.position);
+            if (!_catcherSpawner.HasPresenter(1)) return;
+
+            _distance = Vector3.Distance(_playerSpawner.GetPresenter().transform.position, _catcherSpawner.GetPresenter(1).transform.position);
         }
 
         private void RefreshVignette()

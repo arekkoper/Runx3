@@ -10,7 +10,7 @@ namespace Assets.Code.Infrastructure.Repositories
     public class CatcherRepository : ICatcherRepository
     {
         private int _counter;
-        private List<Catcher> _data;
+        private List<Catcher> _data = new();
 
         public void Add(Catcher catcher)
         {

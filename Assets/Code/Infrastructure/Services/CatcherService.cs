@@ -12,9 +12,10 @@ namespace Assets.Code.Infrastructure.Services
         private readonly ICatcherRepository _repository;
         private readonly Settings _settings;
 
-        public CatcherService(ICatcherRepository repository)
+        public CatcherService(ICatcherRepository repository, Settings settings)
         {
             _repository = repository;
+            _settings = settings;
         }
 
         [Serializable]

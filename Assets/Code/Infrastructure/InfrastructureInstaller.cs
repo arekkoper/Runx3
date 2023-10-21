@@ -19,15 +19,15 @@ public class InfrastructureInstaller : MonoInstaller
         Container.Bind<ILevelRepository>().To<LevelRepository>().AsSingle();
         Container.Bind<ICatcherRepository>().To<CatcherRepository>().AsSingle();
 
-        //Settings
-        Container.BindInstance(CatcherSettings);
+        ////Settings
+        //Container.BindInstance(CatcherSettings);
 
         //Services
         SignalBusInstaller.Install(Container);
         Container.Bind<IMediator>().To<Mediator>().AsSingle();
         Container.Bind<IPlayerService>().To<PlayerService>().AsSingle();
         Container.Bind<ILevelService>().To<LevelService>().AsSingle();
-        Container.Bind<ICatcherService>().To<CatcherService>().AsSingle();
+        Container.Bind<ICatcherService>().To<CatcherService>().AsSingle().WithArguments(CatcherSettings);
 
         //Loaders
         Container.Bind<ILevelLoader>().To<LevelLoader>().AsSingle();

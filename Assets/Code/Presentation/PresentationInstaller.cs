@@ -1,3 +1,4 @@
+using Assets.Code.Application.Commons.Interfaces.Spawners;
 using Assets.Code.Domain.Entities;
 using Assets.Code.Presentation.Effects;
 using Assets.Code.Presentation.Presenters;
@@ -19,11 +20,11 @@ public class PresentationInstaller : MonoInstaller
     {
         //Presenters
         Container.BindFactory<Player, PlayerPresenter, PlayerPresenter.Factory>().FromComponentInNewPrefab(_playerPresenter).UnderTransform(_entitiesHub);
-        Container.BindFactory<CatcherPresenter, CatcherPresenter.Factory>().FromComponentInNewPrefab(_catcherPresenter);
+        Container.BindFactory<Catcher, CatcherPresenter, CatcherPresenter.Factory>().FromComponentInNewPrefab(_catcherPresenter);
 
         //Spawners
         Container.BindInterfacesAndSelfTo<PlayerSpawner>().AsSingle();
-        Container.BindInterfacesAndSelfTo<CatcherSpawner>().AsSingle();
+        Container.Bind<ICatcherSpawner>().To<CatcherSpawner>().AsSingle();
 
 
 
