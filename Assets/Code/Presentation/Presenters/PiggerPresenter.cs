@@ -1,11 +1,14 @@
 ﻿
+using Assets.Code.Application.Signals;
+using Assets.Code.Presentation.Commons;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using Zenject;
 
 namespace Assets.Code.Presentation.Presenters
 {
-    public class PiggerPresenter : MonoBehaviour
+    public class PiggerPresenter : MonoStatic
     {
         [Header("References")]
         [SerializeField] private Transform _pointsHub;
@@ -19,11 +22,23 @@ namespace Assets.Code.Presentation.Presenters
         private Transform _currentPoint;
         private Transform[] _points;
 
+        [Inject] private readonly SignalBus _signalBus;
+
         public Transform[] Points { get => _points; }
 
         private void Start()
         {
             SetupPatrolPoints();
+        }
+
+        private void OnEnable()
+        {
+            _signalBus.Subscribe<OnLevelLoadedSignal>(Restart);
+        }
+
+        private void OnDisable()
+        {
+            _signalBus.Unsubscribe<OnLevelLoadedSignal>(Restart);
         }
 
         private void Update()
@@ -98,5 +113,12 @@ namespace Assets.Code.Presentation.Presenters
 
             return points;
         }
+
+        public void Restart()
+        {
+            SetCurrentPoint(0);
+            transform.position = _points[0].position;
+        }
+
     }
 }

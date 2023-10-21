@@ -1,5 +1,7 @@
-﻿using Assets.Code.Presentation.Commons;
+﻿using Assets.Code.Application.Signals;
+using Assets.Code.Presentation.Commons;
 using UnityEngine;
+using Zenject;
 
 namespace Assets.Code.Presentation.Presenters
 {
@@ -14,6 +16,8 @@ namespace Assets.Code.Presentation.Presenters
         [SerializeField] private float _raiseWaitTime;
         [SerializeField] private float _lowerTime;
         [SerializeField] private float _raiseTime;
+
+        [Inject] private readonly SignalBus _signalBus;
 
         private enum State
         {
@@ -33,6 +37,21 @@ namespace Assets.Code.Presentation.Presenters
             Invoke("StartRising", _interval);
         }
 
+        private void OnEnable()
+        {
+            _signalBus.Subscribe<OnLevelLoadedSignal>(Restart);
+        }
+
+        private void OnDisable()
+        {
+            _signalBus.Unsubscribe<OnLevelLoadedSignal>(Restart);
+        }
+
+        private void Update()
+        {
+            Moving();
+        }
+
         private void StartRising()
         {
             _hitBoxObject.SetActive(true);
@@ -44,11 +63,6 @@ namespace Assets.Code.Presentation.Presenters
         {
             _lastSwitchTime = Time.time;
             _state = State.Lowering;
-        }
-
-        private void Update()
-        {
-            Moving();
         }
 
         private void Moving()
@@ -81,6 +95,14 @@ namespace Assets.Code.Presentation.Presenters
                 }
 
             }
+        }
+
+        private void Restart()
+        {
+            CancelInvoke();
+            _lastSwitchTime = Mathf.NegativeInfinity;
+            _spikeHolder.localScale = new Vector3(_spikeHolder.localScale.x, LoweredSpikeHeight, _spikeHolder.localScale.z);
+            Invoke("StartRising", _interval);
         }
     }
 }
