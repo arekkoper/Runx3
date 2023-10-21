@@ -20,8 +20,8 @@ namespace Assets.Code.Application.Modules.Game.Commands.StartNewGame
         public void Handle(StartNewGameCommand command)
         {
             _playerService.ResetScore();
-            _gameManager.CurrentLevelID = 1;
-            _gameManager.Save();
+            //_gameManager.CurrentLevelID = 1;
+            //_gameManager.Save();
             _mediator.Send(new ChangeLevelCommand() { LevelID = 1 });
         }
     }

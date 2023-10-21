@@ -1,9 +1,8 @@
 ﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game.Queries.GetLevelName;
 using Assets.Code.Application.Modules.Hero.Queries.GetScore;
+using Assets.Code.Application.Modules.Level.Queries.GetCurrentLevel;
 using Assets.Code.Application.Signals;
 using Assets.Code.Presentation.Commons;
-using System;
 using TMPro;
 using UnityEngine;
 using Zenject;
@@ -39,7 +38,7 @@ namespace Assets.Code.Presentation.Statics.UI
         private void Refresh()
         {
             _scoreText.text = $"Score: {_mediator.Send(new GetScoreQuery())}";
-            _levelText.text = $"Level: {_mediator.Send(new GetLevelNameQuery())}";
+            _levelText.text = $"Level: {_mediator.Send(new GetCurrentLevelCommand()).Id}";
         }
     }
 }

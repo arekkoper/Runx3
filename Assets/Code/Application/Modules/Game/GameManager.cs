@@ -16,7 +16,6 @@ namespace Assets.Code.Application.Modules.Game
         private readonly SignalBus _signalBus;
         private readonly IMediator _mediator;
 
-        public int CurrentLevelID { get; set; }
         public GameState CurrentState { get; set; }
         public string UI_MAIN_MENU { get => "UI_MainMenu"; }
         public string UI_GAME { get => "UI_Game"; }
@@ -27,9 +26,7 @@ namespace Assets.Code.Application.Modules.Game
             {2, "Level_002" },
             {3, "Level_003" }
         };
-        public bool MaxLevelReached { get => CurrentLevelID >= LEVELS.Count; }
         public float StartLevelTime { get; set; }
-        public float EndLevelTime { get; set; }
 
         public SignalBus SignalBus => _signalBus;
         public IMediator Mediator => _mediator;
@@ -42,11 +39,6 @@ namespace Assets.Code.Application.Modules.Game
 
         public void Initialize()
         {
-            if (PlayerPrefs.GetInt("LevelID") > 1)
-                Load();
-            else
-                CurrentLevelID = 1;
-
             //Initiator commands
             _mediator.Send(new InitPlayerCommand());
             _mediator.Send(new InitLevelsCommand() { LevelCap = 3 });
@@ -77,17 +69,6 @@ namespace Assets.Code.Application.Modules.Game
         public void EnterState()
         {
             CurrentState.EnterState();
-        }
-
-        public void Save()
-        {
-            PlayerPrefs.SetInt("LevelID", CurrentLevelID);
-            PlayerPrefs.Save();
-        }
-
-        public void Load()
-        {
-            CurrentLevelID = PlayerPrefs.GetInt("LevelID");
         }
 
     }

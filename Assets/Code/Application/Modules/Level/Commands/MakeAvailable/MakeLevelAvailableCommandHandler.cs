@@ -1,6 +1,7 @@
 ﻿
 using Assets.Code.Application.Commons.Interfaces.Mediator;
 using Assets.Code.Application.Modules.Level.Queries.GetLevel;
+using UnityEngine;
 
 namespace Assets.Code.Application.Modules.Level.Commands.MakeAvailable
 {
@@ -18,6 +19,8 @@ namespace Assets.Code.Application.Modules.Level.Commands.MakeAvailable
             var level = _mediator.Send(new GetLevelQuery() { Id = command.Id });
 
             level.IsAvailable = true;
+
+            Debug.Log($"Make level {level.Id} available");
         }
     }
 }

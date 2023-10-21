@@ -19,6 +19,8 @@ namespace Assets.Code.Application.Modules.Game.GameStates
             {
                 ScenesToUnload.Add(Manager.LEVELS[item.Key]);
             }
+
+            Debug.Log($"Reload scenes");
         }
 
         public override void UpdateState()
@@ -29,6 +31,8 @@ namespace Assets.Code.Application.Modules.Game.GameStates
         {
             Manager.Mediator.Send(new LoadLevelCommand());
             Manager.StartLevelTime = Time.time;
+
+            Debug.Log($"Enter scene Level {LevelID}");
         }
 
     }
