@@ -20,6 +20,7 @@ namespace Assets.Code.Application
 
             //Observers
             Container.BindInterfacesAndSelfTo<OnPlayerKilledObserver>().AsSingle();
+            Container.BindInterfacesAndSelfTo<OnPlayerWinObserver>().AsSingle();
         }
     }
 }

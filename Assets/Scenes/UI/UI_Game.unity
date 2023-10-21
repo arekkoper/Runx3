@@ -427,8 +427,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a716b02221933cf4587f64f13ee9d289, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _scoreText: {fileID: 1442396550}
-  _levelText: {fileID: 1278823203}
+  _currentScore: {fileID: 1442396550}
+  _levelID: {fileID: 1278823203}
+  _theBestScore: {fileID: 1188095814}
 --- !u!1 &874771094
 GameObject:
   m_ObjectHideFlags: 0
@@ -1449,7 +1450,7 @@ GameObject:
   - component: {fileID: 1442396551}
   - component: {fileID: 1442396550}
   m_Layer: 5
-  m_Name: Text (Score)
+  m_Name: Text (CurrentScore)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

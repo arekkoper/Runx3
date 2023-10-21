@@ -1,6 +1,4 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game;
+﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
 using Assets.Code.Application.Modules.Game.Commands.ChangeLevel;
 using Assets.Code.Application.Modules.Level.Commands.MakeAvailable;
 using Assets.Code.Application.Modules.Level.Queries.GetCurrentLevel;

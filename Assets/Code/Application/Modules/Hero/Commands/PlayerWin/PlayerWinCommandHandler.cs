@@ -35,11 +35,8 @@ namespace Assets.Code.Application.Modules.Hero.Commands.PlayerWin
 
             _signalBus.Fire(new OnPlayerWinSignal()); //this is for UI
 
-            //_gameManager.CurrentLevelID++;
             _mediator.Send(new MakeLevelAvailableCommand() { Id = _mediator.Send(new GetCurrentLevelCommand()).Id });
 
-            //_gameManager.Save();
-            //_playerService.Save();
        }
     }
 }
