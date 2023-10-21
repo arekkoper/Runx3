@@ -14,7 +14,6 @@ namespace Assets.Code.Presentation.Spawners
     {
         private CatcherPresenter _presenter;
         private CatcherSpawnPoint _spawnPoint;
-        private Dictionary<Catcher, CatcherPresenter> _presenters = new();
 
         private readonly CatcherPresenter.Factory _factory;
         private readonly IMediator _mediator;
@@ -37,22 +36,19 @@ namespace Assets.Code.Presentation.Spawners
             if (_spawnPoint == null) return;
 
             var catcher = _mediator.Send(new CreateCatcherCommand());
-            var presenter = _factory.Create(catcher);
 
-            _presenters.Add(catcher, presenter);
+            _presenter = _factory.Create(catcher);
 
-            presenter.transform.position = _spawnPoint.transform.position;
+            _presenter.transform.position = _spawnPoint.transform.position;
 
         }
 
         public void Unspawn()
         {
-            foreach (var item in _presenters)
+            if(_presenter != null)
             {
-                Object.Destroy(item.Value);
+                Object.Destroy(_presenter.gameObject);
             }
-            //if (_presenter != null)
-            //    Object.Destroy(_presenter.gameObject);
         }
 
         public CatcherPresenter GetPresenter()
@@ -60,19 +56,9 @@ namespace Assets.Code.Presentation.Spawners
             return _presenter;
         }
 
-        public CatcherPresenter GetPresenter(int id)
-        {
-            return _presenters.Where(x => x.Key.Id == id).FirstOrDefault().Value;
-        }
-
         public bool HasPresenter()
         {
             return _presenter != null;
-        }
-
-        public bool HasPresenter(int id)
-        {
-            return _presenters.Any(x => x.Key.Id == id);
         }
     }
 }

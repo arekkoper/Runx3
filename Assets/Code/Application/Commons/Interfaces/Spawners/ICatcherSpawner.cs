@@ -5,8 +5,8 @@ namespace Assets.Code.Application.Commons.Interfaces.Spawners
 {
     public interface ICatcherSpawner
     {
-        CatcherPresenter GetPresenter(int id);
-        bool HasPresenter(int id);
+        CatcherPresenter GetPresenter();
+        bool HasPresenter();
         void SetSpawnPoint(CatcherSpawnPoint spawnPoint);
         void Spawn();
         void Unspawn();

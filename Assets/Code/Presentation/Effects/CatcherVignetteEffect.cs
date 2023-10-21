@@ -1,6 +1,8 @@
 ﻿
 using Assets.Code.Application.Commons.Interfaces.Services;
 using Assets.Code.Application.Commons.Interfaces.Spawners;
+using Assets.Code.Application.Signals;
+using Assets.Code.Presentation.Presenters;
 using Assets.Code.Presentation.Spawners;
 using System;
 using UnityEngine;
@@ -15,13 +17,18 @@ namespace Assets.Code.Presentation.Effects
         private readonly IPostProcessService _postProcessService;
 
         private float _distance;
-        private float _originVignetteIntensity;
         private float _currentVignetteIntensity;
         private float _startDistance;
         private double _angle;
         private float _offset;
 
-        public CatcherVignetteEffect(PlayerSpawner playerSpawner, ICatcherSpawner catcherSpawner, IPostProcessService postProcessService)
+        private PlayerPresenter _playerPresenter;
+        private CatcherPresenter _catcherPresenter;
+
+        public CatcherVignetteEffect(
+            PlayerSpawner playerSpawner,
+            ICatcherSpawner catcherSpawner,
+            IPostProcessService postProcessService)
         {
             _playerSpawner = playerSpawner;
             _catcherSpawner = catcherSpawner;
@@ -38,7 +45,7 @@ namespace Assets.Code.Presentation.Effects
         public void Tick()
         {
             if (_playerSpawner == null || _catcherSpawner == null) return;
-            if (!_playerSpawner.HasPresenter() || !_catcherSpawner.HasPresenter(1)) return;
+            if (!_playerSpawner.HasPresenter() || !_catcherSpawner.HasPresenter()) return;
 
             CalculateDistance();
 
@@ -49,9 +56,12 @@ namespace Assets.Code.Presentation.Effects
 
         private void CalculateDistance()
         {
-            if (!_catcherSpawner.HasPresenter(1)) return;
+            if(_catcherPresenter == null)
+            {
+                _catcherPresenter = _catcherSpawner.GetPresenter();
+            }
 
-            _distance = Vector3.Distance(_playerSpawner.GetPresenter().transform.position, _catcherSpawner.GetPresenter(1).transform.position);
+            _distance = Vector3.Distance(_playerSpawner.GetPresenter().transform.position, _catcherPresenter.transform.position);
         }
 
         private void RefreshVignette()
