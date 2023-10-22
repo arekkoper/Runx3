@@ -1,9 +1,9 @@
-﻿using Assets.Code.Presentation.Commons.Interfaces;
-using Assets.Code.Presentation.Views;
-using System.Collections;
+﻿using System.Collections;
+using Code.Presentation.Commons.Abstractions;
+using Code.Presentation.Views;
 using UnityEngine;
 
-namespace Assets.Code.Presentation.Controllers
+namespace Code.Presentation.Controllers
 {
     public class MainMenuController : MonoBehaviour
     {

@@ -1,7 +1,7 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Loaders;
-using Assets.Code.Application.Commons.Interfaces.Mediator;
+﻿using Code.Application.Commons.Interfaces.Loaders;
+using Code.Application.Commons.Interfaces.Mediator;
 
-namespace Assets.Code.Application.Modules.Game.Commands.LoadLevel
+namespace Code.Application.Modules.Game.Commands.LoadLevel
 {
     public class LoadLevelCommandHandler : ICommandHandler<LoadLevelCommand>
     {

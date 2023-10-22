@@ -1,7 +1,7 @@
-﻿using Assets.Code.Application.Modules.Game;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Code.Application.Modules.Game;
 
-namespace Assets.Code.Domain.Commons.Abstractions
+namespace Code.Domain.Entities
 {
     public abstract class GameState
     {

@@ -1,8 +1,8 @@
-﻿
-using Assets.Code.Domain.Entities;
+﻿using Code.Application.Commons.Interfaces.Services;
+using Code.Domain.Entities;
 using UnityEngine;
 
-namespace Assets.Code.Infrastructure.Services
+namespace Code.Infrastructure.Services
 {
     public class PlayerService : IPlayerService
     {

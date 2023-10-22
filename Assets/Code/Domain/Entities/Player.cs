@@ -1,4 +1,4 @@
-namespace Assets.Code.Domain.Entities
+namespace Code.Domain.Entities
 {
     public class Player
     {

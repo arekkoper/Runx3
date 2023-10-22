@@ -1,18 +1,20 @@
-using Assets.Code.Application.Commons.Interfaces.Services;
-using Assets.Code.Infrastructure.Providers;
-using Assets.Code.Presentation.Effects;
-using UnityEngine;
+using Code.Application.Commons.Interfaces.Services;
+using Code.Infrastructure.Services;
+using Code.Presentation.Effects;
 using Zenject;
 
-public class CoreSceneInstaller : MonoInstaller
+namespace Code.Presentation.Installers
 {
-    public override void InstallBindings()
+    public class CoreSceneInstaller : MonoInstaller
     {
-        //Providers
-        Container.Bind<IPostProcessService>().To<PostProcessService>().FromComponentInHierarchy().AsSingle();
+        public override void InstallBindings()
+        {
+            //Providers
+            Container.Bind<IPostProcessService>().To<PostProcessService>().FromComponentInHierarchy().AsSingle();
 
-        //Effects
-        Container.BindInterfacesAndSelfTo<CatcherVignetteEffect>().AsSingle();
+            //Effects
+            Container.BindInterfacesAndSelfTo<CatcherVignetteEffect>().AsSingle();
 
+        }
     }
 }

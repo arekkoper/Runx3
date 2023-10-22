@@ -1,5 +1,5 @@
 ﻿
-namespace Assets.Code.Application.Commons.Interfaces.Mediator
+namespace Code.Application.Commons.Interfaces.Mediator
 {
     public interface IQueryHandler<TQuery, TResult> where TQuery : IQuery<TResult>
     {

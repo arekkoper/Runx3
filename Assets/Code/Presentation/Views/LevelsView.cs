@@ -1,14 +1,14 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game.Commands.ChangeLevel;
-using Assets.Code.Application.Modules.Level.Queries.GetLevel;
-using Assets.Code.Domain.Entities;
-using Assets.Code.Presentation.Commons.Interfaces;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Game.Commands.ChangeLevel;
+using Code.Application.Modules.Level.Queries.GetLevel;
+using Code.Domain.Entities;
+using Code.Presentation.Commons.Abstractions;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Assets.Code.Presentation.Views
+namespace Code.Presentation.Views
 {
     public class LevelsView : View
     {

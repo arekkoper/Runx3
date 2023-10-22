@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-namespace Assets.Code.Infrastructure.Editor
+namespace Code.Infrastructure.Editor
 {
     public class SceneSwitcherEditor : EditorWindow
     {

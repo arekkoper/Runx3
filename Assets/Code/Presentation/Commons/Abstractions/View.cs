@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Code.Presentation.Commons.Interfaces
+namespace Code.Presentation.Commons.Abstractions
 {
     public abstract class View : MonoStatic
     {

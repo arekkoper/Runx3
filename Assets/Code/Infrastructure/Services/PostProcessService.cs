@@ -1,14 +1,12 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Services;
-using Assets.Code.Application.Signals;
-using Assets.Code.Presentation.Commons;
-using System;
+﻿using Code.Application.Commons.Interfaces.Services;
+using Code.Application.Signals;
+using Code.Presentation.Commons;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using Zenject;
 
-namespace Assets.Code.Infrastructure.Providers
+namespace Code.Infrastructure.Services
 {
     public class PostProcessService : MonoStatic, IPostProcessService
     {

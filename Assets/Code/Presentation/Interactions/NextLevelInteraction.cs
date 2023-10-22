@@ -1,12 +1,11 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game.Commands.ChangeLevel;
-using Assets.Code.Application.Modules.Level.Commands.MakeAvailable;
-using Assets.Code.Application.Modules.Level.Queries.GetCurrentLevel;
-using Assets.Code.Presentation.Commons;
-using UnityEngine;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Game.Commands.ChangeLevel;
+using Code.Application.Modules.Level.Commands.MakeAvailable;
+using Code.Application.Modules.Level.Queries.GetCurrentLevel;
+using Code.Presentation.Commons;
 using Zenject;
 
-namespace Assets.Code.Presentation.Statics.Interactions
+namespace Code.Presentation.Interactions
 {
     public class NextLevelInteraction : MonoStatic
     {
@@ -16,8 +15,6 @@ namespace Assets.Code.Presentation.Statics.Interactions
         {
             var currentLevelId = _mediator.Send(new GetCurrentLevelCommand()).Id;
             var nextLevelId = currentLevelId + 1;
-
-            Debug.Log($"Current level: {currentLevelId}, Next level: {nextLevelId}");
 
             _mediator.Send(new MakeLevelAvailableCommand() { Id = nextLevelId });
             _mediator.Send(new ChangeLevelCommand() { LevelID = nextLevelId });

@@ -1,13 +1,10 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Commons.Interfaces.Spawners;
-using Assets.Code.Domain.Entities;
-using Assets.Code.Presentation.Presenters;
-using Assets.Code.Presentation.Spawners.Points;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Spawners;
+using Code.Presentation.Presenters;
+using Code.Presentation.Spawners.Points;
 using UnityEngine;
 
-namespace Assets.Code.Presentation.Spawners
+namespace Code.Presentation.Spawners
 {
     public class CatcherSpawner : ICatcherSpawner
     {

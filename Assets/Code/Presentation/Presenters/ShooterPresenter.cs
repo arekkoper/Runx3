@@ -1,9 +1,9 @@
-﻿using Assets.Code.Application.Signals;
-using Assets.Code.Presentation.Commons;
+﻿using Code.Application.Signals;
+using Code.Presentation.Commons;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.Presentation.Presenters
+namespace Code.Presentation.Presenters
 {
     public class ShooterPresenter : MonoStatic
     {

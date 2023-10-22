@@ -1,16 +1,15 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game;
-using Assets.Code.Application.Modules.Game.Commands.CalculateScore;
-using Assets.Code.Application.Modules.Level.Queries.GetCurrentLevel;
-using Assets.Code.Application.Modules.Level.Queries.GetTheBestScore;
-using Assets.Code.Application.Signals;
-using Assets.Code.Presentation.Commons;
-using System;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Game;
+using Code.Application.Modules.Game.Commands.CalculateScore;
+using Code.Application.Modules.Level.Queries.GetCurrentLevel;
+using Code.Application.Modules.Level.Queries.GetTheBestScore;
+using Code.Application.Signals;
+using Code.Presentation.Commons;
 using TMPro;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.Presentation.Statics.UI
+namespace Code.Presentation.Sections
 {
     public class HUDSection : MonoStatic
     {

@@ -1,8 +1,8 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Level.Commands.RunLevel;
-using UnityEngine;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Game.GameStates;
+using Code.Application.Modules.Level.Commands.RunLevel;
 
-namespace Assets.Code.Application.Modules.Game.Commands.ChangeLevel
+namespace Code.Application.Modules.Game.Commands.ChangeLevel
 {
     public class ChangeLevelCommandHandler : ICommandHandler<ChangeLevelCommand>
     {
@@ -19,9 +19,8 @@ namespace Assets.Code.Application.Modules.Game.Commands.ChangeLevel
         {
             _mediator.Send(new RunLevelCommand() { LevelID = command.LevelID });
 
-            _gameManager.ChangeState(new GameStates.LevelState() { LevelID = command.LevelID });
+            _gameManager.ChangeState(new LevelState() { LevelID = command.LevelID });
 
-            Debug.Log($"Change level to {command.LevelID}");
         }
     }
 }

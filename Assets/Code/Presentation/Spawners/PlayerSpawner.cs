@@ -1,7 +1,8 @@
-﻿using Assets.Code.Presentation.Presenters;
+﻿using Code.Application.Commons.Interfaces.Services;
+using Code.Presentation.Presenters;
 using UnityEngine;
 
-namespace Assets.Code.Presentation.Spawners
+namespace Code.Presentation.Spawners
 {
     public class PlayerSpawner
     {

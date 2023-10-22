@@ -1,5 +1,5 @@
 ﻿
-namespace Assets.Code.Application.Signals
+namespace Code.Application.Signals
 {
     public class OnLevelLoadedSignal
     {

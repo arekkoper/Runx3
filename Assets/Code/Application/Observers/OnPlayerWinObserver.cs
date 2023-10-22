@@ -1,14 +1,15 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game;
-using Assets.Code.Application.Modules.Game.Commands.CalculateScore;
-using Assets.Code.Application.Modules.Level.Commands.SetScore;
-using Assets.Code.Application.Modules.Level.Queries.GetCurrentLevel;
-using Assets.Code.Application.Signals;
-using System;
+﻿using System;
+using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Game;
+using Code.Application.Modules.Game.Commands.CalculateScore;
+using Code.Application.Modules.Level.Commands.MakeAvailable;
+using Code.Application.Modules.Level.Commands.SetScore;
+using Code.Application.Modules.Level.Queries.GetCurrentLevel;
+using Code.Application.Signals;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.Application.Observers
+namespace Code.Application.Observers
 {
     public class OnPlayerWinObserver : IInitializable, IDisposable
     {
@@ -35,15 +36,21 @@ namespace Assets.Code.Application.Observers
 
         private void Perform(OnPlayerWinSignal param)
         {
+            var currentLevel = _mediator.Send(new GetCurrentLevelCommand());
+            
             _mediator.Send(new SetScoreCommand()
             {
-                LevelID = _mediator.Send(new GetCurrentLevelCommand()).Id,
+                LevelID = currentLevel.Id,
                 Score = _mediator.Send(new CalculateScoreCommand()
                 {
                     StartTime = _gameManager.StartLevelTime,
                     EndTime = Time.time
                 })
             });
+
+            var nextLevelId = currentLevel.Id + 1;
+            
+            _mediator.Send(new MakeLevelAvailableCommand() { Id = nextLevelId });
         }
 
 

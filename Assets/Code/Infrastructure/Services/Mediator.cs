@@ -1,11 +1,10 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using System;
+﻿using System;
 using System.Linq;
 using System.Reflection;
+using Code.Application.Commons.Interfaces.Mediator;
 using Zenject;
 
-namespace Assets.Code.Infrastructure.Services
+namespace Code.Infrastructure.Services
 {
     public class Mediator : IMediator
     {

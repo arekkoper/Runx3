@@ -1,9 +1,8 @@
-﻿using Assets.Code.Application.Modules.Game.Commands.LoadLevel;
-using Assets.Code.Application.Modules.Hero.Commands.CreatePlayer;
-using Assets.Code.Domain.Commons.Abstractions;
+﻿using Code.Application.Modules.Game.Commands.LoadLevel;
+using Code.Domain.Entities;
 using UnityEngine;
 
-namespace Assets.Code.Application.Modules.Game.GameStates
+namespace Code.Application.Modules.Game.GameStates
 {
     public class LevelState : GameState
     {
@@ -20,7 +19,6 @@ namespace Assets.Code.Application.Modules.Game.GameStates
                 ScenesToUnload.Add(Manager.LEVELS[item.Key]);
             }
 
-            Debug.Log($"Reload scenes");
         }
 
         public override void UpdateState()
@@ -32,7 +30,6 @@ namespace Assets.Code.Application.Modules.Game.GameStates
             Manager.Mediator.Send(new LoadLevelCommand());
             Manager.StartLevelTime = Time.time;
 
-            Debug.Log($"Enter state Level {LevelID}");
         }
 
     }

@@ -1,12 +1,10 @@
-﻿
-using Assets.Code.Application.Signals;
-using Assets.Code.Presentation.Commons;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Code.Application.Signals;
+using Code.Presentation.Commons;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.Presentation.Presenters
+namespace Code.Presentation.Presenters
 {
     public class PiggerPresenter : MonoStatic
     {

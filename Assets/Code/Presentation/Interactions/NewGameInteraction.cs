@@ -1,11 +1,9 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game.Commands.ChangeLevel;
-using Assets.Code.Application.Modules.Game.Commands.StartNewGame;
-using Assets.Code.Presentation.Commons;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Game.Commands.StartNewGame;
+using Code.Presentation.Commons;
 using Zenject;
 
-namespace Assets.Code.Presentation.Statics.Interactions
+namespace Code.Presentation.Interactions
 {
     public class NewGameInteraction : MonoStatic
     {

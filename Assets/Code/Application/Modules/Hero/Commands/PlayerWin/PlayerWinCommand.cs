@@ -1,6 +1,6 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
+﻿using Code.Application.Commons.Interfaces.Mediator;
 
-namespace Assets.Code.Application.Modules.Hero.Commands.PlayerWin
+namespace Code.Application.Modules.Hero.Commands.PlayerWin
 {
     public class PlayerWinCommand : ICommand
     {

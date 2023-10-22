@@ -1,8 +1,6 @@
-using Assets.Code.Domain.Entities;
-using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.Domain
+namespace Code.Domain
 {
     public class DomainInstaller : MonoInstaller
     {

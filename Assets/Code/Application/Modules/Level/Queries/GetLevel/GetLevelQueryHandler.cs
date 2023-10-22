@@ -1,9 +1,7 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Commons.Interfaces.Services;
-using Assets.Code.Domain.Entities;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Services;
 
-namespace Assets.Code.Application.Modules.Level.Queries.GetLevel
+namespace Code.Application.Modules.Level.Queries.GetLevel
 {
     public class GetLevelQueryHandler : IQueryHandler<GetLevelQuery, Domain.Entities.Level>
     {

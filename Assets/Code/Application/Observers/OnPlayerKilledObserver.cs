@@ -1,11 +1,11 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Hero.Commands.DestroyPlayerPresenter;
-using Assets.Code.Application.Modules.Level.Commands.IncreaseDeathScore;
-using Assets.Code.Application.Signals;
-using System;
+﻿using System;
+using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Hero.Commands.DestroyPlayerPresenter;
+using Code.Application.Modules.Level.Commands.IncreaseDeathScore;
+using Code.Application.Signals;
 using Zenject;
 
-namespace Assets.Code.Application.Observers
+namespace Code.Application.Observers
 {
     public class OnPlayerKilledObserver : IInitializable, IDisposable
     {

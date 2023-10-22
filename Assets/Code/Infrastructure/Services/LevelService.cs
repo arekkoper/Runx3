@@ -1,11 +1,10 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Repositories;
-using Assets.Code.Application.Commons.Interfaces.Services;
-using Assets.Code.Domain.Entities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Code.Application.Commons.Interfaces.Repositories;
+using Code.Application.Commons.Interfaces.Services;
+using Code.Domain.Entities;
 using UnityEngine;
 
-namespace Assets.Code.Infrastructure.Services
+namespace Code.Infrastructure.Services
 {
     public class LevelService : ILevelService
     {

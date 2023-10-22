@@ -1,6 +1,6 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
+﻿using Code.Application.Commons.Interfaces.Mediator;
 
-namespace Assets.Code.Application.Modules.Game.Commands.ChangeLevel
+namespace Code.Application.Modules.Game.Commands.ChangeLevel
 {
     public class ChangeLevelCommand : ICommand
     {

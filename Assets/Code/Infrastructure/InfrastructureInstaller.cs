@@ -1,28 +1,30 @@
-using Assets.Code.Application.Commons.Interfaces.Loaders;
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Commons.Interfaces.Repositories;
-using Assets.Code.Application.Commons.Interfaces.Services;
-using Assets.Code.Infrastructure.Loaders;
-using Assets.Code.Infrastructure.Repositories;
-using Assets.Code.Infrastructure.Services;
-using UnityEngine;
+using Code.Application.Commons.Interfaces.Loaders;
+using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Repositories;
+using Code.Application.Commons.Interfaces.Services;
+using Code.Infrastructure.Loaders;
+using Code.Infrastructure.Repositories;
+using Code.Infrastructure.Services;
 using Zenject;
 
-public class InfrastructureInstaller : MonoInstaller
+namespace Code.Infrastructure
 {
-    public override void InstallBindings()
+    public class InfrastructureInstaller : MonoInstaller
     {
-        //Repositories
-        Container.Bind<ILevelRepository>().To<LevelRepository>().AsSingle();
+        public override void InstallBindings()
+        {
+            //Repositories
+            Container.Bind<ILevelRepository>().To<LevelRepository>().AsSingle();
 
-        //Services
-        SignalBusInstaller.Install(Container);
-        Container.Bind<IMediator>().To<Mediator>().AsSingle();
-        Container.Bind<IPlayerService>().To<PlayerService>().AsSingle();
-        Container.Bind<ILevelService>().To<LevelService>().AsSingle();
+            //Services
+            SignalBusInstaller.Install(Container);
+            Container.Bind<IMediator>().To<Mediator>().AsSingle();
+            Container.Bind<IPlayerService>().To<PlayerService>().AsSingle();
+            Container.Bind<ILevelService>().To<LevelService>().AsSingle();
 
-        //Loaders
-        Container.Bind<ILevelLoader>().To<LevelLoader>().AsSingle();
+            //Loaders
+            Container.Bind<ILevelLoader>().To<LevelLoader>().AsSingle();
 
+        }
     }
 }

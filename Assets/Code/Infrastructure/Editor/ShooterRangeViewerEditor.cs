@@ -1,9 +1,9 @@
 ﻿#if UNITY_EDITOR
-using Assets.Code.Presentation.Presenters;
+using Code.Presentation.Presenters;
 using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Code.Infrastructure.Editor
+namespace Code.Infrastructure.Editor
 {
     [CustomEditor(typeof(ShooterPresenter))]
     public class ShooterRangeViewerEditor : UnityEditor.Editor

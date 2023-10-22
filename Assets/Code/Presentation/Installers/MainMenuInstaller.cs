@@ -1,8 +1,7 @@
-﻿
-using Assets.Code.Presentation.Controllers;
+﻿using Code.Presentation.Controllers;
 using Zenject;
 
-namespace Assets.Code.Presentation.Installers
+namespace Code.Presentation.Installers
 {
     public class MainMenuInstaller : MonoInstaller
     {

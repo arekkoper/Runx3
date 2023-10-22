@@ -1,8 +1,6 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Domain.Entities;
+﻿using Code.Application.Commons.Interfaces.Mediator;
 
-namespace Assets.Code.Application.Modules.Level.Queries.GetCurrentLevel
+namespace Code.Application.Modules.Level.Queries.GetCurrentLevel
 {
     public class GetCurrentLevelCommand : IQuery<Domain.Entities.Level>
     {

@@ -1,9 +1,8 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Spawners;
-using Assets.Code.Presentation.Commons;
+﻿using Code.Application.Commons.Interfaces.Spawners;
+using Code.Presentation.Commons;
 using Zenject;
 
-namespace Assets.Code.Presentation.Spawners.Points
+namespace Code.Presentation.Spawners.Points
 {
     public class CatcherSpawnPoint : MonoStatic
     {

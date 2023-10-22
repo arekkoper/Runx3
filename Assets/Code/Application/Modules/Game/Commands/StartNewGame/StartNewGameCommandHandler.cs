@@ -1,8 +1,8 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game.Commands.ChangeLevel;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Services;
+using Code.Application.Modules.Game.Commands.ChangeLevel;
 
-namespace Assets.Code.Application.Modules.Game.Commands.StartNewGame
+namespace Code.Application.Modules.Game.Commands.StartNewGame
 {
     public class StartNewGameCommandHandler : ICommandHandler<StartNewGameCommand>
     {

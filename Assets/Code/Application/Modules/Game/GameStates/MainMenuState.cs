@@ -1,7 +1,7 @@
-﻿using Assets.Code.Application.Modules.Game.Commands.UnloadLevel;
-using Assets.Code.Domain.Commons.Abstractions;
+﻿using Code.Application.Modules.Game.Commands.UnloadLevel;
+using Code.Domain.Entities;
 
-namespace Assets.Code.Application.Modules.Game.GameStates
+namespace Code.Application.Modules.Game.GameStates
 {
     public class MainMenuState : GameState
     {

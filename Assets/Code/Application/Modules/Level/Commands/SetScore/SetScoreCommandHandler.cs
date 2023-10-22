@@ -1,9 +1,7 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Commons.Interfaces.Services;
-using UnityEngine;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Services;
 
-namespace Assets.Code.Application.Modules.Level.Commands.SetScore
+namespace Code.Application.Modules.Level.Commands.SetScore
 {
     public class SetScoreCommandHandler : ICommandHandler<SetScoreCommand>
     {
@@ -22,7 +20,6 @@ namespace Assets.Code.Application.Modules.Level.Commands.SetScore
             {
                 level.TheBestScore = command.Score;
 
-                Debug.Log($"Set the best score {command.Score} for level {level.Id}");
             }
         }
     }

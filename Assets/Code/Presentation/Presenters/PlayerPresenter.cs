@@ -1,11 +1,11 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Presenters;
-using Assets.Code.Application.Modules.Hero.Behaviours;
-using Assets.Code.Application.Signals;
-using Assets.Code.Domain.Entities;
+﻿using Code.Application.Commons.Interfaces.Presenters;
+using Code.Application.Modules.Hero.Behaviours;
+using Code.Application.Signals;
+using Code.Domain.Entities;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.Presentation.Presenters
+namespace Code.Presentation.Presenters
 {
     public class PlayerPresenter : MonoBehaviour, IDieable
     {

@@ -1,10 +1,10 @@
 ﻿#if UNITY_EDITOR
-using Assets.Code.Presentation.Presenters;
 using System.Collections.Generic;
+using Code.Presentation.Presenters;
 using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Code.Infrastructure.Editor
+namespace Code.Infrastructure.Editor
 {
     [CustomEditor(typeof(PiggerPresenter))]
     public class PiggerPointsViewerEditor : UnityEditor.Editor

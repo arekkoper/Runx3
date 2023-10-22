@@ -1,8 +1,8 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Commons.Interfaces.Services;
-using Assets.Code.Application.Modules.Level.Commands.MakeAvailable;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Services;
+using Code.Application.Modules.Level.Commands.MakeAvailable;
 
-namespace Assets.Code.Application.Modules.Level.Commands.InitLevels
+namespace Code.Application.Modules.Level.Commands.InitLevels
 {
     public class InitLevelsCommandHandler : ICommandHandler<InitLevelsCommand>
     {

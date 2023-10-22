@@ -1,9 +1,7 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Loaders;
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game.GameStates;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Game.GameStates;
 
-namespace Assets.Code.Application.Modules.Game.Commands.ReturnToMenu
+namespace Code.Application.Modules.Game.Commands.ReturnToMenu
 {
     public class ReturnToMenuCommandHandler : ICommandHandler<ReturnToMenuCommand>
     {

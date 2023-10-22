@@ -1,8 +1,7 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Loaders;
-using Assets.Code.Application.Commons.Interfaces.Mediator;
+﻿using Code.Application.Commons.Interfaces.Loaders;
+using Code.Application.Commons.Interfaces.Mediator;
 
-namespace Assets.Code.Application.Modules.Game.Commands.UnloadLevel
+namespace Code.Application.Modules.Game.Commands.UnloadLevel
 {
     public class UnloadLevelCommandHandler : ICommandHandler<UnloadLevelCommand>
     {

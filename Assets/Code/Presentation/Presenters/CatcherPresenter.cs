@@ -1,15 +1,10 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Signals;
-using Assets.Code.Domain.Entities;
-using Assets.Code.Domain.Enums;
-using Assets.Code.Presentation.Commons;
-using Assets.Code.Presentation.Spawners;
-using System;
+﻿using Code.Application.Signals;
+using Code.Presentation.Commons;
+using Code.Presentation.Spawners;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.Presentation.Presenters
+namespace Code.Presentation.Presenters
 {
     public class CatcherPresenter : MonoStatic
     {

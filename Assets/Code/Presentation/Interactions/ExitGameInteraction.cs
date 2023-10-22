@@ -1,6 +1,6 @@
-﻿using Assets.Code.Presentation.Commons;
+﻿using Code.Presentation.Commons;
 
-namespace Assets.Code.Presentation.Statics.Interactions
+namespace Code.Presentation.Interactions
 {
     public class ExitGameInteraction : MonoStatic
     {

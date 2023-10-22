@@ -1,8 +1,7 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Level.Queries.GetCurrentLevel;
-using UnityEngine;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Level.Queries.GetCurrentLevel;
 
-namespace Assets.Code.Application.Modules.Level.Commands.IncreaseDeathScore
+namespace Code.Application.Modules.Level.Commands.IncreaseDeathScore
 {
     public class IncreaseDeathScoreCommandHandler : ICommandHandler<IncreaseDeathScoreCommand>
     {
@@ -19,7 +18,6 @@ namespace Assets.Code.Application.Modules.Level.Commands.IncreaseDeathScore
 
             level.Deaths++;
 
-            Debug.Log($"Level: {level.Id}, deaths: {level.Deaths}");
         }
     }
 }

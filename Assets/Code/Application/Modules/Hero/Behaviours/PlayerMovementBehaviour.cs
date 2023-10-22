@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Assets.Code.Application.Modules.Hero.Behaviours
+namespace Code.Application.Modules.Hero.Behaviours
 {
     public class PlayerMovementBehaviour
     {

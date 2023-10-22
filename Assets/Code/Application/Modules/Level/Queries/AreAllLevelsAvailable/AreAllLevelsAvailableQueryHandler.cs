@@ -1,8 +1,8 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Commons.Interfaces.Services;
-using System.Linq;
+﻿using System.Linq;
+using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Services;
 
-namespace Assets.Code.Application.Modules.Level.Queries.AreAllLevelsAvailable
+namespace Code.Application.Modules.Level.Queries.AreAllLevelsAvailable
 {
     public class AreAllLevelsAvailableQueryHandler : IQueryHandler<AreAllLevelsAvailableQuery, bool>
     {

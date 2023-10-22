@@ -1,6 +1,6 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
+﻿using Code.Application.Commons.Interfaces.Mediator;
 
-namespace Assets.Code.Application.Modules.Level.Queries.GetLevel
+namespace Code.Application.Modules.Level.Queries.GetLevel
 {
     public class GetLevelQuery : IQuery<Domain.Entities.Level>
     {

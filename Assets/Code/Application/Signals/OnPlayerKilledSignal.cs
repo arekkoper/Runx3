@@ -1,7 +1,7 @@
 ﻿
-using Assets.Code.Presentation.Presenters;
+using Code.Presentation.Presenters;
 
-namespace Assets.Code.Application.Signals
+namespace Code.Application.Signals
 {
     public class OnPlayerKilledSignal
     {

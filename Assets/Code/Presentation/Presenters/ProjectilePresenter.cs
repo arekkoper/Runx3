@@ -1,7 +1,7 @@
 ﻿
 using UnityEngine;
 
-namespace Assets.Code.Presentation.Presenters
+namespace Code.Presentation.Presenters
 {
     public class ProjectilePresenter : MonoBehaviour
     {

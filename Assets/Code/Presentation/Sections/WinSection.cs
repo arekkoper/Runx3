@@ -1,13 +1,13 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Commons.Interfaces.UI;
-using Assets.Code.Application.Modules.Level.Queries.AreAllLevelsAvailable;
-using Assets.Code.Application.Signals;
-using Assets.Code.Presentation.Commons;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.UI;
+using Code.Application.Modules.Level.Queries.AreAllLevelsAvailable;
+using Code.Application.Signals;
+using Code.Presentation.Commons;
 using TMPro;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.Presentation.Statics.UI
+namespace Code.Presentation.Sections
 {
     public class WinSection : MonoStatic, IWinSection
     {

@@ -1,11 +1,11 @@
+using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Repositories;
+using Code.Application.Commons.Interfaces.Services;
+using Code.Application.Modules.Level.Commands.MakeAvailable;
+using Code.Infrastructure.Repositories;
+using Code.Infrastructure.Services;
 using Zenject;
 using NUnit.Framework;
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Infrastructure.Services;
-using Assets.Code.Application.Commons.Interfaces.Services;
-using Assets.Code.Application.Modules.Level.Commands.MakeAvailable;
-using Assets.Code.Application.Commons.Interfaces.Repositories;
-using Assets.Code.Infrastructure.Repositories;
 
 [TestFixture]
 public class MakeLevelAvailableTest : ZenjectUnitTestFixture

@@ -1,8 +1,7 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.Presentation.Commons
+namespace Code.Presentation.Commons
 {
     public class MonoStatic : MonoBehaviour
     {

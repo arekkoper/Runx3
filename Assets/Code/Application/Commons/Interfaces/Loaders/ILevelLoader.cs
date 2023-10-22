@@ -1,4 +1,4 @@
-﻿namespace Assets.Code.Application.Commons.Interfaces.Loaders
+﻿namespace Code.Application.Commons.Interfaces.Loaders
 {
     public interface ILevelLoader
     {

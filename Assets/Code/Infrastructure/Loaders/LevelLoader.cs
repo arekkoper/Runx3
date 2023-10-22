@@ -1,11 +1,10 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Loaders;
-using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Commons.Interfaces.Spawners;
-using Assets.Code.Application.Signals;
-using Assets.Code.Presentation.Spawners;
+﻿using Code.Application.Commons.Interfaces.Loaders;
+using Code.Application.Commons.Interfaces.Spawners;
+using Code.Application.Signals;
+using Code.Presentation.Spawners;
 using Zenject;
 
-namespace Assets.Code.Infrastructure.Loaders
+namespace Code.Infrastructure.Loaders
 {
     public class LevelLoader : ILevelLoader
     {

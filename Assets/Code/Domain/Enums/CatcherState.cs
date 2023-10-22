@@ -1,5 +1,5 @@
 ﻿
-namespace Assets.Code.Domain.Enums
+namespace Code.Domain.Enums
 {
     public enum CatcherState
     {

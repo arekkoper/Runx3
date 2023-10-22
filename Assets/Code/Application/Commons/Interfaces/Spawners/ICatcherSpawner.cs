@@ -1,7 +1,7 @@
-﻿using Assets.Code.Presentation.Presenters;
-using Assets.Code.Presentation.Spawners.Points;
+﻿using Code.Presentation.Presenters;
+using Code.Presentation.Spawners.Points;
 
-namespace Assets.Code.Application.Commons.Interfaces.Spawners
+namespace Code.Application.Commons.Interfaces.Spawners
 {
     public interface ICatcherSpawner
     {

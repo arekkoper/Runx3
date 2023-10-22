@@ -1,7 +1,7 @@
 ﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Mediator;
 
-namespace Assets.Code.Application.Modules.Level.Commands.InitLevels
+namespace Code.Application.Modules.Level.Commands.InitLevels
 {
     public class InitLevelsCommand : ICommand
     {

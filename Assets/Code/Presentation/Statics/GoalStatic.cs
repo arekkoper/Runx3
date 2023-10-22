@@ -1,11 +1,10 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Hero.Commands.PlayerWin;
-using Assets.Code.Application.Signals;
-using Assets.Code.Presentation.Commons;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Hero.Commands.PlayerWin;
+using Code.Presentation.Commons;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.Presentation.Presenters
+namespace Code.Presentation.Statics
 {
     public class GoalStatic : MonoStatic
     {

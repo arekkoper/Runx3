@@ -1,8 +1,8 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Commons.Interfaces.Services;
-using Assets.Code.Application.Modules.Level.Queries.GetLevel;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Services;
+using Code.Application.Modules.Level.Queries.GetLevel;
 
-namespace Assets.Code.Application.Modules.Level.Commands.RunLevel
+namespace Code.Application.Modules.Level.Commands.RunLevel
 {
     public class RunLevelCommandHandler : ICommandHandler<RunLevelCommand>
     {

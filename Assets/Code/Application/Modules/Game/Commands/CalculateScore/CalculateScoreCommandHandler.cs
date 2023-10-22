@@ -1,7 +1,7 @@
 ﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Mediator;
 
-namespace Assets.Code.Application.Modules.Game.Commands.CalculateScore
+namespace Code.Application.Modules.Game.Commands.CalculateScore
 {
     public class CalculateScoreCommandHandler : ICommandHandler<CalculateScoreCommand, int>
     {

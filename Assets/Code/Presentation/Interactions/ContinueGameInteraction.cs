@@ -1,12 +1,11 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game;
-using Assets.Code.Application.Modules.Game.Commands.ChangeLevel;
-using Assets.Code.Application.Modules.Level.Queries.AreAllLevelsAvailable;
-using Assets.Code.Presentation.Commons;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Game;
+using Code.Application.Modules.Level.Queries.AreAllLevelsAvailable;
+using Code.Presentation.Commons;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Assets.Code.Presentation.Statics.Interactions
+namespace Code.Presentation.Interactions
 {
     public class ContinueGameInteraction : MonoStatic
     {

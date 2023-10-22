@@ -1,7 +1,7 @@
-﻿using Assets.Code.Domain.Entities;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Code.Domain.Entities;
 
-namespace Assets.Code.Application.Commons.Interfaces.Repositories
+namespace Code.Application.Commons.Interfaces.Repositories
 {
     public interface ILevelRepository
     {

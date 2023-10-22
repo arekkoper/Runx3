@@ -1,14 +1,14 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Commons.Interfaces.Services;
-using Assets.Code.Application.Modules.Game;
-using Assets.Code.Application.Modules.Game.Commands.CalculateScore;
-using Assets.Code.Application.Modules.Level.Commands.MakeAvailable;
-using Assets.Code.Application.Modules.Level.Queries.GetCurrentLevel;
-using Assets.Code.Application.Signals;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Services;
+using Code.Application.Modules.Game;
+using Code.Application.Modules.Game.Commands.CalculateScore;
+using Code.Application.Modules.Level.Commands.MakeAvailable;
+using Code.Application.Modules.Level.Queries.GetCurrentLevel;
+using Code.Application.Signals;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.Application.Modules.Hero.Commands.PlayerWin
+namespace Code.Application.Modules.Hero.Commands.PlayerWin
 {
     public class PlayerWinCommandHandler : ICommandHandler<PlayerWinCommand>
     {

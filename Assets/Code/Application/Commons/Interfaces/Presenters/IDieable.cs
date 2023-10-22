@@ -1,5 +1,5 @@
 ﻿
-namespace Assets.Code.Application.Commons.Interfaces.Presenters
+namespace Code.Application.Commons.Interfaces.Presenters
 {
     public interface IDieable
     {

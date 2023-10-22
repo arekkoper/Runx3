@@ -1,7 +1,7 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Commons.Interfaces.Services;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Services;
 
-namespace Assets.Code.Application.Modules.Level.Queries.GetTheBestScore
+namespace Code.Application.Modules.Level.Queries.GetTheBestScore
 {
     public class GetTheBestScoreQueryHandler : IQueryHandler<GetTheBestScoreQuery, int>
     {

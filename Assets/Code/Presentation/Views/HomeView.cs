@@ -1,6 +1,6 @@
-﻿using Assets.Code.Presentation.Commons.Interfaces;
+﻿using Code.Presentation.Commons.Abstractions;
 
-namespace Assets.Code.Presentation.Views
+namespace Code.Presentation.Views
 {
     public class HomeView : View
     {

@@ -1,7 +1,7 @@
 ﻿
-using Assets.Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Commons.Interfaces.Mediator;
 
-namespace Assets.Code.Application.Modules.Level.Commands.SetScore
+namespace Code.Application.Modules.Level.Commands.SetScore
 {
     public class SetScoreCommand : ICommand
     {

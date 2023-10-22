@@ -1,7 +1,7 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Presentation.Presenters;
+﻿using Code.Application.Commons.Interfaces.Mediator;
+using Code.Presentation.Presenters;
 
-namespace Assets.Code.Application.Modules.Hero.Commands.DestroyPlayerPresenter
+namespace Code.Application.Modules.Hero.Commands.DestroyPlayerPresenter
 {
     public class DestroyPlayerPresenterCommand : ICommand
     {

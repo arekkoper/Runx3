@@ -1,15 +1,14 @@
-﻿using Assets.Code.Application.Commons.Interfaces.Mediator;
-using Assets.Code.Application.Modules.Game.GameStates;
-using Assets.Code.Application.Modules.Hero.Commands.CreatePlayer;
-using Assets.Code.Application.Modules.Level.Commands.InitLevels;
-using Assets.Code.Application.Signals;
-using Assets.Code.Domain.Commons.Abstractions;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using UnityEngine;
+using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Game.GameStates;
+using Code.Application.Modules.Hero.Commands.CreatePlayer;
+using Code.Application.Modules.Level.Commands.InitLevels;
+using Code.Application.Signals;
+using Code.Domain.Entities;
 using Zenject;
 
-namespace Assets.Code.Application.Modules.Game
+namespace Code.Application.Modules.Game
 {
     public class GameManager : IInitializable, ITickable, IDisposable
     {

@@ -1,9 +1,9 @@
-using Assets.Code.Application.Modules.Game;
-using Assets.Code.Application.Observers;
-using Assets.Code.Application.Signals;
+using Code.Application.Modules.Game;
+using Code.Application.Observers;
+using Code.Application.Signals;
 using Zenject;
 
-namespace Assets.Code.Application
+namespace Code.Application
 {
     public class ApplicationInstaller : MonoInstaller
     {

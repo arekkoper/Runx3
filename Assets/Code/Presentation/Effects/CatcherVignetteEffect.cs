@@ -1,14 +1,11 @@
-﻿
-using Assets.Code.Application.Commons.Interfaces.Services;
-using Assets.Code.Application.Commons.Interfaces.Spawners;
-using Assets.Code.Application.Signals;
-using Assets.Code.Presentation.Presenters;
-using Assets.Code.Presentation.Spawners;
-using System;
+﻿using Code.Application.Commons.Interfaces.Services;
+using Code.Application.Commons.Interfaces.Spawners;
+using Code.Presentation.Presenters;
+using Code.Presentation.Spawners;
 using UnityEngine;
 using Zenject;
 
-namespace Assets.Code.Presentation.Effects
+namespace Code.Presentation.Effects
 {
     public class CatcherVignetteEffect : IInitializable, ITickable
     {

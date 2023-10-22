@@ -1,13 +1,13 @@
-﻿using Assets.Code.Application.Modules.Game;
-using Assets.Code.Application.Signals;
-using Assets.Code.Presentation.Commons;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using Code.Application.Modules.Game;
+using Code.Application.Signals;
+using Code.Presentation.Commons;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
 
-namespace Assets.Code.Presentation.Presenters
+namespace Code.Presentation.Statics
 {
     public class SceneLoaderStatic : MonoStatic
     {
