@@ -1,10 +1,10 @@
 ﻿using Code.Application.Commons.Interfaces.Mediator;
 using Code.Application.Commons.Interfaces.UI;
-using Code.Application.Modules.Level.Queries.AreAllLevelsAvailable;
+using Code.Application.Modules.Level.Queries.IsLastLevel;
 using Code.Application.Signals;
 using Code.Presentation.Commons;
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace Code.Presentation.Sections
@@ -13,8 +13,7 @@ namespace Code.Presentation.Sections
     {
         [Header("References")]
         [SerializeField] private CanvasGroup _canvasGroup;
-        [SerializeField] private GameObject _restartButton;
-        [SerializeField] private TMP_Text _title;
+        [SerializeField] private Button nextLevelButton;
 
         [Inject] private readonly SignalBus _signalBus;
         [Inject] private readonly IMediator _mediator;
@@ -31,10 +30,9 @@ namespace Code.Presentation.Sections
 
         public void Show()
         {
-            if(_mediator.Send(new AreAllLevelsAvailableQuery()))
+            if(_mediator.Send(new IsLastLevelQuery()))
             {
-                _title.text = "You win the game!";
-                _restartButton.SetActive(false);
+                nextLevelButton.gameObject.SetActive(false);
             }
 
             _canvasGroup.interactable = true;

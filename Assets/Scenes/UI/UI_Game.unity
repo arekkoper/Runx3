@@ -362,6 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _canvasGroup: {fileID: 715055606}
+  nextLevelButton: {fileID: 1213936087}
   _restartButton: {fileID: 1213936085}
   _title: {fileID: 2053675973}
 --- !u!225 &715055606
@@ -1222,6 +1223,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a5a657d74c90aa44191e32fdcc060d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1213936087 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 605327992571181460, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
+    type: 3}
+  m_PrefabInstance: {fileID: 1213936083}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1213936085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1278823201
