@@ -12,7 +12,7 @@ namespace Code.Presentation.Sections
     public class WinSection : MonoStatic, IWinSection
     {
         [Header("References")]
-        [SerializeField] private CanvasGroup _canvasGroup;
+        [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private Button nextLevelButton;
 
         [Inject] private readonly SignalBus _signalBus;
@@ -21,11 +21,13 @@ namespace Code.Presentation.Sections
         private void OnEnable()
         {
             _signalBus.Subscribe<OnPlayerWinSignal>(Show);
+            _signalBus.Subscribe<OnLevelLoadedSignal>(Hide);
         }
 
         private void OnDisable()
         {
             _signalBus.Unsubscribe<OnPlayerWinSignal>(Show);
+            _signalBus.Unsubscribe<OnLevelLoadedSignal>(Hide);
         }
 
         public void Show()
@@ -35,16 +37,16 @@ namespace Code.Presentation.Sections
                 nextLevelButton.gameObject.SetActive(false);
             }
 
-            _canvasGroup.interactable = true;
-            _canvasGroup.blocksRaycasts = true;
-            _canvasGroup.alpha = 1;
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+            canvasGroup.alpha = 1;
         }
 
         public void Hide()
         {
-            _canvasGroup.interactable = false;
-            _canvasGroup.blocksRaycasts = false;
-            _canvasGroup.alpha = 0;
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+            canvasGroup.alpha = 0;
         }
     }
 }
