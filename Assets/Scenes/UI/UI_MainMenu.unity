@@ -516,18 +516,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4219412403243934110, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 0e888892ea1ace84baa8db59d5813252,
-        type: 2}
-    - target: {fileID: 4219412403243934110, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
-        type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 6492454398872875457, guid: 0e888892ea1ace84baa8db59d5813252,
-        type: 2}
-    - target: {fileID: 4219412403243934110, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
-        type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
@@ -569,7 +557,7 @@ PrefabInstance:
     - target: {fileID: 4915727706416690607, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 47.7271
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 4915727706416690607, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
@@ -2139,7 +2127,7 @@ PrefabInstance:
     - target: {fileID: 4915727706416690607, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 47.7271
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 4915727706416690607, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}

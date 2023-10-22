@@ -4,31 +4,34 @@ using Code.Application.Commons.Interfaces.Services;
 using Code.Application.Modules.Level.Commands.MakeAvailable;
 using Code.Infrastructure.Repositories;
 using Code.Infrastructure.Services;
-using Zenject;
 using NUnit.Framework;
+using Zenject;
 
-[TestFixture]
-public class MakeLevelAvailableTest : ZenjectUnitTestFixture
+namespace Code.Tests
 {
-    [SetUp]
-    public void CommonInstall()
+    [TestFixture]
+    public class MakeLevelAvailableTest : ZenjectUnitTestFixture
     {
-        Container.Bind<IMediator>().To<Mediator>().AsSingle();
-        Container.Bind<ILevelRepository>().To<LevelRepository>().AsSingle();
-        Container.Bind<ILevelService>().To<LevelService>().AsSingle();
-        Container.Inject(this);
-    }
+        [SetUp]
+        public void CommonInstall()
+        {
+            Container.Bind<IMediator>().To<Mediator>().AsSingle();
+            Container.Bind<ILevelRepository>().To<LevelRepository>().AsSingle();
+            Container.Bind<ILevelService>().To<LevelService>().AsSingle();
+            Container.Inject(this);
+        }
 
-    [Inject] private readonly IMediator _mediator;
-    [Inject] private readonly ILevelService _levelService;
+        [Inject] private readonly IMediator _mediator;
+        [Inject] private readonly ILevelService _levelService;
 
-    [Test]
-    public void ChangeLevelAvailableFromFalseToTrue()
-    {
-        var level = _levelService.Create();
+        [Test]
+        public void ChangeLevelAvailableFromFalseToTrue()
+        {
+            var level = _levelService.Create();
 
-        _mediator.Send(new MakeLevelAvailableCommand() { Id = level.Id });
+            _mediator.Send(new MakeLevelAvailableCommand() { Id = level.Id });
 
-        Assert.That(level.IsAvailable);
+            Assert.That(level.IsAvailable);
+        }
     }
 }
