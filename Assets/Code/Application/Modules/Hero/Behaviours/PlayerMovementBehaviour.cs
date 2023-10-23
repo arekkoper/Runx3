@@ -4,7 +4,7 @@ namespace Code.Application.Modules.Hero.Behaviours
 {
     public class PlayerMovementBehaviour
     {
-        private Vector3 _movemementVelocity;
+        private Vector3 _movementVelocity;
 
         public CharacterController CharacterController { get; set; }
         public Transform Model { get; set; }
@@ -16,7 +16,7 @@ namespace Code.Application.Modules.Hero.Behaviours
 
         public PlayerMovementBehaviour()
         {
-            _movemementVelocity = Vector3.zero;
+            _movementVelocity = Vector3.zero;
             StopHandleInputs = false;
         }
 
@@ -28,15 +28,15 @@ namespace Code.Application.Modules.Hero.Behaviours
             }
             else
             {
-                if (_movemementVelocity.z > 0)
-                    _movemementVelocity.z = Mathf.Max(0, _movemementVelocity.z - VelocityLoss * Time.deltaTime);
+                if (_movementVelocity.z > 0)
+                    _movementVelocity.z = Mathf.Max(0, _movementVelocity.z - VelocityLoss * Time.deltaTime);
                 else
-                    _movemementVelocity.z = Mathf.Min(0, _movemementVelocity.z + VelocityLoss * Time.deltaTime);
+                    _movementVelocity.z = Mathf.Min(0, _movementVelocity.z + VelocityLoss * Time.deltaTime);
 
-                if (_movemementVelocity.x > 0)
-                    _movemementVelocity.x = Mathf.Max(0, _movemementVelocity.x - VelocityLoss * Time.deltaTime);
+                if (_movementVelocity.x > 0)
+                    _movementVelocity.x = Mathf.Max(0, _movementVelocity.x - VelocityLoss * Time.deltaTime);
                 else
-                    _movemementVelocity.x = Mathf.Min(0, _movemementVelocity.x + VelocityLoss * Time.deltaTime);
+                    _movementVelocity.x = Mathf.Min(0, _movementVelocity.x + VelocityLoss * Time.deltaTime);
 
             }
 
@@ -46,10 +46,10 @@ namespace Code.Application.Modules.Hero.Behaviours
         private void MovementLogic()
         {
             //Move
-            if (_movemementVelocity.x != 0 || _movemementVelocity.z != 0)
+            if (_movementVelocity.x != 0 || _movementVelocity.z != 0)
             {
-                CharacterController.Move(_movemementVelocity * Time.deltaTime);
-                Model.rotation = Quaternion.Slerp(Model.rotation, Quaternion.LookRotation(_movemementVelocity), 0.18f);
+                CharacterController.Move(_movementVelocity * Time.deltaTime);
+                Model.rotation = Quaternion.Slerp(Model.rotation, Quaternion.LookRotation(_movementVelocity), 0.18f);
             }
         }
 
@@ -58,47 +58,47 @@ namespace Code.Application.Modules.Hero.Behaviours
             //Up & Down
             if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
             {
-                if (_movemementVelocity.z >= 0)
-                    _movemementVelocity.z = Mathf.Min(Speed, _movemementVelocity.z + VelocityGain * Time.deltaTime);
+                if (_movementVelocity.z >= 0)
+                    _movementVelocity.z = Mathf.Min(Speed, _movementVelocity.z + VelocityGain * Time.deltaTime);
                 else
-                    _movemementVelocity.z = Mathf.Min(0, _movemementVelocity.z + VelocityGain * ReverseMomentum * Time.deltaTime);
+                    _movementVelocity.z = Mathf.Min(0, _movementVelocity.z + VelocityGain * ReverseMomentum * Time.deltaTime);
             }
             else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
             {
-                if (_movemementVelocity.z > 0)
-                    _movemementVelocity.z = Mathf.Max(0, _movemementVelocity.z - VelocityGain * ReverseMomentum * Time.deltaTime);
+                if (_movementVelocity.z > 0)
+                    _movementVelocity.z = Mathf.Max(0, _movementVelocity.z - VelocityGain * ReverseMomentum * Time.deltaTime);
                 else
-                    _movemementVelocity.z = Mathf.Max(-Speed, _movemementVelocity.z - VelocityGain * Time.deltaTime);
+                    _movementVelocity.z = Mathf.Max(-Speed, _movementVelocity.z - VelocityGain * Time.deltaTime);
             }
             else
             {
-                if (_movemementVelocity.z > 0)
-                    _movemementVelocity.z = Mathf.Max(0, _movemementVelocity.z - VelocityLoss * Time.deltaTime);
+                if (_movementVelocity.z > 0)
+                    _movementVelocity.z = Mathf.Max(0, _movementVelocity.z - VelocityLoss * Time.deltaTime);
                 else
-                    _movemementVelocity.z = Mathf.Min(0, _movemementVelocity.z + VelocityLoss * Time.deltaTime);
+                    _movementVelocity.z = Mathf.Min(0, _movementVelocity.z + VelocityLoss * Time.deltaTime);
             }
 
             //Left & Right
             if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
             {
-                if (_movemementVelocity.x >= 0)
-                    _movemementVelocity.x = Mathf.Min(Speed, _movemementVelocity.x + VelocityGain * Time.deltaTime);
+                if (_movementVelocity.x >= 0)
+                    _movementVelocity.x = Mathf.Min(Speed, _movementVelocity.x + VelocityGain * Time.deltaTime);
                 else
-                    _movemementVelocity.x = Mathf.Min(0, _movemementVelocity.x + VelocityGain * ReverseMomentum * Time.deltaTime);
+                    _movementVelocity.x = Mathf.Min(0, _movementVelocity.x + VelocityGain * ReverseMomentum * Time.deltaTime);
             }
             else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
             {
-                if (_movemementVelocity.x > 0)
-                    _movemementVelocity.x = Mathf.Max(0, _movemementVelocity.x - VelocityGain * ReverseMomentum * Time.deltaTime);
+                if (_movementVelocity.x > 0)
+                    _movementVelocity.x = Mathf.Max(0, _movementVelocity.x - VelocityGain * ReverseMomentum * Time.deltaTime);
                 else
-                    _movemementVelocity.x = Mathf.Max(-Speed, _movemementVelocity.x - VelocityGain * Time.deltaTime);
+                    _movementVelocity.x = Mathf.Max(-Speed, _movementVelocity.x - VelocityGain * Time.deltaTime);
             }
             else
             {
-                if (_movemementVelocity.x > 0)
-                    _movemementVelocity.x = Mathf.Max(0, _movemementVelocity.x - VelocityLoss * Time.deltaTime);
+                if (_movementVelocity.x > 0)
+                    _movementVelocity.x = Mathf.Max(0, _movementVelocity.x - VelocityLoss * Time.deltaTime);
                 else
-                    _movemementVelocity.x = Mathf.Min(0, _movemementVelocity.x + VelocityLoss * Time.deltaTime);
+                    _movementVelocity.x = Mathf.Min(0, _movementVelocity.x + VelocityLoss * Time.deltaTime);
             }
         }
     }

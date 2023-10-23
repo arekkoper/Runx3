@@ -46,6 +46,7 @@ namespace Code.Presentation.Presenters
         private void Update()
         {
             _movementBehaviour.Behave();
+            transform.position = new Vector3(transform.position.x, 0f, transform.position.z); //I had to add this line, because player was "flying" on Y axis
         }
 
         private void React()
