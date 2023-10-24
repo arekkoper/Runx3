@@ -84,7 +84,7 @@ namespace Code.Presentation.Presenters
 
         private void Retarget()
         {
-            _currentTarget = _playerSpawner.HasPresenter() ? _playerSpawner.GetPlayerPosition() : new Vector3(transform.position.x + 2f, 0f, transform.position.z + 2f);
+            _currentTarget = _playerSpawner.HasPresenter() ? _playerSpawner.GetPlayerPosition() : new Vector3(transform.position.x + 2f, 5f, transform.position.z + 2f);
             _initialRotation = _model.rotation;
             _targetRotation = Quaternion.LookRotation((_currentTarget - transform.position).normalized);
             _state = State.Rotating;
