@@ -16,6 +16,7 @@ namespace Code.Presentation.Presenters
         [SerializeField] private float _speed;
 
         private const float RotationSlerpAmount = 0.08f;
+        private const float DistanceThreshold = 0.1f; 
         private int _currentPointIndex;
         private Transform _currentPoint;
         private Transform[] _points;
@@ -50,7 +51,7 @@ namespace Code.Presentation.Presenters
             {
                 transform.position = Vector3.MoveTowards(transform.position, _currentPoint.position, _speed * Time.deltaTime);
 
-                if (transform.position == _currentPoint.position)
+                if (Vector3.Distance(transform.position, _currentPoint.position) <= DistanceThreshold)
                 {
                     if (_currentPointIndex >= _points.Length - 1)
                     {
