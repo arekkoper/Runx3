@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Code.Application.Commons.Interfaces.Mediator;
+using Code.Application.Modules.Enemies.Commands.ToggleCatcher;
 using Code.Application.Modules.Level.Commands.MakeAvailable;
 using Code.Presentation.Commons;
 using UnityEngine;
@@ -15,6 +16,7 @@ namespace Code.Infrastructure.Services.Cheats
         private List<object> _commands;
 
         private Cheat<int> MAKE_LEVEL_AVAILABLE;
+        private Cheat TOGGLE_CATCHER;
 
         [Inject] private readonly IMediator _mediator;
 
@@ -26,9 +28,27 @@ namespace Code.Infrastructure.Services.Cheats
 
             _commands = new List<object>()
             {
-                MAKE_LEVEL_AVAILABLE
+                MAKE_LEVEL_AVAILABLE,
+                TOGGLE_CATCHER
             };
         }
+        
+        private void CheatLoader()
+        {
+            MAKE_LEVEL_AVAILABLE = new Cheat<int>("ma", "Make specific level as an available",
+                "ma [levelID]",
+                levelID =>
+                {
+                    _mediator.Send(new MakeLevelAvailableCommand() { Id = levelID });
+                });
+
+            TOGGLE_CATCHER = new Cheat("tc", "Cheat toggles catcher", "tc", () =>
+            {
+                _mediator.Send(new ToggleCatcherCommand());
+            });
+        }
+
+        #region Logic
 
         private void Update()
         {
@@ -60,16 +80,6 @@ namespace Code.Infrastructure.Services.Cheats
             GUI.SetNextControlName("CheatInput");
             _input = GUI.TextField(new Rect(10f, y + 5f, Screen.width - 20f, 20f), _input);
             GUI.FocusControl("CheatInput");
-        }
-
-        private void CheatLoader()
-        {
-            MAKE_LEVEL_AVAILABLE = new Cheat<int>("ma", "Make specific level as an available",
-                "ma [levelID]",
-                levelID =>
-                {
-                    _mediator.Send(new MakeLevelAvailableCommand() { Id = levelID });
-                });
         }
 
         private void HandleInput()
@@ -104,5 +114,8 @@ namespace Code.Infrastructure.Services.Cheats
             _input = "";
             GUI.FocusControl(null);
         }
+        
+        #endregion
+
     }
 }
