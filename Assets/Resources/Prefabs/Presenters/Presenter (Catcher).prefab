@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _model: {fileID: 4221282409919666837}
-  _speed: 22
+  _speed: 18
   _minRetargetInterval: 0.2
   _maxRetargetInterval: 0.5
   _rotationTime: 0.1
