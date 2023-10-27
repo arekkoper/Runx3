@@ -27,11 +27,6 @@ namespace Code.Application.Modules.Hero.Commands.PlayerWin
 
         public void Handle(PlayerWinCommand command)
         {
-            _playerService.IncreaseScore(_mediator.Send(new CalculateScoreCommand()
-            {
-                StartTime = _gameManager.StartLevelTime,
-                EndTime = Time.time
-            }));
 
             _signalBus.Fire(new OnPlayerWinSignal()); //this is for UI
 

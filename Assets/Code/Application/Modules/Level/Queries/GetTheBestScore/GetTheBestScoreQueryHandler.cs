@@ -3,7 +3,7 @@ using Code.Application.Commons.Interfaces.Services;
 
 namespace Code.Application.Modules.Level.Queries.GetTheBestScore
 {
-    public class GetTheBestScoreQueryHandler : IQueryHandler<GetTheBestScoreQuery, int>
+    public class GetTheBestScoreQueryHandler : IQueryHandler<GetTheBestScoreQuery, float>
     {
         private readonly ILevelService _levelService;
 
@@ -12,7 +12,7 @@ namespace Code.Application.Modules.Level.Queries.GetTheBestScore
             _levelService = levelService;
         }
 
-        public int Handle(GetTheBestScoreQuery query)
+        public float Handle(GetTheBestScoreQuery query)
         {
             return _levelService.GetLevelById(query.LevelID).TheBestScore;
         }

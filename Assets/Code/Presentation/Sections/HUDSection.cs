@@ -23,7 +23,7 @@ namespace Code.Presentation.Sections
         [Inject] private readonly GameManager _gameManager;
 
         private bool _refreshCurrentScore;
-        private int _score;
+        private float _score;
 
         private void Start()
         {

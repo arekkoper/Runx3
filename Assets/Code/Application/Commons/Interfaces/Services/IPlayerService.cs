@@ -7,7 +7,6 @@ namespace Code.Application.Commons.Interfaces.Services
         Player Create();
         Player GetPlayer();
         int GetScore();
-        void IncreaseScore(int score);
         void ResetScore();
         void Save();
     }

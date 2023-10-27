@@ -2,7 +2,7 @@
 
 namespace Code.Application.Modules.Level.Queries.GetTheBestScore
 {
-    public class GetTheBestScoreQuery : IQuery<int>
+    public class GetTheBestScoreQuery : IQuery<float>
     {
         public int LevelID { get; set; }
     }
