@@ -1,5 +1,6 @@
 using Code.Application.Commons.Interfaces.Spawners;
 using Code.Domain.Entities;
+using Code.Presentation.Controllers;
 using Code.Presentation.Presenters;
 using Code.Presentation.Spawners;
 using UnityEngine;
@@ -21,12 +22,14 @@ namespace Code.Presentation
         {
             //Presenters
             Container.BindFactory<Player, PlayerPresenter, PlayerPresenter.Factory>().FromComponentInNewPrefab(_playerPresenter).UnderTransform(_entitiesHub);
-            Container.BindFactory<CatcherPresenter, CatcherPresenter.Factory>().FromComponentInNewPrefab(_catcherPresenter);
+            Container.BindFactory<CatcherPresenter, CatcherPresenter.Factory>().FromComponentInNewPrefab(_catcherPresenter).UnderTransform(_entitiesHub);
 
             //Spawners
             Container.BindInterfacesAndSelfTo<PlayerSpawner>().AsSingle();
             Container.Bind<ICatcherSpawner>().To<CatcherSpawner>().AsSingle();
-
+            
+            //Controllers
+            Container.BindInterfacesAndSelfTo<CursorController>().AsSingle();
 
 
         }
