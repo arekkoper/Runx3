@@ -1,7 +1,9 @@
-﻿using Code.Application.Commons.Interfaces.Mediator;
+﻿using System;
+using Code.Application.Commons.Interfaces.Mediator;
 using Code.Application.Modules.Game.Commands.ChangeLevel;
 using Code.Application.Modules.Level.Queries.GetCurrentLevel;
 using Code.Presentation.Commons;
+using UnityEngine;
 using Zenject;
 
 namespace Code.Presentation.Interactions
@@ -12,8 +14,23 @@ namespace Code.Presentation.Interactions
         
         public void Interact()
         {
+            RestartLevel();
+        }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                RestartLevel();
+            }
+        }
+
+        private void RestartLevel()
+        {
             var currentLevelId = _mediator.Send(new GetCurrentLevelCommand()).Id;
+
             _mediator.Send(new ChangeLevelCommand() { LevelID = currentLevelId });
+
         }
     }
 }

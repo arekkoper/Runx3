@@ -30,8 +30,7 @@ namespace Code.Presentation
             
             //Controllers
             Container.BindInterfacesAndSelfTo<CursorController>().AsSingle();
-
-
+            
         }
     }
 }
