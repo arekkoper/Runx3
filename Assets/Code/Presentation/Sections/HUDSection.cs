@@ -13,7 +13,8 @@ namespace Code.Presentation.Sections
 {
     public class HUDSection : MonoStatic
     {
-        [Header("References")]
+        [Header("References")] 
+        [SerializeField] private CanvasGroup canvasGroup;
         [SerializeField] private TMP_Text _currentScore;
         [SerializeField] private TMP_Text _levelID;
         [SerializeField] private TMP_Text _theBestScore;
@@ -25,6 +26,8 @@ namespace Code.Presentation.Sections
         private bool _refreshCurrentScore;
         private float _score;
 
+        public float Score { get => _score; }
+        
         private void Start()
         {
             Refresh();
@@ -37,6 +40,8 @@ namespace Code.Presentation.Sections
             _signalBus.Subscribe<OnLevelLoadedSignal>(Refresh);
             _signalBus.Subscribe<OnLevelLoadedSignal>(ActiveCurrentScoreRefresh);
             _signalBus.Subscribe<OnPlayerKilledSignal>(DeactiveCurrentScoreRefresh);
+            _signalBus.Subscribe<OnInGameMenuOpenSignal>(InGameMenuOpen);
+            _signalBus.Subscribe<OnInGameMenuCloseSignal>(InGameMenuClose);
         }
 
         private void OnDisable()
@@ -46,6 +51,8 @@ namespace Code.Presentation.Sections
             _signalBus.Unsubscribe<OnLevelLoadedSignal>(Refresh);
             _signalBus.Unsubscribe<OnLevelLoadedSignal>(ActiveCurrentScoreRefresh);
             _signalBus.Unsubscribe<OnPlayerKilledSignal>(DeactiveCurrentScoreRefresh);
+            _signalBus.Unsubscribe<OnInGameMenuOpenSignal>(InGameMenuOpen);
+            _signalBus.Unsubscribe<OnInGameMenuCloseSignal>(InGameMenuClose);
         }
 
         private void Update()
@@ -80,6 +87,29 @@ namespace Code.Presentation.Sections
             _levelID.text = $"Level: {_mediator.Send(new GetCurrentLevelCommand()).Id}";
         }
 
+        private void InGameMenuClose()
+        {
+            Show();
+        }
+
+        private void InGameMenuOpen()
+        {
+            Hide();
+        }
+        
+        public void Show()
+        {
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+            canvasGroup.alpha = 1;
+        }
+
+        public void Hide()
+        {
+            canvasGroup.interactable = false;
+            canvasGroup.blocksRaycasts = false;
+            canvasGroup.alpha = 0;
+        }
 
     }
 }

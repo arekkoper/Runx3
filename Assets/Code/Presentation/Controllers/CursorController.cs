@@ -20,6 +20,9 @@ namespace Code.Presentation.Controllers
             _signalBus.Subscribe<OnLevelLoadedSignal>(HideCursor);
             _signalBus.Subscribe<OnPlayerWinSignal>(ShowCursor);
             _signalBus.Subscribe<OnPlayerKilledSignal>(ShowCursor);
+            _signalBus.Subscribe<OnInGameMenuOpenSignal>(ShowCursor);
+            _signalBus.Subscribe<OnInGameMenuCloseSignal>(HideCursor);
+            _signalBus.Subscribe<OnReturnToMenuSignal>(ShowCursor);
         }
 
         public void Dispose()
@@ -27,6 +30,9 @@ namespace Code.Presentation.Controllers
             _signalBus.Unsubscribe<OnLevelLoadedSignal>(HideCursor);
             _signalBus.Unsubscribe<OnPlayerWinSignal>(ShowCursor);
             _signalBus.Unsubscribe<OnPlayerKilledSignal>(ShowCursor);
+            _signalBus.Unsubscribe<OnInGameMenuOpenSignal>(ShowCursor);
+            _signalBus.Unsubscribe<OnInGameMenuCloseSignal>(HideCursor);
+            _signalBus.Unsubscribe<OnReturnToMenuSignal>(ShowCursor);
         }
 
         private void ShowCursor()
