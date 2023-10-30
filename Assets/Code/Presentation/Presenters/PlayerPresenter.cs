@@ -14,6 +14,7 @@ namespace Code.Presentation.Presenters
         [SerializeField] private Transform _model;
 
         private PlayerMovementBehaviour _movementBehaviour;
+        private PlayerDashBehaviour _dashBehaviour;
 
         [Inject] private readonly Player _player;
         [Inject] private readonly SignalBus _signalBus;
@@ -31,6 +32,14 @@ namespace Code.Presentation.Presenters
                 ReverseMomentum = _player.ReverseMomentumMultiplier,
                 Model = _model
             };
+
+            _dashBehaviour = new PlayerDashBehaviour()
+            {
+                CharacterController = _characterController,
+                MovementVelocity = _movementBehaviour.MovementVelocity,
+                Model = _model,
+                Speed = _player.Speed
+            };
         }
 
         private void OnEnable()
@@ -45,7 +54,11 @@ namespace Code.Presentation.Presenters
 
         private void Update()
         {
-            _movementBehaviour.Behave();
+            if(!_dashBehaviour.IsDashing)
+                _movementBehaviour.Behave();
+            
+            _dashBehaviour.Behave();
+            
             transform.position = new Vector3(transform.position.x, 5.13f, transform.position.z); //I had to add this line, because player was "flying" on Y axis
         }
 
