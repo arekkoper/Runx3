@@ -13,6 +13,8 @@ namespace Code.Presentation.Presenters
         [SerializeField] private CharacterController _characterController;
         [SerializeField] private Transform _model;
 
+        public PlayerDashBehaviour DashBehaviour => _dashBehaviour;
+        
         private PlayerMovementBehaviour _movementBehaviour;
         private PlayerDashBehaviour _dashBehaviour;
 
@@ -38,7 +40,8 @@ namespace Code.Presentation.Presenters
                 CharacterController = _characterController,
                 MovementVelocity = _movementBehaviour.MovementVelocity,
                 Model = _model,
-                Speed = _player.Speed
+                Speed = _player.Speed,
+                SignalBus = _signalBus
             };
         }
 

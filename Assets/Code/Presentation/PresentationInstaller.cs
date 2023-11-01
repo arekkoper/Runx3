@@ -25,7 +25,7 @@ namespace Code.Presentation
             Container.BindFactory<CatcherPresenter, CatcherPresenter.Factory>().FromComponentInNewPrefab(_catcherPresenter).UnderTransform(_entitiesHub);
 
             //Spawners
-            Container.BindInterfacesAndSelfTo<PlayerSpawner>().AsSingle();
+            Container.Bind<IPlayerSpawner>().To<PlayerSpawner>().AsSingle();
             Container.Bind<ICatcherSpawner>().To<CatcherSpawner>().AsSingle();
             
             //Controllers

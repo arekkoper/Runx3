@@ -8,11 +8,11 @@ namespace Code.Infrastructure.Loaders
 {
     public class LevelLoader : ILevelLoader
     {
-        private readonly PlayerSpawner _playerSpawner;
+        private readonly IPlayerSpawner _playerSpawner;
         private readonly ICatcherSpawner _catcherSpawner;
         private readonly SignalBus _signalBus;
 
-        public LevelLoader(PlayerSpawner playerSpawner, ICatcherSpawner catcherSpawner, SignalBus signalBus)
+        public LevelLoader(IPlayerSpawner playerSpawner, ICatcherSpawner catcherSpawner, SignalBus signalBus)
         {
             _playerSpawner = playerSpawner;
             _catcherSpawner = catcherSpawner;

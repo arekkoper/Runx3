@@ -1,5 +1,6 @@
-﻿using Unity.VisualScripting.YamlDotNet.Core.Tokens;
+﻿using Code.Application.Signals;
 using UnityEngine;
+using Zenject;
 
 namespace Code.Application.Modules.Hero.Behaviours
 {
@@ -9,14 +10,17 @@ namespace Code.Application.Modules.Hero.Behaviours
         public Vector3 MovementVelocity { get; set; }
         public Transform Model { get; set; }
         public float Speed { get; set; }
+        public SignalBus SignalBus { get; set; }
         
         private Vector3 _dashDirection;
         private float _dashDistance = 10f;
         private float _dashTime = 0.18f;
-        private float _dashCooldown = 2f;
+        private float _dashCooldown = 3f;
         private float _dashBeginTime = Mathf.NegativeInfinity;
         
         public bool CanDashNow => Time.time > _dashBeginTime + _dashTime + _dashCooldown;
+        public float Cooldown => _dashBeginTime + _dashTime + _dashCooldown - Time.time;
+        public float DashCooldown => _dashCooldown + _dashTime;
         public bool IsDashing => Time.time < _dashBeginTime + _dashTime;
 
         public void Behave()
@@ -44,6 +48,8 @@ namespace Code.Application.Modules.Hero.Behaviours
                         MovementVelocity = _dashDirection * Speed;
                         Model.forward = _dashDirection;
                     }
+                    
+                    SignalBus.Fire(new OnPlayerDashSignal());
                 }
             }
 

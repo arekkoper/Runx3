@@ -9,7 +9,7 @@ namespace Code.Presentation.Effects
 {
     public class CatcherVignetteEffect : IInitializable, ITickable
     {
-        private readonly PlayerSpawner _playerSpawner;
+        private readonly IPlayerSpawner _playerSpawner;
         private readonly ICatcherSpawner _catcherSpawner;
         private readonly IPostProcessService _postProcessService;
 
@@ -23,7 +23,7 @@ namespace Code.Presentation.Effects
         private CatcherPresenter _catcherPresenter;
 
         public CatcherVignetteEffect(
-            PlayerSpawner playerSpawner,
+            IPlayerSpawner playerSpawner,
             ICatcherSpawner catcherSpawner,
             IPostProcessService postProcessService)
         {
