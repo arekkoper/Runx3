@@ -32,12 +32,14 @@ namespace Code.Presentation.Controllers
         {
             _signalBus.Subscribe<OnPlayerKilledSignal>(Restart);
             _signalBus.Subscribe<OnPlayerDashSignal>(Refresh);
+            _signalBus.Subscribe<OnLevelLoadedSignal>(Restart);
         }
 
         private void OnDisable()
         {
             _signalBus.Unsubscribe<OnPlayerKilledSignal>(Restart);
             _signalBus.Unsubscribe<OnPlayerDashSignal>(Refresh);
+            _signalBus.Unsubscribe<OnLevelLoadedSignal>(Restart);
         }
 
         private void Refresh()
