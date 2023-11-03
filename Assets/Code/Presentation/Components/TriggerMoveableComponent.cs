@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Code.Application.Signals;
 using Code.Presentation.Commons;
 using UnityEngine;

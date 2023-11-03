@@ -7,7 +7,7 @@ using Zenject;
 
 namespace Code.Presentation.Presenters
 {
-    public class PlayerPresenter : MonoBehaviour, IDieable
+    public class PlayerPresenter : MonoBehaviour, IDieable, IPickable
     {
         [Header("References")]
         [SerializeField] private CharacterController _characterController;
