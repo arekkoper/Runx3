@@ -47,5 +47,10 @@ namespace Code.Presentation.Presenters
             
             _signalBus.Fire(new OnTriggerActiveSignal() { Id = id });
         }
+
+        public void Hide(KeyPresenter keyPresenter)
+        {
+            keyPresenter.gameObject.SetActive(false);
+        }
     }
 }
