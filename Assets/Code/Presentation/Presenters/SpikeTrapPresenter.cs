@@ -9,7 +9,6 @@ namespace Code.Presentation.Presenters
     {
         [Header("References")]
         [SerializeField] private Transform _spikeHolder;
-        [SerializeField] private GameObject _hitBoxObject;
 
         [Header("Parameters")]
         [SerializeField] private float _interval;
@@ -54,7 +53,6 @@ namespace Code.Presentation.Presenters
 
         private void StartRising()
         {
-            _hitBoxObject.SetActive(true);
             _lastSwitchTime = Time.time;
             _state = State.Raising;
         }
@@ -77,7 +75,6 @@ namespace Code.Presentation.Presenters
                 if(scale.y == LoweredSpikeHeight)
                 {
                     Invoke("StartRising", _interval);
-                    _hitBoxObject.SetActive(false);
                     _state = State.Lowered;
                 }
             }
