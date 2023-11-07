@@ -58,8 +58,8 @@ namespace Code.Presentation.Views
             _theBestScore.text = _level.TheBestScore.ToString();
             _deaths.text = _level.Deaths.ToString();
 
-            _nextLevel.gameObject.SetActive(!(_level.Id == 3));
-            _previousLevel.gameObject.SetActive(!(_level.Id == 1));
+            _nextLevel.GetComponent<Image>().enabled = _level.Id != 3;
+            _previousLevel.GetComponent<Image>().enabled = _level.Id != 1;
             _run.interactable = _level.IsAvailable;
         }
     }
