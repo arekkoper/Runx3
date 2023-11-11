@@ -7,33 +7,33 @@ using Zenject;
 
 namespace Code.Presentation.Audios
 {
-    public class DashAudio : IInitializable, IDisposable
+    public class LightClickAudio : IInitializable, IDisposable
     {
-        private readonly SignalBus _signalBus;
+        private readonly SignalBus _signal;
         private readonly IAudioService _audioService;
 
-        public DashAudio(SignalBus signalBus, IAudioService audioService)
+        public LightClickAudio(SignalBus signal, IAudioService audioService)
         {
-            _signalBus = signalBus;
+            _signal = signal;
             _audioService = audioService;
         }
         
         public void Initialize()
         {
-            _signalBus.Subscribe<OnPlayerDashSignal>(PlaySound);
+            _signal.Subscribe<OnButtonClick>(PlaySound);
         }
 
         public void Dispose()
         {
-            _signalBus.Unsubscribe<OnPlayerDashSignal>(PlaySound);
+            _signal.Unsubscribe<OnButtonClick>(PlaySound);
         }
-
-        private void PlaySound()
+        
+        private void PlaySound(OnButtonClick param)
         {
             var settings = new SoundSettings()
             {
-                SoundType = SoundType.PlayerDash,
-                Volume = 0.1f
+                SoundType = param.IsHeavy ? SoundType.ClickHeavy : SoundType.ClickLight,
+                Volume = 0.6f
             };
             
             _audioService.PlaySound(settings);
