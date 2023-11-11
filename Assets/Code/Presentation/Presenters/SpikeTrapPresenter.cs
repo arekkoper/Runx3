@@ -9,6 +9,7 @@ namespace Code.Presentation.Presenters
     {
         [Header("References")]
         [SerializeField] private Transform _spikeHolder;
+        [SerializeField] private AudioSource audioSource;
 
         [Header("Parameters")]
         [SerializeField] private float _interval;
@@ -54,6 +55,7 @@ namespace Code.Presentation.Presenters
         private void StartRising()
         {
             _lastSwitchTime = Time.time;
+            audioSource.Play();
             _state = State.Raising;
         }
 

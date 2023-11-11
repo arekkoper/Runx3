@@ -12,6 +12,7 @@ namespace Code.Presentation.Presenters
         [Header("References")]
         [SerializeField] private CharacterController _characterController;
         [SerializeField] private Transform _model;
+        [SerializeField] private AudioSource dashSound;
 
         public PlayerDashBehaviour DashBehaviour => _dashBehaviour;
         

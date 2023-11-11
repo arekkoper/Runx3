@@ -1,5 +1,6 @@
 using Code.Application.Commons.Interfaces.Spawners;
 using Code.Domain.Entities;
+using Code.Presentation.Audios;
 using Code.Presentation.Controllers;
 using Code.Presentation.Presenters;
 using Code.Presentation.Spawners;
@@ -31,6 +32,9 @@ namespace Code.Presentation
             //Controllers
             Container.BindInterfacesAndSelfTo<CursorController>().AsSingle();
             Container.BindInterfacesAndSelfTo<TimeController>().AsSingle();
+            
+            //Audios
+            Container.BindInterfacesAndSelfTo<DashAudio>().AsSingle();
 
         }
     }
