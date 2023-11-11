@@ -20,6 +20,8 @@ namespace Code.Application
             Container.DeclareSignal<OnInGameMenuCloseSignal>().OptionalSubscriber();
             Container.DeclareSignal<OnInGameMenuOpenSignal>().OptionalSubscriber();
             Container.DeclareSignal<OnReturnToMenuSignal>().OptionalSubscriber();
+            Container.DeclareSignal<OnPlayerDashSignal>().OptionalSubscriber();
+            Container.DeclareSignal<OnTriggerActiveSignal>().OptionalSubscriber();
 
             //Observers
             Container.BindInterfacesAndSelfTo<OnPlayerKilledObserver>().AsSingle();

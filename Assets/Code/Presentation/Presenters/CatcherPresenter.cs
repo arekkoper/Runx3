@@ -1,6 +1,6 @@
-﻿using Code.Application.Signals;
+﻿using Code.Application.Commons.Interfaces.Spawners;
+using Code.Application.Signals;
 using Code.Presentation.Commons;
-using Code.Presentation.Spawners;
 using UnityEngine;
 using Zenject;
 
@@ -18,7 +18,7 @@ namespace Code.Presentation.Presenters
         [SerializeField] private float _rotationTime;
         [SerializeField] private float _postRotationWaitTime;
 
-        [Inject] private readonly PlayerSpawner _playerSpawner;
+        [Inject] private readonly IPlayerSpawner _playerSpawner;
         [Inject] private readonly SignalBus _signalBus;
 
         public class Factory : PlaceholderFactory<CatcherPresenter> { }

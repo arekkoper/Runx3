@@ -7,13 +7,17 @@ using Zenject;
 
 namespace Code.Presentation.Presenters
 {
-    public class PlayerPresenter : MonoBehaviour, IDieable
+    public class PlayerPresenter : MonoBehaviour, IDieable, IPickable
     {
         [Header("References")]
         [SerializeField] private CharacterController _characterController;
         [SerializeField] private Transform _model;
+        [SerializeField] private AudioSource dashSound;
 
+        public PlayerDashBehaviour DashBehaviour => _dashBehaviour;
+        
         private PlayerMovementBehaviour _movementBehaviour;
+        private PlayerDashBehaviour _dashBehaviour;
 
         [Inject] private readonly Player _player;
         [Inject] private readonly SignalBus _signalBus;
@@ -31,6 +35,15 @@ namespace Code.Presentation.Presenters
                 ReverseMomentum = _player.ReverseMomentumMultiplier,
                 Model = _model
             };
+
+            _dashBehaviour = new PlayerDashBehaviour()
+            {
+                CharacterController = _characterController,
+                MovementVelocity = _movementBehaviour.MovementVelocity,
+                Model = _model,
+                Speed = _player.Speed,
+                SignalBus = _signalBus
+            };
         }
 
         private void OnEnable()
@@ -45,7 +58,11 @@ namespace Code.Presentation.Presenters
 
         private void Update()
         {
-            _movementBehaviour.Behave();
+            if(!_dashBehaviour.IsDashing)
+                _movementBehaviour.Behave();
+            
+            _dashBehaviour.Behave();
+            
             transform.position = new Vector3(transform.position.x, 5.13f, transform.position.z); //I had to add this line, because player was "flying" on Y axis
         }
 

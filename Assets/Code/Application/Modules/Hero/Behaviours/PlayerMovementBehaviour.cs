@@ -5,7 +5,8 @@ namespace Code.Application.Modules.Hero.Behaviours
     public class PlayerMovementBehaviour
     {
         private Vector3 _movementVelocity;
-
+        public Vector3 MovementVelocity => _movementVelocity;
+        
         public CharacterController CharacterController { get; set; }
         public Transform Model { get; set; }
         public float Speed { get; set; }
@@ -37,7 +38,6 @@ namespace Code.Application.Modules.Hero.Behaviours
                     _movementVelocity.x = Mathf.Max(0, _movementVelocity.x - VelocityLoss * Time.deltaTime);
                 else
                     _movementVelocity.x = Mathf.Min(0, _movementVelocity.x + VelocityLoss * Time.deltaTime);
-
             }
 
             MovementLogic();

@@ -1,10 +1,11 @@
 ﻿using Code.Application.Commons.Interfaces.Services;
+using Code.Application.Commons.Interfaces.Spawners;
 using Code.Presentation.Presenters;
 using UnityEngine;
 
 namespace Code.Presentation.Spawners
 {
-    public class PlayerSpawner
+    public class PlayerSpawner : IPlayerSpawner
     {
         private PlayerPresenter _presenter;
 

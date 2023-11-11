@@ -7,6 +7,7 @@ using Code.Application.Signals;
 using Code.Presentation.Commons;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace Code.Presentation.Sections
@@ -18,6 +19,7 @@ namespace Code.Presentation.Sections
         [SerializeField] private TMP_Text _currentScore;
         [SerializeField] private TMP_Text _levelID;
         [SerializeField] private TMP_Text _theBestScore;
+
 
         [Inject] private readonly SignalBus _signalBus;
         [Inject] private readonly IMediator _mediator;

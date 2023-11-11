@@ -10,6 +10,7 @@ namespace Code.Presentation.Presenters
         [Header("References")]
         [SerializeField] private Transform _bulletPoint;
         [SerializeField] private ProjectilePresenter _projectilePresenter;
+        [SerializeField] private AudioSource audioSource;
 
         [Header("Parameters")]
         [SerializeField] private float _fireRate;
@@ -39,6 +40,8 @@ namespace Code.Presentation.Presenters
                 _lastFireTime = Time.time;
                 
                 var projectile = Instantiate(_projectilePresenter, _bulletPoint.position, _bulletPoint.rotation, _bulletPoint);
+                
+                audioSource.Play();
                 
                 projectile.Speed = _speed;
                 projectile.Range = _range;

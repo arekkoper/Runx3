@@ -1,5 +1,6 @@
 using Code.Application.Commons.Interfaces.Spawners;
 using Code.Domain.Entities;
+using Code.Presentation.Audios;
 using Code.Presentation.Controllers;
 using Code.Presentation.Presenters;
 using Code.Presentation.Spawners;
@@ -25,12 +26,15 @@ namespace Code.Presentation
             Container.BindFactory<CatcherPresenter, CatcherPresenter.Factory>().FromComponentInNewPrefab(_catcherPresenter).UnderTransform(_entitiesHub);
 
             //Spawners
-            Container.BindInterfacesAndSelfTo<PlayerSpawner>().AsSingle();
+            Container.Bind<IPlayerSpawner>().To<PlayerSpawner>().AsSingle();
             Container.Bind<ICatcherSpawner>().To<CatcherSpawner>().AsSingle();
             
             //Controllers
             Container.BindInterfacesAndSelfTo<CursorController>().AsSingle();
             Container.BindInterfacesAndSelfTo<TimeController>().AsSingle();
+            
+            //Audios
+            Container.BindInterfacesAndSelfTo<DashAudio>().AsSingle();
 
         }
     }
