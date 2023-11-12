@@ -1,33 +1,31 @@
-﻿using Code.Application.Commons.Enums;
-using Code.Application.Commons.Interfaces.Services;
+﻿using Code.Application.Commons.Interfaces.Services;
 using Code.Application.Commons.Interfaces.Storages;
-using Code.Application.Commons.Structs;
 using UnityEngine;
+using AudioSettings = Code.Application.Commons.Structs.AudioSettings;
+using AudioType = Code.Application.Commons.Enums.AudioType;
 
 namespace Code.Infrastructure.Services
 {
     public class AudioService : IAudioService
     {
-        private readonly ISoundStorage _soundStorage;
+        private readonly IAudioStorage _audioStorage;
         private readonly AudioSource _audioSource;
         
-        public AudioService(ISoundStorage soundStorage)
+        public AudioService(IAudioStorage audioStorage)
         {
-            _soundStorage = soundStorage;
+            _audioStorage = audioStorage;
             
-            var audioObject = new GameObject();
+            var audioObject = new GameObject
+            {
+                name = "AudioSource"
+            };
             _audioSource = audioObject.AddComponent<AudioSource>();
         }
-        
-        public void PlaySound(SoundType type)
-        {
-            _audioSource.PlayOneShot(_soundStorage.GetSound(type));
-        }
 
-        public void PlaySound(SoundSettings settings)
+        public void PlaySound(AudioSettings settings)
         {
             _audioSource.volume = settings.Volume;
-            _audioSource.clip = _soundStorage.GetSound(settings.SoundType);
+            _audioSource.clip = _audioStorage.GetSound(settings.AudioType);
             
             _audioSource.Play();
         }

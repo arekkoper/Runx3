@@ -35,7 +35,7 @@ namespace Code.Presentation
             
             //Audios
             Container.BindInterfacesAndSelfTo<DashAudio>().AsSingle();
-            Container.BindInterfacesAndSelfTo<LightClickAudio>().AsSingle();
+            Container.BindInterfacesAndSelfTo<ButtonClickAudio>().AsSingle();
 
         }
     }

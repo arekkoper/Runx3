@@ -1,7 +1,9 @@
-﻿namespace Code.Application.Signals
+﻿using Code.Application.Commons.Enums;
+
+namespace Code.Application.Signals
 {
     public class OnButtonClick
     {
-        public bool IsHeavy { get; set; }
+        public AudioType AudioType { get; set; }
     }
 }

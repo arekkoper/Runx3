@@ -7,12 +7,12 @@ using Zenject;
 
 namespace Code.Presentation.Audios
 {
-    public class LightClickAudio : IInitializable, IDisposable
+    public class ButtonClickAudio : IInitializable, IDisposable
     {
         private readonly SignalBus _signal;
         private readonly IAudioService _audioService;
 
-        public LightClickAudio(SignalBus signal, IAudioService audioService)
+        public ButtonClickAudio(SignalBus signal, IAudioService audioService)
         {
             _signal = signal;
             _audioService = audioService;
@@ -30,9 +30,9 @@ namespace Code.Presentation.Audios
         
         private void PlaySound(OnButtonClick param)
         {
-            var settings = new SoundSettings()
+            var settings = new AudioSettings()
             {
-                SoundType = param.IsHeavy ? SoundType.ClickHeavy : SoundType.ClickLight,
+                AudioType = param.AudioType,
                 Volume = 0.6f
             };
             

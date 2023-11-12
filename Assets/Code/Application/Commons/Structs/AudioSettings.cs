@@ -2,9 +2,9 @@
 
 namespace Code.Application.Commons.Structs
 {
-    public struct SoundSettings
+    public struct AudioSettings
     {
-        public SoundType SoundType { get; set; }
+        public AudioType AudioType { get; set; }
         public float Volume { get; set; }
     }
 }

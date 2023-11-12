@@ -23,14 +23,13 @@ namespace Code.Infrastructure
             Container.Bind<IMediator>().To<Mediator>().AsSingle();
             Container.Bind<IPlayerService>().To<PlayerService>().AsSingle();
             Container.Bind<ILevelService>().To<LevelService>().AsSingle();
-            Container.Bind<IAudioService>().To<AudioService>().AsTransient();
+            Container.Bind<IAudioService>().To<AudioService>().AsSingle();
 
             //Loaders
             Container.Bind<ILevelLoader>().To<LevelLoader>().AsSingle();
 
             //Storages
-            Container.Bind<ISoundStorage>().To<SoundStorage>().FromScriptableObjectResource("Storages/SoundStorage")
-                .AsSingle();
+            Container.Bind<IAudioStorage>().To<AudioStorage>().FromScriptableObjectResource("Storages/AudioStorage").AsSingle();
         }
     }
 }

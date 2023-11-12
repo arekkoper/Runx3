@@ -30,9 +30,9 @@ namespace Code.Presentation.Audios
 
         private void PlaySound()
         {
-            var settings = new SoundSettings()
+            var settings = new AudioSettings()
             {
-                SoundType = SoundType.PlayerDash,
+                AudioType = AudioType.PlayerDash,
                 Volume = 0.1f
             };
             
