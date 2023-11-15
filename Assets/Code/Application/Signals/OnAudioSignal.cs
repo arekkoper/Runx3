@@ -2,7 +2,7 @@
 
 namespace Code.Application.Signals
 {
-    public class OnButtonClick
+    public class OnButtonClickSignal
     {
         public AudioType AudioType { get; set; }
     }
