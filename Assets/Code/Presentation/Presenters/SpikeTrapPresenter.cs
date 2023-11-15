@@ -1,4 +1,5 @@
-﻿using Code.Application.Signals;
+﻿using Assets.Code.Application.Signals;
+using Code.Application.Signals;
 using Code.Presentation.Commons;
 using UnityEngine;
 using Zenject;
@@ -9,7 +10,6 @@ namespace Code.Presentation.Presenters
     {
         [Header("References")]
         [SerializeField] private Transform _spikeHolder;
-        [SerializeField] private AudioSource audioSource;
 
         [Header("Parameters")]
         [SerializeField] private float _interval;
@@ -55,8 +55,8 @@ namespace Code.Presentation.Presenters
         private void StartRising()
         {
             _lastSwitchTime = Time.time;
-            audioSource.Play();
             _state = State.Raising;
+            _signalBus.Fire(new OnSpikeTrapStickingOutSignal());
         }
 
         private void StartLowering()

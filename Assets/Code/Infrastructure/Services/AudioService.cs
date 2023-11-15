@@ -34,9 +34,27 @@ namespace Code.Infrastructure.Services
             _audioSource.Play();
         }
 
+        public void Play(AudioSettings settings)
+        {
+            _audioSource.clip = settings.clip;
+            _audioSource.volume = settings.volume;
+            _audioSource.loop = settings.isLoop;
+            _audioSource.maxDistance = settings.maxDistance;
+            _audioSource.spatialBlend = settings.spacialBlend;
+            _audioSource.rolloffMode = settings.mode;
+            _audioSource.playOnAwake = settings.playOnAwake;
+
+            _audioSource.Play();
+        }
+
         public void RenameAudioObject(string name)
         {
             _audioSource.name = name;
+        }
+
+        public void ChangeAudioSourcePosition(Transform parent)
+        {
+            _audioSource.transform.SetParent(parent, false);
         }
 
     }

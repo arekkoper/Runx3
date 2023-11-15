@@ -1,3 +1,4 @@
+using Assets.Code.Application.Signals;
 using Code.Application.Modules.Game;
 using Code.Application.Observers;
 using Code.Application.Signals;
@@ -23,6 +24,7 @@ namespace Code.Application
             Container.DeclareSignal<OnPlayerDashSignal>().OptionalSubscriber();
             Container.DeclareSignal<OnTriggerActiveSignal>().OptionalSubscriber();
             Container.DeclareSignal<OnAudioSignal>().OptionalSubscriber();
+            Container.DeclareSignal<OnSpikeTrapStickingOutSignal>().OptionalSubscriber();
 
             //Observers
             Container.BindInterfacesAndSelfTo<OnPlayerKilledObserver>().AsSingle();
