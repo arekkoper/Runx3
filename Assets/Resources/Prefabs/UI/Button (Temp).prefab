@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7750519109547761461}
   - component: {fileID: 7505139459629376117}
   - component: {fileID: 605327992571181460}
-  - component: {fileID: 8685292451093333207}
+  - component: {fileID: 8623231859748440140}
   m_Layer: 5
   m_Name: Button (Temp)
   m_TagString: Untagged
@@ -134,7 +134,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &8685292451093333207
+--- !u!114 &8623231859748440140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,6 +147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioType: 0
+  volume: 1
 --- !u!1 &8492093699984213182
 GameObject:
   m_ObjectHideFlags: 0

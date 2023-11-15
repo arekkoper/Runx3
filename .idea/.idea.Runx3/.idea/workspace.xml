@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c2877d13-4a18-4b3d-b601-6829fa119746" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Application/ApplicationInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Application/ApplicationInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Application/Commons/Interfaces/Services/IAudioService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Application/Commons/Interfaces/Services/IAudioService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Application/Commons/Structs/AudioSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Application/Commons/Structs/AudioSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Application/Signals/OnButtonClick.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Application/Signals/OnAudioSignal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Application/Signals/OnButtonClick.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Application/Signals/OnAudioSignal.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/InfrastructureInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/InfrastructureInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Infrastructure/Services/AudioService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Infrastructure/Services/AudioService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Presentation/Audios/ButtonClickAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Presentation/Audios/ButtonClickAudio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Presentation/Audios/DashAudio.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Presentation/Audios/DashAudio.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Code/Presentation/Components/ButtonEventComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Presentation/Components/ButtonEventComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Presenters/Presenter (Pigger).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Presenters/Presenter (Pigger).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Button (Temp).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/UI/Button (Temp).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/CORE.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/CORE.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/UI/UI_MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/UI/UI_MainMenu.unity" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="005" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;arekkoper&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="bf836641-6b0f-43ca-9c1d-f393b2fcfbca" />
+        <option name="url" value="https://github.com/arekkoper/Runx3.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0a6fc7bd1e454de69e8cc0d10f3d1c3410000/56/dc6fccbd/AudioSettings.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0a6fc7bd1e454de69e8cc0d10f3d1c3410000/a1/ae1a496e/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/bc/31930f52/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/Aquare/Game Projects/Runx3/Assets/Code/Application/ApplicationInstaller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Ruth-King-of-Vermin/Assets/Code/Legacy/Core/Cheat/CheatCommand.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Ruth-King-of-Vermin/Assets/Code/Legacy/Core/Cheat/CheatCommandBase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../Ruth-King-of-Vermin/Assets/Code/Legacy/Core/Cheat/CheatManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../Unity/PROJEKTY/Obstacle Course/Assets/Scripts/Player.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2X6rI6gSp4kFqLd9Z768MM0bTj6" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.37694705&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.build.unityPlugin&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\user\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\user\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\user\\AppData\\Local\\Symbols\\src&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/../../Game Builds/Runx3/RUNx3 006\Runx3.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="D:\Aquare\Game Builds\Runx3" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="D:\Unity\2022.3.8f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;D:\Aquare\Game Projects\Runx3&quot; -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\Aquare\Game Projects\Runx3" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="D:\Unity\2022.3.8f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;D:\Aquare\Game Projects\Runx3&quot; -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="D:\Aquare\Game Projects\Runx3" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c2877d13-4a18-4b3d-b601-6829fa119746" name="Changes" comment="" />
+      <created>1697960293626</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697960293626</updated>
+      <workItem from="1697960300413" duration="356000" />
+      <workItem from="1697960694202" duration="1023000" />
+      <workItem from="1697961838120" duration="6734000" />
+      <workItem from="1697996680597" duration="3629000" />
+      <workItem from="1698061420860" duration="5840000" />
+      <workItem from="1698089055998" duration="4196000" />
+      <workItem from="1698153621517" duration="1936000" />
+      <workItem from="1698348738367" duration="2579000" />
+      <workItem from="1698405793159" duration="3365000" />
+      <workItem from="1698411300134" duration="1940000" />
+      <workItem from="1698574664141" duration="9293000" />
+      <workItem from="1698677221132" duration="538000" />
+      <workItem from="1698692047120" duration="2923000" />
+      <workItem from="1698762714903" duration="800000" />
+      <workItem from="1698823531883" duration="10877000" />
+      <workItem from="1698948896278" duration="764000" />
+      <workItem from="1699011558793" duration="3864000" />
+      <workItem from="1699026375459" duration="6058000" />
+      <workItem from="1699176625955" duration="3373000" />
+      <workItem from="1699366873889" duration="573000" />
+      <workItem from="1699373741282" duration="1520000" />
+      <workItem from="1699640263940" duration="2068000" />
+      <workItem from="1699734250472" duration="6465000" />
+      <workItem from="1699774616620" duration="2183000" />
+      <workItem from="1699790376719" duration="4796000" />
+      <workItem from="1699803956830" duration="1803000" />
+    </task>
+    <task id="LOCAL-00001" summary="change namespaces (implement rider) and fix issue with making next level available">
+      <option name="closed" value="true" />
+      <created>1697962941438</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697962941438</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fix issue with showing next level button">
+      <option name="closed" value="true" />
+      <created>1697967236289</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697967236289</updated>
+    </task>
+    <task id="LOCAL-00003" summary="you can now replay level if you dislike score">
+      <option name="closed" value="true" />
+      <created>1697968090416</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697968090416</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add cursor">
+      <option name="closed" value="true" />
+      <created>1697982354763</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697982354763</updated>
+    </task>
+    <task id="LOCAL-00005" summary="start working on recontent level 001">
+      <option name="closed" value="true" />
+      <created>1698000614893</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698000614893</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix some issue with movement and start working on redesign level 002">
+      <option name="closed" value="true" />
+      <created>1698067074862</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698067074862</updated>
+    </task>
+    <task id="LOCAL-00007" summary="working on lvl 002">
+      <option name="closed" value="true" />
+      <created>1698070832031</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698070832031</updated>
+    </task>
+    <task id="LOCAL-00008" summary="still working on level 2">
+      <option name="closed" value="true" />
+      <created>1698090087441</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698090087441</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add cheat console">
+      <option name="closed" value="true" />
+      <created>1698092436154</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1698092436154</updated>
+    </task>
+    <task id="LOCAL-00010" summary="start working on level 003">
+      <option name="closed" value="true" />
+      <created>1698158323743</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1698158323743</updated>
+    </task>
+    <task id="LOCAL-00011" summary="level 003 design">
+      <option name="closed" value="true" />
+      <created>1698348814918</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1698348814918</updated>
+    </task>
+    <task id="LOCAL-00012" summary="fix pigger distance condition">
+      <option name="closed" value="true" />
+      <created>1698349813194</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1698349813194</updated>
+    </task>
+    <task id="LOCAL-00013" summary="add game version">
+      <option name="closed" value="true" />
+      <created>1698350265706</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1698350265706</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add cheat that toggles catcher">
+      <option name="closed" value="true" />
+      <created>1698351144247</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1698351144247</updated>
+    </task>
+    <task id="LOCAL-00015" summary="change score from int to float">
+      <option name="closed" value="true" />
+      <created>1698406933802</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1698406933802</updated>
+    </task>
+    <task id="LOCAL-00016" summary="add CursorController.cs">
+      <option name="closed" value="true" />
+      <created>1698407505675</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1698407505675</updated>
+    </task>
+    <task id="LOCAL-00017" summary="you can now restart level durign run">
+      <option name="closed" value="true" />
+      <created>1698408429883</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1698408429883</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add ingame section and make some fixes on level design">
+      <option name="closed" value="true" />
+      <created>1698415415768</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1698415415768</updated>
+    </task>
+    <task id="LOCAL-00019" summary="add in game pause menu">
+      <option name="closed" value="true" />
+      <created>1698586380813</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1698586380813</updated>
+    </task>
+    <task id="LOCAL-00020" summary="now you can dash!">
+      <option name="closed" value="true" />
+      <created>1698693638852</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1698693638852</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fished working on dashing">
+      <option name="closed" value="true" />
+      <created>1698831818726</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1698831818726</updated>
+    </task>
+    <task id="LOCAL-00022" summary="make some fixes to 005">
+      <option name="closed" value="true" />
+      <created>1698834305654</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1698834305654</updated>
+    </task>
+    <task id="LOCAL-00023" summary="you can now use moveable component">
+      <option name="closed" value="true" />
+      <created>1699011881728</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1699011881728</updated>
+    </task>
+    <task id="LOCAL-00024" summary="you can now use triggered moveable objects using different IDs">
+      <option name="closed" value="true" />
+      <created>1699013967453</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1699013967453</updated>
+    </task>
+    <task id="LOCAL-00025" summary="start working on keys collection">
+      <option name="closed" value="true" />
+      <created>1699032516913</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1699032516913</updated>
+    </task>
+    <task id="LOCAL-00026" summary="you can now use KeyGroup prefab with keys that have lifetime and different event effect">
+      <option name="closed" value="true" />
+      <created>1699178253179</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1699178253179</updated>
+    </task>
+    <task id="LOCAL-00027" summary="improve spike trap 3D model">
+      <option name="closed" value="true" />
+      <created>1699181031494</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1699181031495</updated>
+    </task>
+    <task id="LOCAL-00028" summary="improve catcher, pigger and shooter model with new sounds, also buttons!">
+      <option name="closed" value="true" />
+      <created>1699367181514</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1699367181515</updated>
+    </task>
+    <task id="LOCAL-00029" summary="add sound service and a lot of nice stuff">
+      <option name="closed" value="true" />
+      <created>1699738665278</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1699738665278</updated>
+    </task>
+    <task id="LOCAL-00030" summary="add click button sound effect">
+      <option name="closed" value="true" />
+      <created>1699740745476</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1699740745476</updated>
+    </task>
+    <task id="LOCAL-00031" summary="fix naming">
+      <option name="closed" value="true" />
+      <created>1699776484603</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1699776484603</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="working on lvl 002" />
+    <MESSAGE value="still working on level 2" />
+    <MESSAGE value="add cheat console" />
+    <MESSAGE value="start working on level 003" />
+    <MESSAGE value="level 003 design" />
+    <MESSAGE value="fix pigger distance condition" />
+    <MESSAGE value="add game version" />
+    <MESSAGE value="add cheat that toggles catcher" />
+    <MESSAGE value="change score from int to float" />
+    <MESSAGE value="add CursorController.cs" />
+    <MESSAGE value="you can now restart level durign run" />
+    <MESSAGE value="add ingame section and make some fixes on level design" />
+    <MESSAGE value="add in game pause menu" />
+    <MESSAGE value="now you can dash!" />
+    <MESSAGE value="fished working on dashing" />
+    <MESSAGE value="make some fixes to 005" />
+    <MESSAGE value="you can now use moveable component" />
+    <MESSAGE value="you can now use triggered moveable objects using different IDs" />
+    <MESSAGE value="start working on keys collection" />
+    <MESSAGE value="you can now use KeyGroup prefab with keys that have lifetime and different event effect" />
+    <MESSAGE value="improve spike trap 3D model" />
+    <MESSAGE value="improve catcher, pigger and shooter model with new sounds, also buttons!" />
+    <MESSAGE value="add sound service and a lot of nice stuff" />
+    <MESSAGE value="add click button sound effect" />
+    <MESSAGE value="fix naming" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix naming" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

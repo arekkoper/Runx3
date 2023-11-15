@@ -23,7 +23,7 @@ namespace Code.Infrastructure
             Container.Bind<IMediator>().To<Mediator>().AsSingle();
             Container.Bind<IPlayerService>().To<PlayerService>().AsSingle();
             Container.Bind<ILevelService>().To<LevelService>().AsSingle();
-            Container.Bind<IAudioService>().To<AudioService>().AsSingle();
+            Container.Bind<IAudioService>().To<AudioService>().AsTransient();
 
             //Loaders
             Container.Bind<ILevelLoader>().To<LevelLoader>().AsSingle();

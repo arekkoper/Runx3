@@ -22,7 +22,7 @@ namespace Code.Application
             Container.DeclareSignal<OnReturnToMenuSignal>().OptionalSubscriber();
             Container.DeclareSignal<OnPlayerDashSignal>().OptionalSubscriber();
             Container.DeclareSignal<OnTriggerActiveSignal>().OptionalSubscriber();
-            Container.DeclareSignal<OnButtonClick>().OptionalSubscriber();
+            Container.DeclareSignal<OnAudioSignal>().OptionalSubscriber();
 
             //Observers
             Container.BindInterfacesAndSelfTo<OnPlayerKilledObserver>().AsSingle();

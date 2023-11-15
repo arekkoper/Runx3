@@ -1,7 +1,5 @@
 ﻿using System;
-using Code.Application.Commons.Enums;
 using Code.Application.Commons.Interfaces.Services;
-using Code.Application.Commons.Structs;
 using Code.Application.Signals;
 using Zenject;
 
@@ -16,27 +14,23 @@ namespace Code.Presentation.Audios
         {
             _signal = signal;
             _audioService = audioService;
+
+            _audioService.RenameAudioObject("Audio (ButtonClick)");
         }
         
         public void Initialize()
         {
-            _signal.Subscribe<OnButtonClick>(PlaySound);
+            _signal.Subscribe<OnAudioSignal>(PlaySound);
         }
 
         public void Dispose()
         {
-            _signal.Unsubscribe<OnButtonClick>(PlaySound);
+            _signal.Unsubscribe<OnAudioSignal>(PlaySound);
         }
         
-        private void PlaySound(OnButtonClick param)
+        private void PlaySound(OnAudioSignal param)
         {
-            var settings = new AudioSettings()
-            {
-                AudioType = param.AudioType,
-                Volume = 0.6f
-            };
-            
-            _audioService.PlaySound(settings);
+            _audioService.PlaySound(param.Settings);
         }
     }
 }

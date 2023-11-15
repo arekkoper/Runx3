@@ -2,7 +2,6 @@
 using Code.Application.Commons.Interfaces.Storages;
 using UnityEngine;
 using AudioSettings = Code.Application.Commons.Structs.AudioSettings;
-using AudioType = Code.Application.Commons.Enums.AudioType;
 
 namespace Code.Infrastructure.Services
 {
@@ -10,7 +9,7 @@ namespace Code.Infrastructure.Services
     {
         private readonly IAudioStorage _audioStorage;
         private readonly AudioSource _audioSource;
-        
+
         public AudioService(IAudioStorage audioStorage)
         {
             _audioStorage = audioStorage;
@@ -19,15 +18,26 @@ namespace Code.Infrastructure.Services
             {
                 name = "AudioSource"
             };
+            
             _audioSource = audioObject.AddComponent<AudioSource>();
         }
 
         public void PlaySound(AudioSettings settings)
         {
-            _audioSource.volume = settings.Volume;
             _audioSource.clip = _audioStorage.GetSound(settings.AudioType);
+            _audioSource.volume = settings.Volume;
+            _audioSource.loop = settings.IsLoop;
+            _audioSource.maxDistance = settings.MaxDistance;
+            _audioSource.spatialBlend = settings.SpacialBlend;
+            _audioSource.rolloffMode = AudioRolloffMode.Linear;
             
             _audioSource.Play();
         }
+
+        public void RenameAudioObject(string name)
+        {
+            _audioSource.name = name;
+        }
+
     }
 }

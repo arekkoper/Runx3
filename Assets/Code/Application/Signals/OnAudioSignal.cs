@@ -1,9 +1,11 @@
 ﻿using Code.Application.Commons.Enums;
+using Code.Application.Commons.Structs;
 
 namespace Code.Application.Signals
 {
-    public class OnButtonClickSignal
+    public class OnAudioSignal
     {
-        public AudioType AudioType { get; set; }
+        public AudioSettings Settings { get; set; }
+
     }
 }

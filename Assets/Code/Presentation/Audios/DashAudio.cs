@@ -16,6 +16,8 @@ namespace Code.Presentation.Audios
         {
             _signalBus = signalBus;
             _audioService = audioService;
+
+            _audioService.RenameAudioObject("Audio (DashAudio)");
         }
         
         public void Initialize()
@@ -33,7 +35,8 @@ namespace Code.Presentation.Audios
             var settings = new AudioSettings()
             {
                 AudioType = AudioType.PlayerDash,
-                Volume = 0.1f
+                Volume = 0.1f,
+                IsLoop = false
             };
             
             _audioService.PlaySound(settings);
