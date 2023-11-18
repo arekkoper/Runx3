@@ -17,8 +17,6 @@ namespace Assets.Code.Presentation.Factories
         private void OnEnable()
         {
             Parent = transform.parent;
-
-            Debug.Log(Parent);
         }
     }
 }

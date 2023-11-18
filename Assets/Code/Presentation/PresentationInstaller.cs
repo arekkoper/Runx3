@@ -43,8 +43,7 @@ namespace Code.Presentation
             Container.BindInterfacesAndSelfTo<TimeController>().AsSingle();
             Container.BindInterfacesAndSelfTo<AudioListenerController>().AsSingle();
             
-            //Audios
-            //Container.BindInterfacesAndSelfTo<DashAudio>().AsSingle();
+
 
         }
     }

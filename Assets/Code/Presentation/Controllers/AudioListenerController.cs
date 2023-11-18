@@ -23,7 +23,6 @@ namespace Assets.Code.Presentation.Controllers
 
         public void Initialize()
         {
-
             _signalBus.Subscribe<OnLevelLoadedSignal>(AttachToPlayer);
             _signalBus.Subscribe<OnReturnToMenuSignal>(AttachToOrigin);
             _signalBus.Subscribe<OnPlayerKilledSignal>(AttachToOrigin);
