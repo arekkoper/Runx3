@@ -3044,7 +3044,12 @@ PrefabInstance:
     - target: {fileID: 6358597383615358417, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: settings.volume
-      value: 0.5
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358597383615358417, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
+        type: 3}
+      propertyPath: settings.maxDistance
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7214115645010036304, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
