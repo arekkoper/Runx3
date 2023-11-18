@@ -6,8 +6,8 @@ namespace Code.Application.Commons.Interfaces.Services
     public interface IAudioService
     {
         void ChangeAudioSourcePosition(Transform parent);
-        void Play(AudioSettings settings);
-        void PlaySound(AudioSettings settings);
-        void RenameAudioObject(string name);
+        void Configure(string name, AudioSettings settings);
+        void DeleteAudioSource();
+        void Play();
     }
 }

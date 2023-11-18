@@ -266,11 +266,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 9991533}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9442197529149aa8ef49ecfc833828a, type: 3}
+  m_Script: {fileID: 11500000, guid: b77e9e37387a446d8ff1345a28bf4142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioType: 0
-  volume: 1
+  button: {fileID: 9991535}
+  settings:
+    clip: {fileID: 8300000, guid: aae1ddcb6d4297b4ea72d5cbdbb37e4b, type: 3}
+    mode: 0
+    volume: 1
+    maxDistance: 100
+    spacialBlend: 0
+    isLoop: 0
+    playOnAwake: 0
+  sceneThrough: 0
 --- !u!1 &79144911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1198,7 +1206,7 @@ GameObject:
   - component: {fileID: 658176470}
   - component: {fileID: 658176472}
   m_Layer: 0
-  m_Name: SceneContext
+  m_Name: SceneContext (UIMainMenu)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1505,11 +1513,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 814684474}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9442197529149aa8ef49ecfc833828a, type: 3}
+  m_Script: {fileID: 11500000, guid: b77e9e37387a446d8ff1345a28bf4142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioType: 0
-  volume: 1
+  button: {fileID: 814684476}
+  settings:
+    clip: {fileID: 8300000, guid: aae1ddcb6d4297b4ea72d5cbdbb37e4b, type: 3}
+    mode: 0
+    volume: 1
+    maxDistance: 100
+    spacialBlend: 0
+    isLoop: 0
+    playOnAwake: 0
+  sceneThrough: 0
 --- !u!1 &817549303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,11 +1731,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 955841677}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9442197529149aa8ef49ecfc833828a, type: 3}
+  m_Script: {fileID: 11500000, guid: b77e9e37387a446d8ff1345a28bf4142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioType: 0
-  volume: 1
+  button: {fileID: 955841679}
+  settings:
+    clip: {fileID: 8300000, guid: aae1ddcb6d4297b4ea72d5cbdbb37e4b, type: 3}
+    mode: 0
+    volume: 1
+    maxDistance: 100
+    spacialBlend: 0
+    isLoop: 0
+    playOnAwake: 0
+  sceneThrough: 0
 --- !u!1 &1139835503
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,7 +2430,6 @@ GameObject:
   - component: {fileID: 1669633430}
   - component: {fileID: 1669633429}
   - component: {fileID: 1669633428}
-  - component: {fileID: 1669633432}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2500,14 +2523,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!81 &1669633432
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1669633427}
-  m_Enabled: 1
 --- !u!1 &1677570725
 GameObject:
   m_ObjectHideFlags: 0
@@ -3016,6 +3031,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6358597383615358417, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
+        type: 3}
+      propertyPath: sceneThrough
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6358597383615358417, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
+        type: 3}
+      propertyPath: settings.clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 440f1aeda3a4da347bcbc091cd025c7e, type: 3}
     - target: {fileID: 7214115645010036304, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: m_Volume

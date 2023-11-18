@@ -1,36 +1,47 @@
-﻿using System;
-using Code.Application.Commons.Interfaces.Services;
-using Code.Application.Signals;
+﻿using Code.Application.Commons.Interfaces.Services;
+using Code.Presentation.Commons;
+using UnityEngine;
+using UnityEngine.UI;
 using Zenject;
 
 namespace Code.Presentation.Audios
 {
-    public class ButtonClickAudio : IInitializable, IDisposable
+    public class ButtonClickAudio : MonoBehaviour
     {
-        private readonly SignalBus _signal;
-        private readonly IAudioService _audioService;
+        [Header("References")]
+        [SerializeField] private Button button;
 
-        public ButtonClickAudio(SignalBus signal, IAudioService audioService)
-        {
-            _signal = signal;
-            _audioService = audioService;
+        [Header("Parameters")]
+        [SerializeField] private Application.Commons.Structs.AudioSettings settings;
+        [SerializeField] [Tooltip("Select that if sound needs to move through scenes")] private bool sceneThrough;
 
-            _audioService.RenameAudioObject("Audio (ButtonClick)");
-        }
-        
-        public void Initialize()
+        [Inject] private readonly IAudioService _audioService;
+
+        private void Start()
         {
-            _signal.Subscribe<OnAudioSignal>(PlaySound);
+            _audioService.Configure($"Audio (ButtonClick/{name})", settings);
+            if(!sceneThrough) _audioService.ChangeAudioSourcePosition(transform);
         }
 
-        public void Dispose()
+        public void OnEnable()
         {
-            _signal.Unsubscribe<OnAudioSignal>(PlaySound);
+            button.onClick.AddListener(Play);
         }
-        
-        private void PlaySound(OnAudioSignal param)
+
+        public void OnDisable()
         {
-            _audioService.PlaySound(param.Settings);
+            button.onClick?.RemoveListener(Play);
+        }
+
+        private void Play()
+        {
+            _audioService.Play();
+
+            if (sceneThrough)
+            {
+                Debug.Log("Scene throug delete method");
+                _audioService.DeleteAudioSource();
+            }
         }
     }
 }

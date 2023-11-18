@@ -1,3 +1,4 @@
+using Assets.Code.Presentation.Factories;
 using Code.Application.Commons.Interfaces.Spawners;
 using Code.Domain.Entities;
 using Code.Presentation.Audios;
@@ -15,15 +16,21 @@ namespace Code.Presentation
         [SerializeField] private PlayerPresenter _playerPresenter;
         [SerializeField] private CatcherPresenter _catcherPresenter;
 
+        [Header("Factories")]
+        [SerializeField] private AudioSourceFactory _audioSourceFactory;
+
         [Header("Hubs")]
         [SerializeField] private Transform _entitiesHub;
         [SerializeField] private Transform _uiHub;
+        [SerializeField] private Transform _audioHub;
 
         public override void InstallBindings()
         {
             //Presenters
             Container.BindFactory<Player, PlayerPresenter, PlayerPresenter.Factory>().FromComponentInNewPrefab(_playerPresenter).UnderTransform(_entitiesHub);
             Container.BindFactory<CatcherPresenter, CatcherPresenter.Factory>().FromComponentInNewPrefab(_catcherPresenter).UnderTransform(_entitiesHub);
+            Container.BindFactory<AudioSourceFactory, AudioSourceFactory.Factory>().FromComponentInNewPrefab(_audioSourceFactory).UnderTransform(_audioHub);
+
 
             //Spawners
             Container.Bind<IPlayerSpawner>().To<PlayerSpawner>().AsSingle();
@@ -34,8 +41,7 @@ namespace Code.Presentation
             Container.BindInterfacesAndSelfTo<TimeController>().AsSingle();
             
             //Audios
-            Container.BindInterfacesAndSelfTo<DashAudio>().AsSingle();
-            Container.BindInterfacesAndSelfTo<ButtonClickAudio>().AsSingle();
+            //Container.BindInterfacesAndSelfTo<DashAudio>().AsSingle();
 
         }
     }

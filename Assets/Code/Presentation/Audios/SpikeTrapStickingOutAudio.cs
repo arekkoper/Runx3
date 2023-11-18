@@ -17,6 +17,7 @@ namespace Assets.Code.Presentation.Audios
         private void Start()
         {
             _audioService.ChangeAudioSourcePosition(transform);
+            _audioService.Configure($"Audio (SpikeTrapStickingOutAudio/{name})", settings);
         }
 
         private void OnEnable()
@@ -31,7 +32,7 @@ namespace Assets.Code.Presentation.Audios
 
         private void PlaySound()
         {
-            _audioService.Play(settings);
+            _audioService.Play();
         }
     }
 }

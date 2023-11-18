@@ -5,7 +5,6 @@ using Zenject;
 
 namespace Code.Presentation.Controllers
 {
-    // ReSharper disable once ClassNeverInstantiated.Global
     public class CursorController : IInitializable, IDisposable
     {
         private readonly SignalBus _signalBus;
