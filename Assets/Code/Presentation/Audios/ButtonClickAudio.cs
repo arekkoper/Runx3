@@ -39,7 +39,6 @@ namespace Code.Presentation.Audios
 
             if (sceneThrough)
             {
-                Debug.Log("Scene throug delete method");
                 _audioService.DeleteAudioSource();
             }
         }

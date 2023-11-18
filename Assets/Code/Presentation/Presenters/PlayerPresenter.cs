@@ -15,6 +15,7 @@ namespace Code.Presentation.Presenters
         [SerializeField] private AudioSource dashSound;
 
         public PlayerDashBehaviour DashBehaviour => _dashBehaviour;
+        public Transform Model => _model;
         
         private PlayerMovementBehaviour _movementBehaviour;
         private PlayerDashBehaviour _dashBehaviour;

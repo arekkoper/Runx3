@@ -24,7 +24,10 @@ namespace Code.Infrastructure.Loaders
             _playerSpawner.Spawn();
             _catcherSpawner.Spawn();
 
-            _signalBus.Fire(new OnLevelLoadedSignal());
+            _signalBus.Fire(new OnLevelLoadedSignal() 
+            {
+                PlayerPresenter = _playerSpawner.GetPresenter()
+            });
         }
 
         public void Unload()

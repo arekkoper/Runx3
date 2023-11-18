@@ -1,3 +1,4 @@
+using Assets.Code.Presentation.Controllers;
 using Assets.Code.Presentation.Factories;
 using Code.Application.Commons.Interfaces.Spawners;
 using Code.Domain.Entities;
@@ -18,6 +19,7 @@ namespace Code.Presentation
 
         [Header("Factories")]
         [SerializeField] private AudioSourceFactory _audioSourceFactory;
+        [SerializeField] private AudioListenerFactory _audioListenerFactory;
 
         [Header("Hubs")]
         [SerializeField] private Transform _entitiesHub;
@@ -30,7 +32,7 @@ namespace Code.Presentation
             Container.BindFactory<Player, PlayerPresenter, PlayerPresenter.Factory>().FromComponentInNewPrefab(_playerPresenter).UnderTransform(_entitiesHub);
             Container.BindFactory<CatcherPresenter, CatcherPresenter.Factory>().FromComponentInNewPrefab(_catcherPresenter).UnderTransform(_entitiesHub);
             Container.BindFactory<AudioSourceFactory, AudioSourceFactory.Factory>().FromComponentInNewPrefab(_audioSourceFactory).UnderTransform(_audioHub);
-
+            Container.BindFactory<AudioListenerFactory, AudioListenerFactory.Factory>().FromComponentInNewPrefab(_audioListenerFactory).UnderTransform(_audioHub);
 
             //Spawners
             Container.Bind<IPlayerSpawner>().To<PlayerSpawner>().AsSingle();
@@ -39,6 +41,7 @@ namespace Code.Presentation
             //Controllers
             Container.BindInterfacesAndSelfTo<CursorController>().AsSingle();
             Container.BindInterfacesAndSelfTo<TimeController>().AsSingle();
+            Container.BindInterfacesAndSelfTo<AudioListenerController>().AsSingle();
             
             //Audios
             //Container.BindInterfacesAndSelfTo<DashAudio>().AsSingle();

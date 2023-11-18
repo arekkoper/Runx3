@@ -156,6 +156,8 @@ MonoBehaviour:
     type: 3}
   _audioSourceFactory: {fileID: 6524513967933786279, guid: b25ca0652fa071243adb5314dc903b66,
     type: 3}
+  _audioListenerFactory: {fileID: 1059548629338291364, guid: ca2f3a23219764746851784d2cc4e5e2,
+    type: 3}
   _entitiesHub: {fileID: 199599693854135951}
   _uiHub: {fileID: 6387933245619010850}
   _audioHub: {fileID: 6996021148225222938}
