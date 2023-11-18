@@ -3,13 +3,16 @@ using Code.Application.Commons.Interfaces.Services;
 using Code.Application.Commons.Structs;
 using Code.Presentation.Commons;
 using System;
+using UnityEngine;
 using Zenject;
+using AudioSettings = Code.Application.Commons.Structs.AudioSettings;
 
 namespace Assets.Code.Presentation.Audios
 {
     public class SpikeTrapStickingOutAudio : MonoStatic
     {
-        [UnityEngine.SerializeField] private AudioSettings settings;
+        [Header("Parameters")]
+        [SerializeField] private AudioSettings settings;
 
         [Inject] private readonly IAudioService _audioService;
         [Inject] private readonly SignalBus _signalBus;

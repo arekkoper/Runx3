@@ -3041,6 +3041,11 @@ PrefabInstance:
       propertyPath: settings.clip
       value: 
       objectReference: {fileID: 8300000, guid: 440f1aeda3a4da347bcbc091cd025c7e, type: 3}
+    - target: {fileID: 6358597383615358417, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
+        type: 3}
+      propertyPath: settings.volume
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7214115645010036304, guid: 7e825b0cbe8f6914c8bbe770dc64ecaa,
         type: 3}
       propertyPath: m_Volume

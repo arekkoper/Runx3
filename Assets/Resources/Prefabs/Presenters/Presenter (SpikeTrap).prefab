@@ -4844,8 +4844,8 @@ MonoBehaviour:
   settings:
     clip: {fileID: 8300000, guid: 9de4f805163fbff43be2b0527c9e3044, type: 3}
     mode: 0
-    volume: 0.7
-    maxDistance: 30
+    volume: 0.5
+    maxDistance: 15
     spacialBlend: 1
     isLoop: 0
     playOnAwake: 0

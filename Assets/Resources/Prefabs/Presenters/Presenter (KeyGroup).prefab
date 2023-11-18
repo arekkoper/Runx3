@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 6055055676784590520}
   - component: {fileID: 1925039505394535958}
   m_Layer: 0
-  m_Name: Presenter (Key Group)
+  m_Name: Presenter (KeyGroup)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
