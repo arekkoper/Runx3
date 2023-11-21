@@ -19,8 +19,7 @@ namespace Code.Presentation.Audios
 
         private void Start()
         {
-            _audioService.ChangeAudioSourcePosition(transform);
-            _audioService.Configure($"Audio (PlayerDash)", settings);
+            _audioService.Configure($"Audio (PlayerDash)", settings, transform);
         }
 
         public void OnEnable()

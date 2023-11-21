@@ -11,17 +11,20 @@ using AudioSettings = Code.Application.Commons.Structs.AudioSettings;
 
 namespace Assets.Code.Presentation.Audios
 {
-    public class CatcherWhisperingAudio : MonoBehaviour
+    public class MainMenuAudio : MonoBehaviour
     {
+        [Header("Parameters")]
         [SerializeField] private AudioSettings settings;
 
         [Inject] private readonly IAudioService _audioService;
 
         private void Start()
         {
-            _audioService.Configure($"Audio (Whispering)", settings, transform);
+            _audioService.Configure($"Audio (MainMusic)", settings);
 
             _audioService.Play();
         }
     }
 }
+
+

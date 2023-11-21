@@ -1,5 +1,6 @@
 ﻿using Assets.Code.Presentation.Factories;
 using Code.Application.Commons.Interfaces.Services;
+using Code.Application.Commons.Interfaces.Storages;
 using UnityEngine;
 using AudioSettings = Code.Application.Commons.Structs.AudioSettings;
 
@@ -26,6 +27,16 @@ namespace Code.Infrastructure.Services
         {
             _audioSource.name = name;
             _audioSource.Setup(settings);
+        }
+
+        public void Configure(string name, AudioSettings settings, Transform parent = null)
+        {
+            if (parent)
+                ChangeAudioSourcePosition(parent);
+
+            _audioSource.name = name;
+            _audioSource.Setup(settings);
+
         }
 
         public void DeleteAudioSource()

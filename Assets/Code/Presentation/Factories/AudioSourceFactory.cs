@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Code.Application.Commons.Interfaces.Storages;
+using System;
 using UnityEngine;
 using Zenject;
 using AudioSettings = Code.Application.Commons.Structs.AudioSettings;
@@ -10,11 +11,13 @@ namespace Assets.Code.Presentation.Factories
         [Header("References")]
         [SerializeField] private AudioSource _audioSource;
 
+        [Inject] private readonly IAudioStorage _audioStorage;
+
         public class Factory : PlaceholderFactory<AudioSourceFactory> { }
 
         public void Setup(AudioSettings settings)
         {
-            _audioSource.clip = settings.clip;
+            _audioSource.clip = _audioStorage.GetSound(settings.audioType);
             _audioSource.volume = settings.volume;
             _audioSource.loop = settings.isLoop;
             _audioSource.maxDistance = settings.maxDistance;

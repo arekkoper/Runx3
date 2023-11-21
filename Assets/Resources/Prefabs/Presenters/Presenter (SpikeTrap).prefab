@@ -4842,7 +4842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settings:
-    clip: {fileID: 8300000, guid: 9de4f805163fbff43be2b0527c9e3044, type: 3}
+    audioType: 5
     mode: 0
     volume: 0.5
     maxDistance: 15

@@ -7,6 +7,7 @@ namespace Code.Application.Commons.Interfaces.Services
     {
         void ChangeAudioSourcePosition(Transform parent);
         void Configure(string name, AudioSettings settings);
+        void Configure(string name, AudioSettings settings, Transform parent = null);
         void DeleteAudioSource();
         void Play();
     }

@@ -8,6 +8,8 @@
         CatcherWhispering,
         PiggerGrounting,
         SpikesStickingOut,
-        TowerShoot
+        TowerShoot,
+        MusicMainMenu,
+        MusicLevel
     }
 }
