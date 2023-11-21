@@ -25,6 +25,7 @@ namespace Code.Application
             Container.DeclareSignal<OnTriggerActiveSignal>().OptionalSubscriber();
             Container.DeclareSignal<OnAudioSignal>().OptionalSubscriber();
             Container.DeclareSignal<OnSpikeTrapStickingOutSignal>().OptionalSubscriber();
+            Container.DeclareSignal<OnTowerShootSignal>().OptionalSubscriber();
 
             //Observers
             Container.BindInterfacesAndSelfTo<OnPlayerKilledObserver>().AsSingle();

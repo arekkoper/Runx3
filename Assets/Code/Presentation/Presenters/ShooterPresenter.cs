@@ -1,4 +1,5 @@
-﻿using Code.Application.Signals;
+﻿using Assets.Code.Application.Signals;
+using Code.Application.Signals;
 using Code.Presentation.Commons;
 using UnityEngine;
 using Zenject;
@@ -10,7 +11,6 @@ namespace Code.Presentation.Presenters
         [Header("References")]
         [SerializeField] private Transform _bulletPoint;
         [SerializeField] private ProjectilePresenter _projectilePresenter;
-        [SerializeField] private AudioSource audioSource;
 
         [Header("Parameters")]
         [SerializeField] private float _fireRate;
@@ -41,10 +41,10 @@ namespace Code.Presentation.Presenters
                 
                 var projectile = Instantiate(_projectilePresenter, _bulletPoint.position, _bulletPoint.rotation, _bulletPoint);
                 
-                audioSource.Play();
-                
                 projectile.Speed = _speed;
                 projectile.Range = _range;
+
+                _signalBus.Fire(new OnTowerShootSignal() {  Id = name });
             }
         }
 

@@ -56,7 +56,7 @@ namespace Code.Presentation.Presenters
         {
             _lastSwitchTime = Time.time;
             _state = State.Raising;
-            _signalBus.Fire(new OnSpikeTrapStickingOutSignal());
+            _signalBus.Fire(new OnSpikeTrapStickingOutSignal() { Id = name });
         }
 
         private void StartLowering()

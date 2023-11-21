@@ -3202,7 +3202,7 @@ PrefabInstance:
     - target: {fileID: 1476690738557815092, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
       propertyPath: _fireRate
-      value: 2
+      value: 1.63
       objectReference: {fileID: 0}
     - target: {fileID: 3513118372082981505, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
@@ -6721,7 +6721,7 @@ PrefabInstance:
     - target: {fileID: 1476690738557815092, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
       propertyPath: _fireRate
-      value: 2
+      value: 2.36
       objectReference: {fileID: 0}
     - target: {fileID: 3513118372082981505, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
@@ -20307,7 +20307,7 @@ PrefabInstance:
     - target: {fileID: 1476690738557815092, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
       propertyPath: _fireRate
-      value: 2
+      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 3513118372082981505, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
@@ -28543,7 +28543,7 @@ PrefabInstance:
     - target: {fileID: 1476690738557815092, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
       propertyPath: _fireRate
-      value: 2
+      value: 2.75
       objectReference: {fileID: 0}
     - target: {fileID: 3513118372082981505, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
@@ -31325,7 +31325,7 @@ PrefabInstance:
     - target: {fileID: 1476690738557815092, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
       propertyPath: _fireRate
-      value: 2
+      value: 1.56
       objectReference: {fileID: 0}
     - target: {fileID: 3513118372082981505, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
@@ -32321,7 +32321,7 @@ PrefabInstance:
     - target: {fileID: 1476690738557815092, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
       propertyPath: _fireRate
-      value: 2
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: 3513118372082981505, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
@@ -47790,7 +47790,7 @@ PrefabInstance:
     - target: {fileID: 1476690738557815092, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
       propertyPath: _fireRate
-      value: 2
+      value: 2.24
       objectReference: {fileID: 0}
     - target: {fileID: 3513118372082981505, guid: 19068ad94e077a643bb2701946c6de69,
         type: 3}
@@ -47865,11 +47865,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6689280815759369263, guid: 19068ad94e077a643bb2701946c6de69,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2352581748500145638}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19068ad94e077a643bb2701946c6de69, type: 3}
 --- !u!4 &2352581748500145636 stripped
 Transform:
@@ -47877,28 +47873,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2352581748500145635}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2352581748500145637 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6689280815759369263, guid: 19068ad94e077a643bb2701946c6de69,
-    type: 3}
-  m_PrefabInstance: {fileID: 2352581748500145635}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2352581748500145638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2352581748500145637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b36b43ba12c6449a98c798e5c6cb1e80, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  model: {fileID: 2352581748500145636}
-  eventId: asd
-  offset: {x: 0, y: 9, z: 0}
-  speed: 10
 --- !u!1001 &3543555759425315048
 PrefabInstance:
   m_ObjectHideFlags: 0
