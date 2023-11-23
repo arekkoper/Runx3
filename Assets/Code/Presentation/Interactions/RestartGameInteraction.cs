@@ -11,7 +11,7 @@ namespace Code.Presentation.Interactions
 
         public void Interact()
         {
-            _mediator.Send(new LoadLevelCommand());
+            _mediator.Send(new LoadLevelCommand() { WasRestart = true });
         }
     }
 }

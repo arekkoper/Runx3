@@ -5,6 +5,6 @@ namespace Code.Application.Commons.Interfaces.Storages
 {
     public interface IAudioStorage
     {
-        AudioClip GetSound(AudioType type);
+        AudioClip GetClip(AudioType type);
     }
 }

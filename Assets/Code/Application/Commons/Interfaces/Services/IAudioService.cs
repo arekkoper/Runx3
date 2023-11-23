@@ -10,5 +10,6 @@ namespace Code.Application.Commons.Interfaces.Services
         void Configure(string name, AudioSettings settings, Transform parent = null);
         void DeleteAudioSource();
         void Play();
+        void Reconfigure(AudioSettings settings);
     }
 }

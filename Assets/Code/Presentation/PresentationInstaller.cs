@@ -42,7 +42,7 @@ namespace Code.Presentation
             Container.BindInterfacesAndSelfTo<CursorController>().AsSingle();
             Container.BindInterfacesAndSelfTo<TimeController>().AsSingle();
             Container.BindInterfacesAndSelfTo<AudioListenerController>().AsSingle();
-            
+            Container.BindInterfacesAndSelfTo<MusicController>().AsSingle();
 
 
         }

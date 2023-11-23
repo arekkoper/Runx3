@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using Zenject;
 using AudioSettings = Code.Application.Commons.Structs.AudioSettings;
+using AudioType = Code.Application.Commons.Enums.AudioType;
 
 namespace Assets.Code.Presentation.Factories
 {
@@ -17,7 +18,7 @@ namespace Assets.Code.Presentation.Factories
 
         public void Setup(AudioSettings settings)
         {
-            _audioSource.clip = _audioStorage.GetSound(settings.audioType);
+            _audioSource.clip = _audioStorage.GetClip(settings.audioType);
             _audioSource.volume = settings.volume;
             _audioSource.loop = settings.isLoop;
             _audioSource.maxDistance = settings.maxDistance;
@@ -40,5 +41,6 @@ namespace Assets.Code.Presentation.Factories
         {
             Destroy(gameObject);
         }
+
     }
 }

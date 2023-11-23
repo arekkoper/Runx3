@@ -7,6 +7,7 @@ namespace Code.Application.Modules.Game.GameStates
     public class LevelState : GameState
     {
         public int LevelID { get; set; }
+        public bool WasRestart { get; set; }
 
         public override void ReloadScenes()
         {
@@ -27,7 +28,7 @@ namespace Code.Application.Modules.Game.GameStates
 
         public override void EnterState()
         {
-            Manager.Mediator.Send(new LoadLevelCommand());
+            Manager.Mediator.Send(new LoadLevelCommand() { WasRestart = WasRestart });
             Manager.StartLevelTime = Time.time;
 
         }

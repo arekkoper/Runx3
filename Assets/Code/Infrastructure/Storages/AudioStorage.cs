@@ -11,7 +11,7 @@ namespace Code.Infrastructure.Storages
         [Header("Storage")] 
         [SerializeField] private SerializableDictionary<AudioType, AudioClip> audioDictionary;
 
-        public AudioClip GetSound(AudioType type)
+        public AudioClip GetClip(AudioType type)
         {
             if (audioDictionary.TryGetValue(type, out AudioClip clip))
             {

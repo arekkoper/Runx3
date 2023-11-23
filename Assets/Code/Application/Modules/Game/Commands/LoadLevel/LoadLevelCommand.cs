@@ -5,6 +5,6 @@ namespace Code.Application.Modules.Game.Commands.LoadLevel
 {
     public class LoadLevelCommand : ICommand
     {
-
+        public bool WasRestart { get; set; }
     }
 }

@@ -29,7 +29,7 @@ namespace Code.Presentation.Interactions
         {
             var currentLevelId = _mediator.Send(new GetCurrentLevelCommand()).Id;
 
-            _mediator.Send(new ChangeLevelCommand() { LevelID = currentLevelId });
+            _mediator.Send(new ChangeLevelCommand() { LevelID = currentLevelId, WasRestart = true });
 
         }
     }

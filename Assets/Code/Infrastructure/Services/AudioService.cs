@@ -3,6 +3,7 @@ using Code.Application.Commons.Interfaces.Services;
 using Code.Application.Commons.Interfaces.Storages;
 using UnityEngine;
 using AudioSettings = Code.Application.Commons.Structs.AudioSettings;
+using AudioType = Code.Application.Commons.Enums.AudioType;
 
 namespace Code.Infrastructure.Services
 {
@@ -47,6 +48,11 @@ namespace Code.Infrastructure.Services
         public void Play()
         {
             _audioSource.Play();
+        }
+
+        public void Reconfigure(AudioSettings settings)
+        {
+            _audioSource.Setup(settings);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Code.Application.Modules.Game.Commands.LoadLevel
 
         public void Handle(LoadLevelCommand command)
         {
-            _levelLoader.Load();
+            _levelLoader.Load(command.WasRestart);
         }
     }
 }

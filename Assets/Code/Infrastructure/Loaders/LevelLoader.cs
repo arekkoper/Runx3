@@ -19,14 +19,15 @@ namespace Code.Infrastructure.Loaders
             _signalBus = signalBus;
         }
 
-        public void Load() 
+        public void Load(bool wasRestart) 
         {
             _playerSpawner.Spawn();
             _catcherSpawner.Spawn();
 
             _signalBus.Fire(new OnLevelLoadedSignal() 
             {
-                PlayerPresenter = _playerSpawner.GetPresenter()
+                PlayerPresenter = _playerSpawner.GetPresenter(),
+                WasRestart = wasRestart
             });
         }
 

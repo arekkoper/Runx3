@@ -2,7 +2,7 @@
 {
     public interface ILevelLoader
     {
-        void Load();
+        void Load(bool wasRestart);
         void Unload();
     }
 }

@@ -19,7 +19,11 @@ namespace Code.Application.Modules.Game.Commands.ChangeLevel
         {
             _mediator.Send(new RunLevelCommand() { LevelID = command.LevelID });
 
-            _gameManager.ChangeState(new LevelState() { LevelID = command.LevelID });
+            _gameManager.ChangeState(new LevelState() 
+            {
+                LevelID = command.LevelID,
+                WasRestart = command.WasRestart
+            });
 
         }
     }
