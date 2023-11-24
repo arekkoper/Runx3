@@ -47,6 +47,7 @@ namespace Code.Presentation
 
             //Audios
             Container.BindInterfacesAndSelfTo<WinAudio>().AsSingle();
+            Container.BindInterfacesAndSelfTo<LoseAudio>().AsSingle();
 
 
         }

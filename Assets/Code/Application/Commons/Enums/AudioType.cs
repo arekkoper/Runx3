@@ -11,6 +11,7 @@
         TowerShoot,
         MusicMainMenu,
         MusicLevel,
-        Win
+        Win,
+        Lose
     }
 }
