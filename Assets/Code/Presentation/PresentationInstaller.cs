@@ -1,3 +1,4 @@
+using Assets.Code.Presentation.Audios;
 using Assets.Code.Presentation.Controllers;
 using Assets.Code.Presentation.Factories;
 using Code.Application.Commons.Interfaces.Spawners;
@@ -43,6 +44,9 @@ namespace Code.Presentation
             Container.BindInterfacesAndSelfTo<TimeController>().AsSingle();
             Container.BindInterfacesAndSelfTo<AudioListenerController>().AsSingle();
             Container.BindInterfacesAndSelfTo<MusicController>().AsSingle();
+
+            //Audios
+            Container.BindInterfacesAndSelfTo<WinAudio>().AsSingle();
 
 
         }

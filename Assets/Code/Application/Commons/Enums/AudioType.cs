@@ -10,6 +10,7 @@
         SpikesStickingOut,
         TowerShoot,
         MusicMainMenu,
-        MusicLevel
+        MusicLevel,
+        Win
     }
 }
