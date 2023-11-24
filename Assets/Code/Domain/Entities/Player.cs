@@ -2,7 +2,6 @@ namespace Code.Domain.Entities
 {
     public class Player
     {
-        public string Name { get; set; }
         public int Score { get; set; }
         public float Speed { get; set; }
         public float TimeToMaxSpeed { get; set; }

@@ -6,8 +6,6 @@ namespace Code.Application.Commons.Interfaces.Services
     {
         Player Create();
         Player GetPlayer();
-        int GetScore();
         void ResetScore();
-        void Save();
     }
 }
