@@ -1,3 +1,5 @@
+using Assets.Code.Application.Commons.Interfaces.Services;
+using Assets.Code.Infrastructure.Services;
 using Code.Application.Commons.Interfaces.Loaders;
 using Code.Application.Commons.Interfaces.Mediator;
 using Code.Application.Commons.Interfaces.Repositories;
@@ -15,6 +17,7 @@ namespace Code.Infrastructure
     {
         public override void InstallBindings()
         {
+
             //Repositories
             Container.Bind<ILevelRepository>().To<LevelRepository>().AsSingle();
 
@@ -24,12 +27,15 @@ namespace Code.Infrastructure
             Container.Bind<IPlayerService>().To<PlayerService>().AsSingle();
             Container.Bind<ILevelService>().To<LevelService>().AsSingle();
             Container.Bind<IAudioService>().To<AudioService>().AsTransient();
+            Container.Bind<ISavingService>().To<SavingService>().AsSingle();
 
             //Loaders
             Container.Bind<ILevelLoader>().To<LevelLoader>().AsSingle();
 
             //Storages
             Container.Bind<IAudioStorage>().To<AudioStorage>().FromScriptableObjectResource("Storages/AudioStorage").AsSingle();
+
+
         }
     }
 }

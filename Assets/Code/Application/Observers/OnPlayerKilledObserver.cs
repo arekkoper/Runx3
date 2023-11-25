@@ -1,4 +1,6 @@
 ﻿using System;
+using Assets.Code.Application.Commons.Interfaces.Services;
+using Assets.Code.Application.Modules.Game.Commands.Save;
 using Code.Application.Commons.Interfaces.Mediator;
 using Code.Application.Modules.Hero.Commands.DestroyPlayerPresenter;
 using Code.Application.Modules.Level.Commands.IncreaseDeathScore;
@@ -12,7 +14,10 @@ namespace Code.Application.Observers
         private readonly SignalBus _signalBus;
         private readonly IMediator _mediator;
 
-        public OnPlayerKilledObserver(SignalBus signalBus, IMediator mediator)
+        public OnPlayerKilledObserver(
+            SignalBus signalBus,
+            IMediator mediator
+            )
         {
             _signalBus = signalBus;
             _mediator = mediator;
@@ -31,6 +36,8 @@ namespace Code.Application.Observers
         {
             _mediator.Send(new DestroyPlayerPresenterCommand() { PlayerPresenter = param.PlayerPresenter });
             _mediator.Send(new IncreaseDeathScoreCommand());
+
+            _mediator.Send(new SaveCommand());
         }
     }
 }

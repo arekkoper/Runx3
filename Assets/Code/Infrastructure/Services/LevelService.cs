@@ -27,7 +27,7 @@ namespace Code.Infrastructure.Services
 
             _repository.Add(level);
 
-            level.Thumbnail = Resources.Load<Sprite>($"Sprites/Level Previews/Spr_Level_Preview_{level.Id}");
+            level.ThumbnailPath = $"Sprites/Level Previews/Spr_Level_Preview_{level.Id}";
 
             return level;
         }

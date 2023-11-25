@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using Assets.Code.Application.Commons.Interfaces.Services;
+using Assets.Code.Application.Modules.Game.Commands.Load;
+using Assets.Code.Application.Modules.Game.Queries.IsSaveFileExist;
 using Code.Application.Commons.Interfaces.Mediator;
 using Code.Application.Modules.Game.GameStates;
 using Code.Application.Modules.Hero.Commands.CreatePlayer;
@@ -30,7 +33,10 @@ namespace Code.Application.Modules.Game
         public SignalBus SignalBus => _signalBus;
         public IMediator Mediator => _mediator;
 
-        public GameManager(SignalBus signalBus, IMediator mediator)
+        public GameManager(
+            SignalBus signalBus,
+            IMediator mediator
+            )
         {
             _signalBus = signalBus;
             _mediator = mediator;
@@ -41,6 +47,10 @@ namespace Code.Application.Modules.Game
             //Initiator commands
             _mediator.Send(new InitPlayerCommand());
             _mediator.Send(new InitLevelsCommand() { LevelCap = 3 });
+            if(_mediator.Send(new IsSaveFileExistQuery()))
+            {
+                _mediator.Send(new LoadCommand());
+            }
 
             _signalBus.Subscribe<OnScenesLoadedSignal>(EnterState);
 

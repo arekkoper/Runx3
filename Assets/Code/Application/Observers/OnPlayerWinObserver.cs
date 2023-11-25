@@ -1,4 +1,6 @@
 ﻿using System;
+using Assets.Code.Application.Commons.Interfaces.Services;
+using Assets.Code.Application.Modules.Game.Commands.Save;
 using Code.Application.Commons.Interfaces.Mediator;
 using Code.Application.Modules.Game;
 using Code.Application.Modules.Game.Commands.CalculateScore;
@@ -17,7 +19,11 @@ namespace Code.Application.Observers
         private readonly IMediator _mediator;
         private readonly GameManager _gameManager;
 
-        public OnPlayerWinObserver(SignalBus signalBus, IMediator mediator, GameManager gameManager)
+        public OnPlayerWinObserver(
+            SignalBus signalBus,
+            IMediator mediator,
+            GameManager gameManager
+            )
         {
             _signalBus = signalBus;
             _mediator = mediator;
@@ -51,6 +57,8 @@ namespace Code.Application.Observers
             var nextLevelId = currentLevel.Id + 1;
             
             _mediator.Send(new MakeLevelAvailableCommand() { Id = nextLevelId });
+
+            _mediator.Send(new SaveCommand());
         }
 
 

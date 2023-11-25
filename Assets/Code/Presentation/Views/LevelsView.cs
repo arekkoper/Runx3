@@ -53,7 +53,7 @@ namespace Code.Presentation.Views
             _level = _mediator.Send(new GetLevelQuery() { Id = LevelId });
 
             _currentLevel.text = _level.Id.ToString();
-            _thumbnail.sprite = _level.Thumbnail;
+            _thumbnail.sprite = Resources.Load<Sprite>($"{_level.ThumbnailPath}");
             _lockedObject.SetActive(!_level.IsAvailable);
             _theBestScore.text = _level.TheBestScore.ToString();
             _deaths.text = _level.Deaths.ToString();

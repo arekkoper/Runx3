@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Code.Domain.Entities
 {
+    [Serializable]
     public class Level
     {
         public int Id { get; set; }
@@ -9,6 +11,6 @@ namespace Code.Domain.Entities
         public int Deaths { get; set; }
         public bool IsAvailable { get; set; }
         public bool IsRunning { get; set; }
-        public Sprite Thumbnail { get; set; }
+        public string ThumbnailPath { get; set; }
     }
 }

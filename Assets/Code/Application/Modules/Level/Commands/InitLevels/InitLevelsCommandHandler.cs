@@ -1,4 +1,5 @@
-﻿using Code.Application.Commons.Interfaces.Mediator;
+﻿using Assets.Code.Application.Commons.Interfaces.Services;
+using Code.Application.Commons.Interfaces.Mediator;
 using Code.Application.Commons.Interfaces.Services;
 using Code.Application.Modules.Level.Commands.MakeAvailable;
 
@@ -9,7 +10,10 @@ namespace Code.Application.Modules.Level.Commands.InitLevels
         private readonly ILevelService _levelService;
         private readonly IMediator _mediator;
 
-        public InitLevelsCommandHandler(ILevelService levelService, IMediator mediator)
+        public InitLevelsCommandHandler(
+            ILevelService levelService,
+            IMediator mediator
+            )
         {
             _levelService = levelService;
             _mediator = mediator;
