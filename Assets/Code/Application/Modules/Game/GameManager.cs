@@ -26,7 +26,17 @@ namespace Code.Application.Modules.Game
             {0, "Level_Test" },
             {1, "Level_001" },
             {2, "Level_002" },
-            {3, "Level_003" }
+            {3, "Level_003" },
+            {4, "Level_004" },
+            {5, "Level_005" },
+            {6, "Level_006" },
+            {7, "Level_007" },
+            {8, "Level_008" },
+            {9, "Level_009" },
+            {10, "Level_010" },
+            {11, "Level_011" },
+            {12, "Level_012" },
+            {13, "Level_013" }
         };
         public float StartLevelTime { get; set; }
 
@@ -46,7 +56,7 @@ namespace Code.Application.Modules.Game
         {
             //Initiator commands
             _mediator.Send(new InitPlayerCommand());
-            _mediator.Send(new InitLevelsCommand() { LevelCap = 3 });
+            _mediator.Send(new InitLevelsCommand() { LevelCap = 13 });
             if(_mediator.Send(new IsSaveFileExistQuery()))
             {
                 _mediator.Send(new LoadCommand());
