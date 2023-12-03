@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: df8897d9634f5ce4ea43b11b2c23055c, type: 3}
       propertyPath: m_Name
-      value: Mod_PlainRounded_001
+      value: Presenter (MoveableWall)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df8897d9634f5ce4ea43b11b2c23055c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.54675
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df8897d9634f5ce4ea43b11b2c23055c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.6326
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: df8897d9634f5ce4ea43b11b2c23055c, type: 3}
       propertyPath: m_LocalPosition.x
