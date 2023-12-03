@@ -1,6 +1,7 @@
 ﻿using System;
 using Code.Application.Commons.Interfaces.Mediator;
 using Code.Application.Modules.Game.Commands.ChangeLevel;
+using Code.Application.Modules.Game.Commands.LoadLevel;
 using Code.Application.Modules.Level.Queries.GetCurrentLevel;
 using Code.Presentation.Commons;
 using UnityEngine;
@@ -30,7 +31,6 @@ namespace Code.Presentation.Interactions
             var currentLevelId = _mediator.Send(new GetCurrentLevelCommand()).Id;
 
             _mediator.Send(new ChangeLevelCommand() { LevelID = currentLevelId, WasRestart = true });
-
         }
     }
 }

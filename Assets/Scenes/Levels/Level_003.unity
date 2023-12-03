@@ -6067,6 +6067,21 @@ PrefabInstance:
       propertyPath: id
       value: open
       objectReference: {fileID: 0}
+    - target: {fileID: 4148020736894770765, guid: d261f267f25bf1b40aa483336edc870c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 23.91
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148020736894770765, guid: d261f267f25bf1b40aa483336edc870c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4148020736894770765, guid: d261f267f25bf1b40aa483336edc870c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 55.97
+      objectReference: {fileID: 0}
     - target: {fileID: 5794994455448743677, guid: d261f267f25bf1b40aa483336edc870c,
         type: 3}
       propertyPath: m_Name
@@ -6147,11 +6162,7 @@ PrefabInstance:
     - {fileID: 7145205483968584674, guid: d261f267f25bf1b40aa483336edc870c, type: 3}
     - {fileID: 1811521210716446498, guid: d261f267f25bf1b40aa483336edc870c, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8234290674627441587, guid: d261f267f25bf1b40aa483336edc870c,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1944886263}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d261f267f25bf1b40aa483336edc870c, type: 3}
 --- !u!4 &1944886260 stripped
 Transform:
@@ -6159,34 +6170,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1944886259}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1944886261 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7820062607768391738, guid: d261f267f25bf1b40aa483336edc870c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1944886259}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1944886262 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8234290674627441587, guid: d261f267f25bf1b40aa483336edc870c,
-    type: 3}
-  m_PrefabInstance: {fileID: 1944886259}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1944886263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1944886262}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78024c295f4a4950a659653c656253ee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  model: {fileID: 1944886261}
-  moveOffset: {x: 0, y: -1, z: 0}
-  speed: 8
-  interval: 0.3
 --- !u!1001 &1972423516
 PrefabInstance:
   m_ObjectHideFlags: 0

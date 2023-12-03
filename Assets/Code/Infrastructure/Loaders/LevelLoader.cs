@@ -1,4 +1,6 @@
-﻿using Code.Application.Commons.Interfaces.Loaders;
+﻿using Assets.Code.Application.Modules.Enemies.Commands.UnspawnCatcher;
+using Code.Application.Commons.Interfaces.Loaders;
+using Code.Application.Commons.Interfaces.Mediator;
 using Code.Application.Commons.Interfaces.Spawners;
 using Code.Application.Signals;
 using Code.Presentation.Spawners;
@@ -9,20 +11,19 @@ namespace Code.Infrastructure.Loaders
     public class LevelLoader : ILevelLoader
     {
         private readonly IPlayerSpawner _playerSpawner;
-        private readonly ICatcherSpawner _catcherSpawner;
         private readonly SignalBus _signalBus;
+        private readonly IMediator _mediator;
 
-        public LevelLoader(IPlayerSpawner playerSpawner, ICatcherSpawner catcherSpawner, SignalBus signalBus)
+        public LevelLoader(IPlayerSpawner playerSpawner, SignalBus signalBus, IMediator mediator)
         {
             _playerSpawner = playerSpawner;
-            _catcherSpawner = catcherSpawner;
             _signalBus = signalBus;
+            _mediator = mediator;
         }
 
         public void Load(bool wasRestart) 
         {
             _playerSpawner.Spawn();
-            _catcherSpawner.Spawn();
 
             _signalBus.Fire(new OnLevelLoadedSignal() 
             {
@@ -34,7 +35,7 @@ namespace Code.Infrastructure.Loaders
         public void Unload()
         {
             _playerSpawner.Unspawn();
-            _catcherSpawner.Unspawn();
+            _mediator.Send(new UnspawnCatcherCommand());
         }
     }
 }

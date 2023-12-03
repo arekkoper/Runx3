@@ -12,12 +12,10 @@ namespace Code.Presentation.Spawners
         private CatcherSpawnPoint _spawnPoint;
 
         private readonly CatcherPresenter.Factory _factory;
-        private readonly IMediator _mediator;
 
-        public CatcherSpawner(CatcherPresenter.Factory factory, IMediator mediator)
+        public CatcherSpawner(CatcherPresenter.Factory factory)
         {
             _factory = factory;
-            _mediator = mediator;
         }
 
         public void SetSpawnPoint(CatcherSpawnPoint spawnPoint)

@@ -1,3 +1,4 @@
+using Assets.Code.Application.Observers;
 using Assets.Code.Application.Signals;
 using Code.Application.Modules.Game;
 using Code.Application.Observers;
@@ -26,10 +27,12 @@ namespace Code.Application
             Container.DeclareSignal<OnAudioSignal>().OptionalSubscriber();
             Container.DeclareSignal<OnSpikeTrapStickingOutSignal>().OptionalSubscriber();
             Container.DeclareSignal<OnTowerShootSignal>().OptionalSubscriber();
+            Container.DeclareSignal<OnCatcherSpawnedSignal>().OptionalSubscriber();
 
             //Observers
             Container.BindInterfacesAndSelfTo<OnPlayerKilledObserver>().AsSingle();
             Container.BindInterfacesAndSelfTo<OnPlayerWinObserver>().AsSingle();
+            Container.BindInterfacesAndSelfTo<OnCallCatcherObserver>().AsSingle();
         }
     }
 }

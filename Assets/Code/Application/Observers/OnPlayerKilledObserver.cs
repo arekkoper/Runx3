@@ -1,5 +1,6 @@
 ﻿using System;
 using Assets.Code.Application.Commons.Interfaces.Services;
+using Assets.Code.Application.Modules.Enemies.Commands.UnspawnCatcher;
 using Assets.Code.Application.Modules.Game.Commands.Save;
 using Code.Application.Commons.Interfaces.Mediator;
 using Code.Application.Modules.Hero.Commands.DestroyPlayerPresenter;
@@ -35,6 +36,7 @@ namespace Code.Application.Observers
         private void Perform(OnPlayerKilledSignal param)
         {
             _mediator.Send(new DestroyPlayerPresenterCommand() { PlayerPresenter = param.PlayerPresenter });
+            
             _mediator.Send(new IncreaseDeathScoreCommand());
 
             _mediator.Send(new SaveCommand());
