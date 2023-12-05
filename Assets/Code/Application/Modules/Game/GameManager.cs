@@ -56,7 +56,7 @@ namespace Code.Application.Modules.Game
         {
             //Initiator commands
             _mediator.Send(new InitPlayerCommand());
-            _mediator.Send(new InitLevelsCommand() { LevelCap = 13 });
+            _mediator.Send(new InitLevelsCommand() { LevelCap = 8 });
 
             if(_mediator.Send(new IsSaveFileExistQuery()))
             {
