@@ -2,6 +2,7 @@
 using Code.Application.Commons.Interfaces.Mediator;
 using Code.Application.Commons.Interfaces.Services;
 using Code.Application.Modules.Level.Queries.GetCurrentLevel;
+using UnityEngine;
 
 namespace Code.Application.Modules.Level.Queries.IsLastLevel
 {
